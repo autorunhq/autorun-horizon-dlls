@@ -110,6 +110,9 @@ def build_audio_driver():
     driver = pe / 'winenxaudio.drv'
     subprocess.run([str(toolchain / 'i686-w64-mingw32-clang'), '-Os', '-Wall', '-Wextra', '-Werror',
                     '-fno-builtin', '-nostdlib', '-shared', '-Wl,--entry,_DllMain@12', '-Wl,--dynamicbase',
+                    # the same bytes every build, as Wine's own modules are, so its
+                    # version changes only when its source does
+                    '-Wl,--no-insert-timestamp',
                     '-o', str(driver), str(probe / 'source/audio_driver.c')], check=True, env=env)
     return driver
 
@@ -337,7 +340,7 @@ def main():
     (repo / 'NOTICE.md').write_text(write_notice(manifest, licenses))
     (repo / 'README.md').write_text(README)
 
-    new = [f for f in files if f['version'] == 1 or f['sha256'] != earlier.get(f"{f['path']}/{f['name']}", {}).get('sha256')]
+    new = [f for f in files if f['sha256'] != earlier.get(f"{f['path']}/{f['name']}", {}).get('sha256')]
     for arch, path in ARCHES.items():
         mine = [f for f in files if f['arch'] == arch]
         print(f'{path}: {len(mine)} files, {sum(f["size"] for f in mine) >> 20} MB')

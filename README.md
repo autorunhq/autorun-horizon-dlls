@@ -45,5 +45,20 @@ files[]       one per file:
               Autorun registers, as DllRegisterServer would on a PC
 ```
 
-The files are built with `wine-nx-probe/tools/package-horizon-dlls.py` in the
-Autorun repository.
+## Building
+
+This repository is a submodule of Autorun, at `horizon-dlls/`, and builds from
+the Wine in the Autorun checkout around it:
+
+```
+git submodule update --init horizon-dlls
+horizon-dlls/tools/build-dlls.py
+```
+
+It builds Wine's PE modules in Autorun's `wine-nx-probe/build-wine-wow64-pe`
+and writes them, stripped, over `switch/`, with the manifest, `NOTICE.md` and
+`LICENSES/`. Which modules there are, what they belong to and what they need
+from the runtime is in `tools/build-dlls.py`; the headers a module shares with
+the runtime are listed in Autorun's `wine-nx-probe/runtime-interfaces.json`.
+Commit and push here, then commit the new `horizon-dlls` in Autorun, so each
+Autorun commit names the DLLs that go with it.

@@ -18,8 +18,8 @@ holds the files, and `switch/wine/horizon-dlls/manifest.json` describes them.
 
 ## manifest.json
 
-Autorun reads the manifest on `main`, and a card keeps the one it installed
-from in the same place.
+Autorun reads the manifest from the published branch, and a card keeps the one
+it installed from in the same place.
 
 ```
 schema        format version; Autorun ignores a manifest it does not know

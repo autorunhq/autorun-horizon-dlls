@@ -1,14 +1,17 @@
 # autorun-horizon-dlls
 
-Built from Wine 11.0 as carried by https://github.com/autorunhq/autorun at commit `536600bd1de118fff82ff1a38dc3e5d6ee0f1317`. The source of every file is there, under the paths its manifest entry lists.
+Built from Wine 11.18 as carried by https://github.com/autorunhq/autorun at commit `14ebe6b92ea5631b3b9d8b687a20503655d40eb1`. The source of every file is there, under the paths its manifest entry lists.
 
 | Component | License | Text |
 |---|---|---|
 | Capstone | BSD-3-Clause | `LICENSES/Capstone.txt` |
 | compiler-rt | NCSA OR MIT | `LICENSES/compiler-rt.txt` |
 | FAudio | Zlib | `LICENSES/FAudio.txt` |
+| FFmpeg | LGPL-2.1-or-later | `LICENSES/FFmpeg.txt` |
 | FluidSynth | LGPL-2.1-or-later | `LICENSES/FluidSynth.txt` |
 | libgsm | TU-Berlin-2.0 | `LICENSES/libgsm.txt` |
+| ICU Common | Unicode-DFS-2016 AND ICU | `LICENSES/ICU Common.txt` |
+| ICU I18N | Unicode-DFS-2016 AND ICU AND BSD-3-Clause | `LICENSES/ICU I18N.txt` |
 | libjpeg | IJG | `LICENSES/libjpeg.txt` |
 | jxrlib | BSD-2-Clause | `LICENSES/jxrlib.txt` |
 | Little CMS | MIT | `LICENSES/Little CMS.txt` |
@@ -16,8 +19,9 @@ Built from Wine 11.0 as carried by https://github.com/autorunhq/autorun at commi
 | mpg123 | LGPL-2.1-only | `LICENSES/mpg123.txt` |
 | musl | MIT | `LICENSES/musl.txt` |
 | libpng | Libpng | `LICENSES/libpng.txt` |
+| SQLite | blessing | `LICENSES/SQLite.txt` |
+| SymCrypt | MIT | `LICENSES/SymCrypt.txt` |
 | libtiff | libtiff | `LICENSES/libtiff.txt` |
-| LibTomCrypt | Unlicense | `LICENSES/LibTomCrypt.txt` |
 | vkd3d | LGPL-2.1-or-later | `LICENSES/vkd3d.txt` |
 | Wine | LGPL-2.1-or-later | `LICENSES/Wine.txt` |
 | libxml2 | MIT | `LICENSES/libxml2.txt` |
@@ -27,41 +31,973 @@ Built from Wine 11.0 as carried by https://github.com/autorunhq/autorun at commi
 compiler-rt is built into every file; the other libraries besides Wine into the
 files whose manifest entry names their license.
 
-Changed from Wine 11.0, or Autorun's own (see the commit history of the paths listed):
+Changed since the Wine 11.0 import, or Autorun's own:
 
+- `drive_c/windows/system32/acledit.dll`: dlls/acledit
+- `drive_c/windows/system32/actxprxy.dll`: dlls/actxprxy
+- `drive_c/windows/system32/adsldp.dll`: dlls/adsldp
+- `drive_c/windows/system32/advapi32.dll`: dlls/advapi32
+- `drive_c/windows/system32/aero.msstyles`: dlls/aero.msstyles
+- `drive_c/windows/system32/amstream.dll`: dlls/amstream
+- `drive_c/windows/system32/appwiz.cpl`: dlls/appwiz.cpl
+- `drive_c/windows/system32/atl.dll`: dlls/atl
+- `drive_c/windows/system32/atl100.dll`: dlls/atl100, dlls/atl
+- `drive_c/windows/system32/atl110.dll`: dlls/atl110, dlls/atl
+- `drive_c/windows/system32/atl80.dll`: dlls/atl80, dlls/atl
+- `drive_c/windows/system32/atl90.dll`: dlls/atl90, dlls/atl
+- `drive_c/windows/system32/avicap32.dll`: dlls/avicap32
+- `drive_c/windows/system32/avifil32.dll`: dlls/avifil32
+- `drive_c/windows/system32/avrt.dll`: dlls/avrt
+- `drive_c/windows/system32/bcrypt.dll`: dlls/bcrypt, libs/symcrypt
+- `drive_c/windows/system32/bcryptprimitives.dll`: dlls/bcryptprimitives
+- `drive_c/windows/system32/bluetoothapis.dll`: dlls/bluetoothapis
+- `drive_c/windows/system32/browseui.dll`: dlls/browseui
+- `drive_c/windows/system32/cabinet.dll`: dlls/cabinet, libs/zlib
+- `drive_c/windows/system32/cards.dll`: dlls/cards
+- `drive_c/windows/system32/cfgmgr32.dll`: dlls/cfgmgr32
+- `drive_c/windows/system32/chakra.dll`: dlls/chakra
+- `drive_c/windows/system32/cldapi.dll`: dlls/cldapi
+- `drive_c/windows/system32/cmd.exe`: programs/cmd
+- `drive_c/windows/system32/cng.sys`: dlls/cng.sys
+- `drive_c/windows/system32/colorcnv.dll`: dlls/colorcnv, libs/ffmpeg
+- `drive_c/windows/system32/combase.dll`: dlls/combase
+- `drive_c/windows/system32/comcat.dll`: dlls/comcat
+- `drive_c/windows/system32/comctl32.dll`: dlls/comctl32
+- `drive_c/windows/system32/comctl32_v6.dll`: dlls/comctl32_v6, dlls/comctl32
+- `drive_c/windows/system32/comdlg32.dll`: dlls/comdlg32
+- `drive_c/windows/system32/coml2.dll`: dlls/coml2
+- `drive_c/windows/system32/comsvcs.dll`: dlls/comsvcs
+- `drive_c/windows/system32/concrt140.dll`: dlls/concrt140, dlls/msvcrt
+- `drive_c/windows/system32/conhost.exe`: programs/conhost
+- `drive_c/windows/system32/connect.dll`: dlls/connect
+- `drive_c/windows/system32/crypt32.dll`: dlls/crypt32
+- `drive_c/windows/system32/cryptbase.dll`: dlls/cryptbase
+- `drive_c/windows/system32/cryptnet.dll`: dlls/cryptnet
+- `drive_c/windows/system32/cryptsp.dll`: dlls/cryptsp
+- `drive_c/windows/system32/cscript.exe`: programs/cscript, programs/wscript
+- `drive_c/windows/system32/ctapi32.dll`: dlls/ctapi32
+- `drive_c/windows/system32/d2d1.dll`: dlls/d2d1
+- `drive_c/windows/system32/d3d10.dll`: dlls/d3d10, dlls/d3dcompiler_43
+- `drive_c/windows/system32/d3d10_1.dll`: dlls/d3d10_1
+- `drive_c/windows/system32/d3d10core.dll`: dlls/d3d10core
+- `drive_c/windows/system32/d3d11.dll`: dlls/d3d11
+- `drive_c/windows/system32/d3d8thk.dll`: dlls/d3d8thk
 - `drive_c/windows/system32/d3d9.dll`: dlls/d3d9
+- `drive_c/windows/system32/d3dcompiler_33.dll`: dlls/d3dcompiler_33, dlls/d3dcompiler_43
+- `drive_c/windows/system32/d3dcompiler_34.dll`: dlls/d3dcompiler_34, dlls/d3dcompiler_43
+- `drive_c/windows/system32/d3dcompiler_35.dll`: dlls/d3dcompiler_35, dlls/d3dcompiler_43
+- `drive_c/windows/system32/d3dcompiler_36.dll`: dlls/d3dcompiler_36, dlls/d3dcompiler_43
+- `drive_c/windows/system32/d3dcompiler_37.dll`: dlls/d3dcompiler_37, dlls/d3dcompiler_43
+- `drive_c/windows/system32/d3dcompiler_38.dll`: dlls/d3dcompiler_38, dlls/d3dcompiler_43
+- `drive_c/windows/system32/d3dcompiler_39.dll`: dlls/d3dcompiler_39, dlls/d3dcompiler_43
+- `drive_c/windows/system32/d3dcompiler_40.dll`: dlls/d3dcompiler_40, dlls/d3dcompiler_43
+- `drive_c/windows/system32/d3dcompiler_41.dll`: dlls/d3dcompiler_41, dlls/d3dcompiler_43
+- `drive_c/windows/system32/d3dcompiler_42.dll`: dlls/d3dcompiler_42, dlls/d3dcompiler_43
+- `drive_c/windows/system32/d3dcompiler_43.dll`: dlls/d3dcompiler_43
+- `drive_c/windows/system32/d3dcompiler_46.dll`: dlls/d3dcompiler_46, dlls/d3dcompiler_43
+- `drive_c/windows/system32/d3dcompiler_47.dll`: dlls/d3dcompiler_47, dlls/d3dcompiler_43
+- `drive_c/windows/system32/d3drm.dll`: dlls/d3drm
+- `drive_c/windows/system32/d3dx10_33.dll`: dlls/d3dx10_33
+- `drive_c/windows/system32/d3dx10_34.dll`: dlls/d3dx10_34
+- `drive_c/windows/system32/d3dx10_35.dll`: dlls/d3dx10_35
+- `drive_c/windows/system32/d3dx10_36.dll`: dlls/d3dx10_36
+- `drive_c/windows/system32/d3dx10_37.dll`: dlls/d3dx10_37
+- `drive_c/windows/system32/d3dx10_38.dll`: dlls/d3dx10_38
+- `drive_c/windows/system32/d3dx10_39.dll`: dlls/d3dx10_39
+- `drive_c/windows/system32/d3dx10_40.dll`: dlls/d3dx10_40
+- `drive_c/windows/system32/d3dx10_41.dll`: dlls/d3dx10_41
+- `drive_c/windows/system32/d3dx10_42.dll`: dlls/d3dx10_42
+- `drive_c/windows/system32/d3dx10_43.dll`: dlls/d3dx10_43, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx11_42.dll`: dlls/d3dx11_42
+- `drive_c/windows/system32/d3dx11_43.dll`: dlls/d3dx11_43, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_24.dll`: dlls/d3dx9_24, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_25.dll`: dlls/d3dx9_25, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_26.dll`: dlls/d3dx9_26, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_27.dll`: dlls/d3dx9_27, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_28.dll`: dlls/d3dx9_28, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_29.dll`: dlls/d3dx9_29, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_30.dll`: dlls/d3dx9_30, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_31.dll`: dlls/d3dx9_31, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_32.dll`: dlls/d3dx9_32, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_33.dll`: dlls/d3dx9_33, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_34.dll`: dlls/d3dx9_34, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_35.dll`: dlls/d3dx9_35, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_36.dll`: dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_37.dll`: dlls/d3dx9_37, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_38.dll`: dlls/d3dx9_38, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_39.dll`: dlls/d3dx9_39, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_40.dll`: dlls/d3dx9_40, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_41.dll`: dlls/d3dx9_41, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_42.dll`: dlls/d3dx9_42, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dx9_43.dll`: dlls/d3dx9_43, dlls/d3dx9_36
+- `drive_c/windows/system32/d3dxof.dll`: dlls/d3dxof
+- `drive_c/windows/system32/dbgeng.dll`: dlls/dbgeng
+- `drive_c/windows/system32/dbghelp.dll`: dlls/dbghelp, libs/zlib
+- `drive_c/windows/system32/dcomp.dll`: dlls/dcomp
+- `drive_c/windows/system32/ddraw.dll`: dlls/ddraw
+- `drive_c/windows/system32/ddrawex.dll`: dlls/ddrawex
+- `drive_c/windows/system32/desk.cpl`: dlls/desk.cpl
+- `drive_c/windows/system32/devenum.dll`: dlls/devenum
+- `drive_c/windows/system32/dinput.dll`: dlls/dinput
+- `drive_c/windows/system32/dinput8.dll`: dlls/dinput8, dlls/dinput
+- `drive_c/windows/system32/directmanipulation.dll`: dlls/directmanipulation
+- `drive_c/windows/system32/dism.exe`: programs/dism
+- `drive_c/windows/system32/dmloader.dll`: dlls/dmloader, dlls/dmusic
+- `drive_c/windows/system32/dmsynth.dll`: dlls/dmsynth, dlls/dmusic, libs/fluidsynth
+- `drive_c/windows/system32/dmusic.dll`: dlls/dmusic
+- `drive_c/windows/system32/dmusic32.dll`: dlls/dmusic32
+- `drive_c/windows/system32/dnsapi.dll`: dlls/dnsapi
+- `drive_c/windows/system32/dplaysvr.exe`: programs/dplaysvr
+- `drive_c/windows/system32/dpnaddr.dll`: dlls/dpnaddr
+- `drive_c/windows/system32/dpnet.dll`: dlls/dpnet
+- `drive_c/windows/system32/dpnhpast.dll`: dlls/dpnhpast
+- `drive_c/windows/system32/dpnhupnp.dll`: dlls/dpnhupnp
+- `drive_c/windows/system32/dpnlobby.dll`: dlls/dpnlobby
+- `drive_c/windows/system32/dpnsvr.exe`: programs/dpnsvr
+- `drive_c/windows/system32/dpvoice.dll`: dlls/dpvoice
+- `drive_c/windows/system32/dpvsetup.exe`: programs/dpvsetup
+- `drive_c/windows/system32/dsdmo.dll`: dlls/dsdmo
 - `drive_c/windows/system32/dsound.dll`: dlls/dsound
+- `drive_c/windows/system32/dsrole.dll`: dlls/dsrole
+- `drive_c/windows/system32/dssenh.dll`: dlls/dssenh, libs/symcrypt
+- `drive_c/windows/system32/dswave.dll`: dlls/dswave, dlls/dmusic
+- `drive_c/windows/system32/dwmapi.dll`: dlls/dwmapi
+- `drive_c/windows/system32/dwrite.dll`: dlls/dwrite
+- `drive_c/windows/system32/dx8vb.dll`: dlls/dx8vb
+- `drive_c/windows/system32/dxcore.dll`: dlls/dxcore
+- `drive_c/windows/system32/dxdiag.exe`: programs/dxdiag
+- `drive_c/windows/system32/dxdiagn.dll`: dlls/dxdiagn
+- `drive_c/windows/system32/dxgi.dll`: dlls/dxgi
+- `drive_c/windows/system32/dxva2.dll`: dlls/dxva2
+- `drive_c/windows/system32/evr.dll`: dlls/evr
+- `drive_c/windows/system32/explorer.exe`: programs/explorer
+- `drive_c/windows/system32/explorerframe.dll`: dlls/explorerframe
+- `drive_c/windows/system32/feclient.dll`: dlls/feclient
+- `drive_c/windows/system32/findstr.exe`: programs/findstr
+- `drive_c/windows/system32/fltlib.dll`: dlls/fltlib
+- `drive_c/windows/system32/fltmgr.sys`: dlls/fltmgr.sys
+- `drive_c/windows/system32/fusion.dll`: dlls/fusion
+- `drive_c/windows/system32/fwpuclnt.dll`: dlls/fwpuclnt
+- `drive_c/windows/system32/gameux.dll`: dlls/gameux
+- `drive_c/windows/system32/gdi32.dll`: dlls/gdi32
+- `drive_c/windows/system32/gdiplus.dll`: dlls/gdiplus
+- `drive_c/windows/system32/hal.dll`: dlls/hal
+- `drive_c/windows/system32/hhctrl.ocx`: dlls/hhctrl.ocx
+- `drive_c/windows/system32/hid.dll`: dlls/hid
+- `drive_c/windows/system32/hidclass.sys`: dlls/hidclass.sys
+- `drive_c/windows/system32/hidparse.sys`: dlls/hidparse.sys, dlls/hid
+- `drive_c/windows/system32/hnetcfg.dll`: dlls/hnetcfg
+- `drive_c/windows/system32/http.sys`: dlls/http.sys
+- `drive_c/windows/system32/icu.dll`: dlls/icu, libs/icucommon, libs/icui18n
+- `drive_c/windows/system32/icuin.dll`: dlls/icuin
+- `drive_c/windows/system32/icuuc.dll`: dlls/icuuc
+- `drive_c/windows/system32/ieframe.dll`: dlls/ieframe
+- `drive_c/windows/system32/iertutil.dll`: dlls/iertutil
+- `drive_c/windows/system32/iexplore.exe`: programs/iexplore
+- `drive_c/windows/system32/imagehlp.dll`: dlls/imagehlp
+- `drive_c/windows/system32/imm32.dll`: dlls/imm32
+- `drive_c/windows/system32/inetcpl.cpl`: dlls/inetcpl.cpl
+- `drive_c/windows/system32/inkobj.dll`: dlls/inkobj
+- `drive_c/windows/system32/iphlpapi.dll`: dlls/iphlpapi
+- `drive_c/windows/system32/ir50_32.dll`: dlls/ir50_32
+- `drive_c/windows/system32/itss.dll`: dlls/itss
+- `drive_c/windows/system32/iyuv_32.dll`: dlls/iyuv_32, dlls/colorcnv, libs/ffmpeg
+- `drive_c/windows/system32/joy.cpl`: dlls/joy.cpl
+- `drive_c/windows/system32/jscript.dll`: dlls/jscript
+- `drive_c/windows/system32/kerberos.dll`: dlls/kerberos
 - `drive_c/windows/system32/kernel32.dll`: dlls/kernel32
 - `drive_c/windows/system32/kernelbase.dll`: dlls/kernelbase
-- `drive_c/windows/system32/ntdll.dll`: dlls/ntdll, libs/musl, libs/tomcrypt
+- `drive_c/windows/system32/klist.exe`: programs/klist
+- `drive_c/windows/system32/ksecdd.sys`: dlls/ksecdd.sys
+- `drive_c/windows/system32/ksproxy.ax`: dlls/ksproxy.ax
+- `drive_c/windows/system32/ksuser.dll`: dlls/ksuser
+- `drive_c/windows/system32/l3codeca.acm`: dlls/l3codeca.acm, libs/mpg123
+- `drive_c/windows/system32/localspl.dll`: dlls/localspl
+- `drive_c/windows/system32/localui.dll`: dlls/localui
+- `drive_c/windows/system32/lsass.exe`: programs/lsass
+- `drive_c/windows/system32/lz32.dll`: dlls/lz32
+- `drive_c/windows/system32/magnification.dll`: dlls/magnification
+- `drive_c/windows/system32/mapi32.dll`: dlls/mapi32
+- `drive_c/windows/system32/mciavi32.dll`: dlls/mciavi32
+- `drive_c/windows/system32/mcicda.dll`: dlls/mcicda
+- `drive_c/windows/system32/mciqtz32.dll`: dlls/mciqtz32
+- `drive_c/windows/system32/mf.dll`: dlls/mf
+- `drive_c/windows/system32/mfasfsrcsnk.dll`: dlls/mfasfsrcsnk, dlls/mfsrcsnk
+- `drive_c/windows/system32/mfmediaengine.dll`: dlls/mfmediaengine
+- `drive_c/windows/system32/mfmp4srcsnk.dll`: dlls/mfmp4srcsnk, dlls/mfsrcsnk
+- `drive_c/windows/system32/mfplat.dll`: dlls/mfplat
+- `drive_c/windows/system32/mfplay.dll`: dlls/mfplay
+- `drive_c/windows/system32/mfreadwrite.dll`: dlls/mfreadwrite
+- `drive_c/windows/system32/mfsrcsnk.dll`: dlls/mfsrcsnk
+- `drive_c/windows/system32/mlang.dll`: dlls/mlang
+- `drive_c/windows/system32/mmdevapi.dll`: dlls/mmdevapi
+- `drive_c/windows/system32/mouhid.sys`: dlls/mouhid.sys
+- `drive_c/windows/system32/mountmgr.sys`: dlls/mountmgr.sys
+- `drive_c/windows/system32/mp3dmod.dll`: dlls/mp3dmod, libs/mpg123
+- `drive_c/windows/system32/mpr.dll`: dlls/mpr
+- `drive_c/windows/system32/msado15.dll`: dlls/msado15
+- `drive_c/windows/system32/msauddecmft.dll`: dlls/msauddecmft
+- `drive_c/windows/system32/mscat32.dll`: dlls/mscat32
+- `drive_c/windows/system32/mscms.dll`: dlls/mscms, libs/lcms2
+- `drive_c/windows/system32/mscoree.dll`: dlls/mscoree
+- `drive_c/windows/system32/msctf.dll`: dlls/msctf
+- `drive_c/windows/system32/msctfmonitor.dll`: dlls/msctfmonitor
+- `drive_c/windows/system32/msdmo.dll`: dlls/msdmo
+- `drive_c/windows/system32/msftedit.dll`: dlls/msftedit
+- `drive_c/windows/system32/msgsm32.acm`: dlls/msgsm32.acm, libs/gsm
+- `drive_c/windows/system32/mshtml.dll`: dlls/mshtml
+- `drive_c/windows/system32/msi.dll`: dlls/msi
+- `drive_c/windows/system32/msiexec.exe`: programs/msiexec
+- `drive_c/windows/system32/msmpeg2vdec.dll`: dlls/msmpeg2vdec, dlls/wmvdecod
+- `drive_c/windows/system32/msnet32.dll`: dlls/msnet32
+- `drive_c/windows/system32/mspatcha.dll`: dlls/mspatcha
+- `drive_c/windows/system32/msports.dll`: dlls/msports
+- `drive_c/windows/system32/mssip32.dll`: dlls/mssip32
+- `drive_c/windows/system32/msv1_0.dll`: dlls/msv1_0
+- `drive_c/windows/system32/msvcirt.dll`: dlls/msvcirt, dlls/msvcp90
+- `drive_c/windows/system32/msvcp100.dll`: dlls/msvcp100, dlls/msvcp90
+- `drive_c/windows/system32/msvcp110.dll`: dlls/msvcp110, dlls/msvcp90
+- `drive_c/windows/system32/msvcp120.dll`: dlls/msvcp120, dlls/msvcp90
+- `drive_c/windows/system32/msvcp120_app.dll`: dlls/msvcp120_app
+- `drive_c/windows/system32/msvcp140.dll`: dlls/msvcp140, dlls/msvcp90
+- `drive_c/windows/system32/msvcp140_1.dll`: dlls/msvcp140_1, dlls/msvcp90
+- `drive_c/windows/system32/msvcp140_2.dll`: dlls/msvcp140_2
+- `drive_c/windows/system32/msvcp60.dll`: dlls/msvcp60, dlls/msvcp90
+- `drive_c/windows/system32/msvcp80.dll`: dlls/msvcp80, dlls/msvcp90
+- `drive_c/windows/system32/msvcp90.dll`: dlls/msvcp90
+- `drive_c/windows/system32/msvcp_win.dll`: dlls/msvcp_win
+- `drive_c/windows/system32/msvcr100.dll`: dlls/msvcr100, dlls/msvcrt, libs/musl
+- `drive_c/windows/system32/msvcr110.dll`: dlls/msvcr110, dlls/msvcrt, libs/musl
+- `drive_c/windows/system32/msvcr120.dll`: dlls/msvcr120, dlls/msvcrt, libs/musl
+- `drive_c/windows/system32/msvcr120_app.dll`: dlls/msvcr120_app
+- `drive_c/windows/system32/msvcr80.dll`: dlls/msvcr80, dlls/msvcrt, libs/musl
+- `drive_c/windows/system32/msvcr90.dll`: dlls/msvcr90, dlls/msvcrt, libs/musl
+- `drive_c/windows/system32/msvcrt.dll`: dlls/msvcrt, libs/musl
+- `drive_c/windows/system32/msvfw32.dll`: dlls/msvfw32
+- `drive_c/windows/system32/msvproc.dll`: dlls/msvproc, libs/ffmpeg
+- `drive_c/windows/system32/mswsock.dll`: dlls/mswsock
+- `drive_c/windows/system32/msxml3.dll`: dlls/msxml3, libs/xml2, libs/xslt
+- `drive_c/windows/system32/msxml4.dll`: dlls/msxml4
+- `drive_c/windows/system32/msxml6.dll`: dlls/msxml6
+- `drive_c/windows/system32/ncrypt.dll`: dlls/ncrypt
+- `drive_c/windows/system32/ndfapi.dll`: dlls/ndfapi
+- `drive_c/windows/system32/ndis.sys`: dlls/ndis.sys
+- `drive_c/windows/system32/netapi32.dll`: dlls/netapi32
+- `drive_c/windows/system32/netio.sys`: dlls/netio.sys
+- `drive_c/windows/system32/netprofm.dll`: dlls/netprofm
+- `drive_c/windows/system32/netutils.dll`: dlls/netutils
+- `drive_c/windows/system32/ngen.exe`: programs/ngen
+- `drive_c/windows/system32/ninput.dll`: dlls/ninput
+- `drive_c/windows/system32/notepad.exe`: programs/notepad
+- `drive_c/windows/system32/npmshtml.dll`: dlls/npmshtml
+- `drive_c/windows/system32/nsiproxy.sys`: dlls/nsiproxy.sys
+- `drive_c/windows/system32/ntdll.dll`: dlls/ntdll, libs/musl, libs/symcrypt, libs/zlib
+- `drive_c/windows/system32/ntoskrnl.exe`: dlls/ntoskrnl.exe
+- `drive_c/windows/system32/ntprint.dll`: dlls/ntprint
+- `drive_c/windows/system32/objsel.dll`: dlls/objsel
+- `drive_c/windows/system32/odbc32.dll`: dlls/odbc32
+- `drive_c/windows/system32/odbcad32.exe`: programs/odbcad32
+- `drive_c/windows/system32/odbccp32.dll`: dlls/odbccp32
+- `drive_c/windows/system32/odbccu32.dll`: dlls/odbccu32
+- `drive_c/windows/system32/ole32.dll`: dlls/ole32
+- `drive_c/windows/system32/oleacc.dll`: dlls/oleacc
+- `drive_c/windows/system32/oleaut32.dll`: dlls/oleaut32
+- `drive_c/windows/system32/oledb32.dll`: dlls/oledb32
+- `drive_c/windows/system32/oleview.exe`: programs/oleview
+- `drive_c/windows/system32/opcservices.dll`: dlls/opcservices, libs/zlib
 - `drive_c/windows/system32/opengl32.dll`: dlls/opengl32
+- `drive_c/windows/system32/packager.dll`: dlls/packager
+- `drive_c/windows/system32/pdh.dll`: dlls/pdh
+- `drive_c/windows/system32/photometadatahandler.dll`: dlls/photometadatahandler
+- `drive_c/windows/system32/powrprof.dll`: dlls/powrprof
+- `drive_c/windows/system32/printui.dll`: dlls/printui
+- `drive_c/windows/system32/prntvpt.dll`: dlls/prntvpt
+- `drive_c/windows/system32/propsys.dll`: dlls/propsys
+- `drive_c/windows/system32/psapi.dll`: dlls/psapi
+- `drive_c/windows/system32/pwrshplugin.dll`: dlls/pwrshplugin
+- `drive_c/windows/system32/qasf.dll`: dlls/qasf
+- `drive_c/windows/system32/qcap.dll`: dlls/qcap
+- `drive_c/windows/system32/qdvd.dll`: dlls/qdvd
+- `drive_c/windows/system32/qedit.dll`: dlls/qedit
 - `drive_c/windows/system32/quartz.dll`: dlls/quartz
+- `drive_c/windows/system32/qwave.dll`: dlls/qwave
+- `drive_c/windows/system32/regedit.exe`: programs/regedit
+- `drive_c/windows/system32/regsvr32.exe`: programs/regsvr32
+- `drive_c/windows/system32/resampledmo.dll`: dlls/resampledmo, libs/ffmpeg
+- `drive_c/windows/system32/riched20.dll`: dlls/riched20
+- `drive_c/windows/system32/riched32.dll`: dlls/riched32
+- `drive_c/windows/system32/robocopy.exe`: programs/robocopy
+- `drive_c/windows/system32/rometadata.dll`: dlls/rometadata
+- `drive_c/windows/system32/rpcrt4.dll`: dlls/rpcrt4
+- `drive_c/windows/system32/rsabase.dll`: dlls/rsabase
+- `drive_c/windows/system32/rsaenh.dll`: dlls/rsaenh, libs/symcrypt
+- `drive_c/windows/system32/rstrtmgr.dll`: dlls/rstrtmgr
+- `drive_c/windows/system32/rtscom.dll`: dlls/rtscom
+- `drive_c/windows/system32/rtutils.dll`: dlls/rtutils
+- `drive_c/windows/system32/sapi.dll`: dlls/sapi
+- `drive_c/windows/system32/sas.dll`: dlls/sas
+- `drive_c/windows/system32/schannel.dll`: dlls/schannel
+- `drive_c/windows/system32/scrobj.dll`: dlls/scrobj
+- `drive_c/windows/system32/scrrun.dll`: dlls/scrrun
+- `drive_c/windows/system32/scsiport.sys`: dlls/scsiport.sys
+- `drive_c/windows/system32/sechost.dll`: dlls/sechost
+- `drive_c/windows/system32/secur32.dll`: dlls/secur32
+- `drive_c/windows/system32/services.exe`: programs/services
+- `drive_c/windows/system32/setupapi.dll`: dlls/setupapi
+- `drive_c/windows/system32/setx.exe`: programs/setx
+- `drive_c/windows/system32/sfc.dll`: dlls/sfc
+- `drive_c/windows/system32/sfc_os.dll`: dlls/sfc_os
+- `drive_c/windows/system32/shcore.dll`: dlls/shcore
+- `drive_c/windows/system32/shdocvw.dll`: dlls/shdocvw
+- `drive_c/windows/system32/shell32.dll`: dlls/shell32
+- `drive_c/windows/system32/shfolder.dll`: dlls/shfolder
+- `drive_c/windows/system32/shlwapi.dll`: dlls/shlwapi
+- `drive_c/windows/system32/slc.dll`: dlls/slc
+- `drive_c/windows/system32/sppc.dll`: dlls/sppc
+- `drive_c/windows/system32/srclient.dll`: dlls/srclient
+- `drive_c/windows/system32/sspicli.dll`: dlls/sspicli
+- `drive_c/windows/system32/start.exe`: programs/start
+- `drive_c/windows/system32/stdole2.tlb`: dlls/stdole2.tlb
+- `drive_c/windows/system32/stdole32.tlb`: dlls/stdole32.tlb
+- `drive_c/windows/system32/strmdll.dll`: dlls/strmdll
+- `drive_c/windows/system32/svrapi.dll`: dlls/svrapi
+- `drive_c/windows/system32/tasklist.exe`: programs/tasklist
+- `drive_c/windows/system32/taskmgr.exe`: programs/taskmgr
+- `drive_c/windows/system32/taskschd.dll`: dlls/taskschd
+- `drive_c/windows/system32/tdh.dll`: dlls/tdh
+- `drive_c/windows/system32/tdi.sys`: dlls/tdi.sys
+- `drive_c/windows/system32/thumbcache.dll`: dlls/thumbcache
+- `drive_c/windows/system32/tiptsf.dll`: dlls/tiptsf
+- `drive_c/windows/system32/twinapi.appcore.dll`: dlls/twinapi.appcore
+- `drive_c/windows/system32/ucrtbase.dll`: dlls/ucrtbase, dlls/msvcrt, libs/musl
+- `drive_c/windows/system32/uianimation.dll`: dlls/uianimation
+- `drive_c/windows/system32/uiautomationcore.dll`: dlls/uiautomationcore
+- `drive_c/windows/system32/uninstaller.exe`: programs/uninstaller
+- `drive_c/windows/system32/urlmon.dll`: dlls/urlmon
+- `drive_c/windows/system32/usbd.sys`: dlls/usbd.sys
 - `drive_c/windows/system32/user32.dll`: dlls/user32, libs/png
+- `drive_c/windows/system32/userenv.dll`: dlls/userenv
+- `drive_c/windows/system32/uxtheme.dll`: dlls/uxtheme
+- `drive_c/windows/system32/vbscript.dll`: dlls/vbscript
+- `drive_c/windows/system32/vccorlib140.dll`: dlls/vccorlib140
+- `drive_c/windows/system32/vcomp.dll`: dlls/vcomp
+- `drive_c/windows/system32/vcomp100.dll`: dlls/vcomp100, dlls/vcomp
+- `drive_c/windows/system32/vcomp110.dll`: dlls/vcomp110, dlls/vcomp
+- `drive_c/windows/system32/vcomp120.dll`: dlls/vcomp120, dlls/vcomp
+- `drive_c/windows/system32/vcomp140.dll`: dlls/vcomp140, dlls/vcomp
+- `drive_c/windows/system32/vcruntime140.dll`: dlls/vcruntime140
+- `drive_c/windows/system32/vcruntime140_1.dll`: dlls/vcruntime140_1, dlls/msvcrt
+- `drive_c/windows/system32/version.dll`: dlls/version
+- `drive_c/windows/system32/vga.dll`: dlls/vga
+- `drive_c/windows/system32/vidreszr.dll`: dlls/vidreszr, dlls/colorcnv, libs/ffmpeg
+- `drive_c/windows/system32/virtdisk.dll`: dlls/virtdisk
+- `drive_c/windows/system32/vulkan-1.dll`: dlls/vulkan-1
+- `drive_c/windows/system32/wbemdisp.dll`: dlls/wbemdisp
+- `drive_c/windows/system32/wbemprox.dll`: dlls/wbemprox
+- `drive_c/windows/system32/webservices.dll`: dlls/webservices
+- `drive_c/windows/system32/websocket.dll`: dlls/websocket
+- `drive_c/windows/system32/wevtapi.dll`: dlls/wevtapi
+- `drive_c/windows/system32/where.exe`: programs/where
 - `drive_c/windows/system32/win32u.dll`: dlls/win32u
+- `drive_c/windows/system32/winbrand.dll`: dlls/winbrand
+- `drive_c/windows/system32/windows.devices.bluetooth.dll`: dlls/windows.devices.bluetooth
+- `drive_c/windows/system32/windows.devices.radios.dll`: dlls/windows.devices.radios
+- `drive_c/windows/system32/windows.gaming.input.dll`: dlls/windows.gaming.input
+- `drive_c/windows/system32/windows.graphics.dll`: dlls/windows.graphics
+- `drive_c/windows/system32/windows.media.speech.dll`: dlls/windows.media.speech
+- `drive_c/windows/system32/windows.perception.stub.dll`: dlls/windows.perception.stub
+- `drive_c/windows/system32/windows.storage.dll`: dlls/windows.storage
+- `drive_c/windows/system32/windows.ui.core.textinput.dll`: dlls/windows.ui.core.textinput
+- `drive_c/windows/system32/windows.ui.dll`: dlls/windows.ui
+- `drive_c/windows/system32/windows.web.dll`: dlls/windows.web
+- `drive_c/windows/system32/windowscodecs.dll`: dlls/windowscodecs, libs/jpeg, libs/png, libs/tiff
+- `drive_c/windows/system32/wineboot.exe`: programs/wineboot
 - `drive_c/windows/system32/winebox64.dll`: dlls/winebox64
+- `drive_c/windows/system32/winebox64ec.dll`: dlls/winebox64ec
+- `drive_c/windows/system32/winebrowser.exe`: programs/winebrowser
+- `drive_c/windows/system32/winebth.sys`: dlls/winebth.sys
+- `drive_c/windows/system32/winebus.sys`: dlls/winebus.sys
+- `drive_c/windows/system32/winecfg.exe`: programs/winecfg
 - `drive_c/windows/system32/wined3d.dll`: dlls/wined3d, libs/vkd3d
+- `drive_c/windows/system32/winedbg.exe`: programs/winedbg, libs/capstone
+- `drive_c/windows/system32/winedevice.exe`: programs/winedevice
+- `drive_c/windows/system32/winedmo.dll`: dlls/winedmo
+- `drive_c/windows/system32/winehid.sys`: dlls/winehid.sys
+- `drive_c/windows/system32/winemenubuilder.exe`: programs/winemenubuilder
+- `drive_c/windows/system32/wineps.drv`: dlls/wineps.drv
 - `drive_c/windows/system32/winevulkan.dll`: dlls/winevulkan
+- `drive_c/windows/system32/winexinput.sys`: dlls/winexinput.sys
+- `drive_c/windows/system32/winhlp32.exe`: programs/winhlp32
+- `drive_c/windows/system32/winhttp.dll`: dlls/winhttp, libs/zlib
+- `drive_c/windows/system32/wininet.dll`: dlls/wininet, libs/zlib
+- `drive_c/windows/system32/winmm.dll`: dlls/winmm
+- `drive_c/windows/system32/winnls32.dll`: dlls/winnls32
+- `drive_c/windows/system32/winspool.drv`: dlls/winspool.drv
+- `drive_c/windows/system32/winsqlite3.dll`: dlls/winsqlite3, libs/sqlite3
+- `drive_c/windows/system32/winsta.dll`: dlls/winsta
+- `drive_c/windows/system32/wintab32.dll`: dlls/wintab32
+- `drive_c/windows/system32/wintrust.dll`: dlls/wintrust
+- `drive_c/windows/system32/wintypes.dll`: dlls/wintypes
+- `drive_c/windows/system32/winver.exe`: programs/winver
+- `drive_c/windows/system32/wkscli.dll`: dlls/wkscli
+- `drive_c/windows/system32/wldap32.dll`: dlls/wldap32, libs/ldap
+- `drive_c/windows/system32/wldp.dll`: dlls/wldp
+- `drive_c/windows/system32/wmadmod.dll`: dlls/wmadmod
+- `drive_c/windows/system32/wmic.exe`: programs/wmic
+- `drive_c/windows/system32/wmilib.sys`: dlls/wmilib.sys
+- `drive_c/windows/system32/wminet_utils.dll`: dlls/wminet_utils
+- `drive_c/windows/system32/wmp.dll`: dlls/wmp
+- `drive_c/windows/system32/wmphoto.dll`: dlls/wmphoto, dlls/windowscodecs, libs/jxr
+- `drive_c/windows/system32/wmplayer.exe`: programs/wmplayer
+- `drive_c/windows/system32/wmvcore.dll`: dlls/wmvcore
+- `drive_c/windows/system32/wmvdecod.dll`: dlls/wmvdecod
+- `drive_c/windows/system32/wnaspi32.dll`: dlls/wnaspi32
+- `drive_c/windows/system32/wordpad.exe`: programs/wordpad
 - `drive_c/windows/system32/wow64.dll`: dlls/wow64
 - `drive_c/windows/system32/wow64win.dll`: dlls/wow64win
+- `drive_c/windows/system32/wpc.dll`: dlls/wpc
+- `drive_c/windows/system32/ws2_32.dll`: dlls/ws2_32
+- `drive_c/windows/system32/wscript.exe`: programs/wscript
+- `drive_c/windows/system32/wsock32.dll`: dlls/wsock32
+- `drive_c/windows/system32/wtsapi32.dll`: dlls/wtsapi32
+- `drive_c/windows/system32/wuaueng.dll`: dlls/wuaueng
+- `drive_c/windows/system32/wusa.exe`: programs/wusa
+- `drive_c/windows/system32/x3daudio1_0.dll`: dlls/x3daudio1_0, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/x3daudio1_1.dll`: dlls/x3daudio1_1, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/x3daudio1_2.dll`: dlls/x3daudio1_2, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/x3daudio1_3.dll`: dlls/x3daudio1_3, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/x3daudio1_4.dll`: dlls/x3daudio1_4, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/x3daudio1_5.dll`: dlls/x3daudio1_5, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/x3daudio1_6.dll`: dlls/x3daudio1_6, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/x3daudio1_7.dll`: dlls/x3daudio1_7, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xactengine2_0.dll`: dlls/xactengine2_0, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/system32/xactengine2_4.dll`: dlls/xactengine2_4, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/system32/xactengine2_7.dll`: dlls/xactengine2_7, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/system32/xactengine2_9.dll`: dlls/xactengine2_9, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/system32/xactengine3_0.dll`: dlls/xactengine3_0, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/system32/xactengine3_1.dll`: dlls/xactengine3_1, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/system32/xactengine3_2.dll`: dlls/xactengine3_2, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/system32/xactengine3_3.dll`: dlls/xactengine3_3, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/system32/xactengine3_4.dll`: dlls/xactengine3_4, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/system32/xactengine3_5.dll`: dlls/xactengine3_5, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/system32/xactengine3_6.dll`: dlls/xactengine3_6, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/system32/xactengine3_7.dll`: dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/system32/xapofx1_1.dll`: dlls/xapofx1_1, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xapofx1_2.dll`: dlls/xapofx1_2, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xapofx1_3.dll`: dlls/xapofx1_3, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xapofx1_4.dll`: dlls/xapofx1_4, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xapofx1_5.dll`: dlls/xapofx1_5, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xaudio2_0.dll`: dlls/xaudio2_0, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xaudio2_1.dll`: dlls/xaudio2_1, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xaudio2_2.dll`: dlls/xaudio2_2, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xaudio2_3.dll`: dlls/xaudio2_3, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xaudio2_4.dll`: dlls/xaudio2_4, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xaudio2_5.dll`: dlls/xaudio2_5, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xaudio2_6.dll`: dlls/xaudio2_6, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xaudio2_7.dll`: dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xaudio2_8.dll`: dlls/xaudio2_8, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/system32/xaudio2_9.dll`: dlls/xaudio2_9, dlls/xaudio2_7, libs/faudio
 - `drive_c/windows/system32/xinput1_1.dll`: dlls/xinput1_1, dlls/xinput1_3
 - `drive_c/windows/system32/xinput1_2.dll`: dlls/xinput1_2, dlls/xinput1_3
 - `drive_c/windows/system32/xinput1_3.dll`: dlls/xinput1_3
 - `drive_c/windows/system32/xinput1_4.dll`: dlls/xinput1_4, dlls/xinput1_3
+- `drive_c/windows/system32/xinput9_1_0.dll`: dlls/xinput9_1_0
 - `drive_c/windows/system32/xinputuap.dll`: dlls/xinputuap, dlls/xinput1_3
+- `drive_c/windows/system32/xmllite.dll`: dlls/xmllite
+- `drive_c/windows/system32/xpsprint.dll`: dlls/xpsprint
+- `drive_c/windows/system32/xtajit64.dll`: dlls/xtajit64
+- `drive_c/windows/syswow64/acledit.dll`: dlls/acledit
+- `drive_c/windows/syswow64/actxprxy.dll`: dlls/actxprxy
+- `drive_c/windows/syswow64/adsldp.dll`: dlls/adsldp
+- `drive_c/windows/syswow64/advapi32.dll`: dlls/advapi32
+- `drive_c/windows/syswow64/aero.msstyles`: dlls/aero.msstyles
+- `drive_c/windows/syswow64/amstream.dll`: dlls/amstream
+- `drive_c/windows/syswow64/appwiz.cpl`: dlls/appwiz.cpl
+- `drive_c/windows/syswow64/atl.dll`: dlls/atl
+- `drive_c/windows/syswow64/atl100.dll`: dlls/atl100, dlls/atl
+- `drive_c/windows/syswow64/atl110.dll`: dlls/atl110, dlls/atl
+- `drive_c/windows/syswow64/atl80.dll`: dlls/atl80, dlls/atl
+- `drive_c/windows/syswow64/atl90.dll`: dlls/atl90, dlls/atl
+- `drive_c/windows/syswow64/avicap32.dll`: dlls/avicap32
+- `drive_c/windows/syswow64/avifil32.dll`: dlls/avifil32
+- `drive_c/windows/syswow64/avrt.dll`: dlls/avrt
+- `drive_c/windows/syswow64/bcrypt.dll`: dlls/bcrypt, libs/symcrypt
+- `drive_c/windows/syswow64/bcryptprimitives.dll`: dlls/bcryptprimitives
+- `drive_c/windows/syswow64/bluetoothapis.dll`: dlls/bluetoothapis
+- `drive_c/windows/syswow64/browseui.dll`: dlls/browseui
+- `drive_c/windows/syswow64/cabinet.dll`: dlls/cabinet, libs/zlib
+- `drive_c/windows/syswow64/cards.dll`: dlls/cards
+- `drive_c/windows/syswow64/cfgmgr32.dll`: dlls/cfgmgr32
+- `drive_c/windows/syswow64/chakra.dll`: dlls/chakra
+- `drive_c/windows/syswow64/cldapi.dll`: dlls/cldapi
+- `drive_c/windows/syswow64/cmd.exe`: programs/cmd
+- `drive_c/windows/syswow64/cng.sys`: dlls/cng.sys
+- `drive_c/windows/syswow64/colorcnv.dll`: dlls/colorcnv, libs/ffmpeg
+- `drive_c/windows/syswow64/combase.dll`: dlls/combase
+- `drive_c/windows/syswow64/comcat.dll`: dlls/comcat
+- `drive_c/windows/syswow64/comctl32.dll`: dlls/comctl32
+- `drive_c/windows/syswow64/comctl32_v6.dll`: dlls/comctl32_v6, dlls/comctl32
+- `drive_c/windows/syswow64/comdlg32.dll`: dlls/comdlg32
+- `drive_c/windows/syswow64/coml2.dll`: dlls/coml2
+- `drive_c/windows/syswow64/compobj.dll16`: dlls/compobj.dll16
+- `drive_c/windows/syswow64/comsvcs.dll`: dlls/comsvcs
+- `drive_c/windows/syswow64/concrt140.dll`: dlls/concrt140, dlls/msvcrt
+- `drive_c/windows/syswow64/connect.dll`: dlls/connect
+- `drive_c/windows/syswow64/crtdll.dll`: dlls/crtdll, dlls/msvcrt, libs/musl
+- `drive_c/windows/syswow64/crypt32.dll`: dlls/crypt32
+- `drive_c/windows/syswow64/cryptbase.dll`: dlls/cryptbase
+- `drive_c/windows/syswow64/cryptnet.dll`: dlls/cryptnet
+- `drive_c/windows/syswow64/cryptsp.dll`: dlls/cryptsp
+- `drive_c/windows/syswow64/cscript.exe`: programs/cscript, programs/wscript
+- `drive_c/windows/syswow64/ctapi32.dll`: dlls/ctapi32
+- `drive_c/windows/syswow64/d2d1.dll`: dlls/d2d1
+- `drive_c/windows/syswow64/d3d10.dll`: dlls/d3d10, dlls/d3dcompiler_43
+- `drive_c/windows/syswow64/d3d10_1.dll`: dlls/d3d10_1
+- `drive_c/windows/syswow64/d3d10core.dll`: dlls/d3d10core
+- `drive_c/windows/syswow64/d3d11.dll`: dlls/d3d11
+- `drive_c/windows/syswow64/d3d8.dll`: dlls/d3d8
+- `drive_c/windows/syswow64/d3d8thk.dll`: dlls/d3d8thk
 - `drive_c/windows/syswow64/d3d9.dll`: dlls/d3d9
+- `drive_c/windows/syswow64/d3dcompiler_33.dll`: dlls/d3dcompiler_33, dlls/d3dcompiler_43
+- `drive_c/windows/syswow64/d3dcompiler_34.dll`: dlls/d3dcompiler_34, dlls/d3dcompiler_43
+- `drive_c/windows/syswow64/d3dcompiler_35.dll`: dlls/d3dcompiler_35, dlls/d3dcompiler_43
+- `drive_c/windows/syswow64/d3dcompiler_36.dll`: dlls/d3dcompiler_36, dlls/d3dcompiler_43
+- `drive_c/windows/syswow64/d3dcompiler_37.dll`: dlls/d3dcompiler_37, dlls/d3dcompiler_43
+- `drive_c/windows/syswow64/d3dcompiler_38.dll`: dlls/d3dcompiler_38, dlls/d3dcompiler_43
+- `drive_c/windows/syswow64/d3dcompiler_39.dll`: dlls/d3dcompiler_39, dlls/d3dcompiler_43
+- `drive_c/windows/syswow64/d3dcompiler_40.dll`: dlls/d3dcompiler_40, dlls/d3dcompiler_43
+- `drive_c/windows/syswow64/d3dcompiler_41.dll`: dlls/d3dcompiler_41, dlls/d3dcompiler_43
+- `drive_c/windows/syswow64/d3dcompiler_42.dll`: dlls/d3dcompiler_42, dlls/d3dcompiler_43
+- `drive_c/windows/syswow64/d3dcompiler_43.dll`: dlls/d3dcompiler_43
+- `drive_c/windows/syswow64/d3dcompiler_46.dll`: dlls/d3dcompiler_46, dlls/d3dcompiler_43
+- `drive_c/windows/syswow64/d3dcompiler_47.dll`: dlls/d3dcompiler_47, dlls/d3dcompiler_43
+- `drive_c/windows/syswow64/d3dim.dll`: dlls/d3dim
+- `drive_c/windows/syswow64/d3dim700.dll`: dlls/d3dim700
+- `drive_c/windows/syswow64/d3drm.dll`: dlls/d3drm
+- `drive_c/windows/syswow64/d3dx10_33.dll`: dlls/d3dx10_33
+- `drive_c/windows/syswow64/d3dx10_34.dll`: dlls/d3dx10_34
+- `drive_c/windows/syswow64/d3dx10_35.dll`: dlls/d3dx10_35
+- `drive_c/windows/syswow64/d3dx10_36.dll`: dlls/d3dx10_36
+- `drive_c/windows/syswow64/d3dx10_37.dll`: dlls/d3dx10_37
+- `drive_c/windows/syswow64/d3dx10_38.dll`: dlls/d3dx10_38
+- `drive_c/windows/syswow64/d3dx10_39.dll`: dlls/d3dx10_39
+- `drive_c/windows/syswow64/d3dx10_40.dll`: dlls/d3dx10_40
+- `drive_c/windows/syswow64/d3dx10_41.dll`: dlls/d3dx10_41
+- `drive_c/windows/syswow64/d3dx10_42.dll`: dlls/d3dx10_42
+- `drive_c/windows/syswow64/d3dx10_43.dll`: dlls/d3dx10_43, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx11_42.dll`: dlls/d3dx11_42
+- `drive_c/windows/syswow64/d3dx11_43.dll`: dlls/d3dx11_43, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_24.dll`: dlls/d3dx9_24, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_25.dll`: dlls/d3dx9_25, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_26.dll`: dlls/d3dx9_26, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_27.dll`: dlls/d3dx9_27, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_28.dll`: dlls/d3dx9_28, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_29.dll`: dlls/d3dx9_29, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_30.dll`: dlls/d3dx9_30, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_31.dll`: dlls/d3dx9_31, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_32.dll`: dlls/d3dx9_32, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_33.dll`: dlls/d3dx9_33, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_34.dll`: dlls/d3dx9_34, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_35.dll`: dlls/d3dx9_35, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_36.dll`: dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_37.dll`: dlls/d3dx9_37, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_38.dll`: dlls/d3dx9_38, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_39.dll`: dlls/d3dx9_39, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_40.dll`: dlls/d3dx9_40, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_41.dll`: dlls/d3dx9_41, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_42.dll`: dlls/d3dx9_42, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dx9_43.dll`: dlls/d3dx9_43, dlls/d3dx9_36
+- `drive_c/windows/syswow64/d3dxof.dll`: dlls/d3dxof
+- `drive_c/windows/syswow64/dbgeng.dll`: dlls/dbgeng
+- `drive_c/windows/syswow64/dbghelp.dll`: dlls/dbghelp, libs/zlib
+- `drive_c/windows/syswow64/dcomp.dll`: dlls/dcomp
+- `drive_c/windows/syswow64/ddraw.dll`: dlls/ddraw
+- `drive_c/windows/syswow64/ddrawex.dll`: dlls/ddrawex
+- `drive_c/windows/syswow64/desk.cpl`: dlls/desk.cpl
+- `drive_c/windows/syswow64/devenum.dll`: dlls/devenum
+- `drive_c/windows/syswow64/dinput.dll`: dlls/dinput
+- `drive_c/windows/syswow64/dinput8.dll`: dlls/dinput8, dlls/dinput
+- `drive_c/windows/syswow64/directmanipulation.dll`: dlls/directmanipulation
+- `drive_c/windows/syswow64/dism.exe`: programs/dism
+- `drive_c/windows/syswow64/dmband.dll`: dlls/dmband, dlls/dmusic
+- `drive_c/windows/syswow64/dmcompos.dll`: dlls/dmcompos, dlls/dmusic
+- `drive_c/windows/syswow64/dmime.dll`: dlls/dmime, dlls/dmusic
+- `drive_c/windows/syswow64/dmloader.dll`: dlls/dmloader, dlls/dmusic
+- `drive_c/windows/syswow64/dmscript.dll`: dlls/dmscript, dlls/dmusic
+- `drive_c/windows/syswow64/dmstyle.dll`: dlls/dmstyle, dlls/dmusic
+- `drive_c/windows/syswow64/dmsynth.dll`: dlls/dmsynth, dlls/dmusic, libs/fluidsynth
+- `drive_c/windows/syswow64/dmusic.dll`: dlls/dmusic
+- `drive_c/windows/syswow64/dmusic32.dll`: dlls/dmusic32
+- `drive_c/windows/syswow64/dnsapi.dll`: dlls/dnsapi
+- `drive_c/windows/syswow64/dplay.dll`: dlls/dplay
+- `drive_c/windows/syswow64/dplaysvr.exe`: programs/dplaysvr
+- `drive_c/windows/syswow64/dplayx.dll`: dlls/dplayx
+- `drive_c/windows/syswow64/dpnaddr.dll`: dlls/dpnaddr
+- `drive_c/windows/syswow64/dpnet.dll`: dlls/dpnet
+- `drive_c/windows/syswow64/dpnhpast.dll`: dlls/dpnhpast
+- `drive_c/windows/syswow64/dpnhupnp.dll`: dlls/dpnhupnp
+- `drive_c/windows/syswow64/dpnlobby.dll`: dlls/dpnlobby
+- `drive_c/windows/syswow64/dpnsvr.exe`: programs/dpnsvr
+- `drive_c/windows/syswow64/dpvoice.dll`: dlls/dpvoice
+- `drive_c/windows/syswow64/dpvsetup.exe`: programs/dpvsetup
+- `drive_c/windows/syswow64/dpwsockx.dll`: dlls/dpwsockx
+- `drive_c/windows/syswow64/dsdmo.dll`: dlls/dsdmo
 - `drive_c/windows/syswow64/dsound.dll`: dlls/dsound
+- `drive_c/windows/syswow64/dsrole.dll`: dlls/dsrole
+- `drive_c/windows/syswow64/dssenh.dll`: dlls/dssenh, libs/symcrypt
+- `drive_c/windows/syswow64/dswave.dll`: dlls/dswave, dlls/dmusic
+- `drive_c/windows/syswow64/dwmapi.dll`: dlls/dwmapi
+- `drive_c/windows/syswow64/dwrite.dll`: dlls/dwrite
+- `drive_c/windows/syswow64/dx8vb.dll`: dlls/dx8vb
+- `drive_c/windows/syswow64/dxcore.dll`: dlls/dxcore
+- `drive_c/windows/syswow64/dxdiag.exe`: programs/dxdiag
+- `drive_c/windows/syswow64/dxdiagn.dll`: dlls/dxdiagn
+- `drive_c/windows/syswow64/dxgi.dll`: dlls/dxgi
+- `drive_c/windows/syswow64/dxva2.dll`: dlls/dxva2
+- `drive_c/windows/syswow64/evr.dll`: dlls/evr
+- `drive_c/windows/syswow64/explorer.exe`: programs/explorer
+- `drive_c/windows/syswow64/explorerframe.dll`: dlls/explorerframe
+- `drive_c/windows/syswow64/feclient.dll`: dlls/feclient
+- `drive_c/windows/syswow64/findstr.exe`: programs/findstr
+- `drive_c/windows/syswow64/fltlib.dll`: dlls/fltlib
+- `drive_c/windows/syswow64/fltmgr.sys`: dlls/fltmgr.sys
+- `drive_c/windows/syswow64/fusion.dll`: dlls/fusion
+- `drive_c/windows/syswow64/fwpuclnt.dll`: dlls/fwpuclnt
+- `drive_c/windows/syswow64/gameux.dll`: dlls/gameux
+- `drive_c/windows/syswow64/gdi.exe16`: dlls/gdi.exe16
+- `drive_c/windows/syswow64/gdi32.dll`: dlls/gdi32
+- `drive_c/windows/syswow64/gdiplus.dll`: dlls/gdiplus
+- `drive_c/windows/syswow64/hal.dll`: dlls/hal
+- `drive_c/windows/syswow64/hhctrl.ocx`: dlls/hhctrl.ocx
+- `drive_c/windows/syswow64/hid.dll`: dlls/hid
+- `drive_c/windows/syswow64/hidclass.sys`: dlls/hidclass.sys
+- `drive_c/windows/syswow64/hidparse.sys`: dlls/hidparse.sys, dlls/hid
+- `drive_c/windows/syswow64/hnetcfg.dll`: dlls/hnetcfg
+- `drive_c/windows/syswow64/http.sys`: dlls/http.sys
+- `drive_c/windows/syswow64/iccvid.dll`: dlls/iccvid
+- `drive_c/windows/syswow64/icu.dll`: dlls/icu, libs/icucommon, libs/icui18n
+- `drive_c/windows/syswow64/icuin.dll`: dlls/icuin
+- `drive_c/windows/syswow64/icuuc.dll`: dlls/icuuc
+- `drive_c/windows/syswow64/ieframe.dll`: dlls/ieframe
+- `drive_c/windows/syswow64/iertutil.dll`: dlls/iertutil
+- `drive_c/windows/syswow64/iexplore.exe`: programs/iexplore
+- `drive_c/windows/syswow64/imagehlp.dll`: dlls/imagehlp
+- `drive_c/windows/syswow64/imm32.dll`: dlls/imm32
+- `drive_c/windows/syswow64/inetcpl.cpl`: dlls/inetcpl.cpl
+- `drive_c/windows/syswow64/inkobj.dll`: dlls/inkobj
+- `drive_c/windows/syswow64/iphlpapi.dll`: dlls/iphlpapi
+- `drive_c/windows/syswow64/ir50_32.dll`: dlls/ir50_32
+- `drive_c/windows/syswow64/itss.dll`: dlls/itss
+- `drive_c/windows/syswow64/iyuv_32.dll`: dlls/iyuv_32, dlls/colorcnv, libs/ffmpeg
+- `drive_c/windows/syswow64/joy.cpl`: dlls/joy.cpl
+- `drive_c/windows/syswow64/jscript.dll`: dlls/jscript
+- `drive_c/windows/syswow64/kerberos.dll`: dlls/kerberos
 - `drive_c/windows/syswow64/kernel32.dll`: dlls/kernel32
 - `drive_c/windows/syswow64/kernelbase.dll`: dlls/kernelbase
-- `drive_c/windows/syswow64/ntdll.dll`: dlls/ntdll, libs/musl, libs/tomcrypt
+- `drive_c/windows/syswow64/keyboard.drv16`: dlls/keyboard.drv16
+- `drive_c/windows/syswow64/klist.exe`: programs/klist
+- `drive_c/windows/syswow64/krnl386.exe16`: dlls/krnl386.exe16
+- `drive_c/windows/syswow64/ksecdd.sys`: dlls/ksecdd.sys
+- `drive_c/windows/syswow64/ksproxy.ax`: dlls/ksproxy.ax
+- `drive_c/windows/syswow64/ksuser.dll`: dlls/ksuser
+- `drive_c/windows/syswow64/l3codeca.acm`: dlls/l3codeca.acm, libs/mpg123
+- `drive_c/windows/syswow64/localspl.dll`: dlls/localspl
+- `drive_c/windows/syswow64/localui.dll`: dlls/localui
+- `drive_c/windows/syswow64/lz32.dll`: dlls/lz32
+- `drive_c/windows/syswow64/magnification.dll`: dlls/magnification
+- `drive_c/windows/syswow64/mapi32.dll`: dlls/mapi32
+- `drive_c/windows/syswow64/mciavi32.dll`: dlls/mciavi32
+- `drive_c/windows/syswow64/mcicda.dll`: dlls/mcicda
+- `drive_c/windows/syswow64/mciqtz32.dll`: dlls/mciqtz32
+- `drive_c/windows/syswow64/mf.dll`: dlls/mf
+- `drive_c/windows/syswow64/mfasfsrcsnk.dll`: dlls/mfasfsrcsnk, dlls/mfsrcsnk
+- `drive_c/windows/syswow64/mfmediaengine.dll`: dlls/mfmediaengine
+- `drive_c/windows/syswow64/mfmp4srcsnk.dll`: dlls/mfmp4srcsnk, dlls/mfsrcsnk
+- `drive_c/windows/syswow64/mfplat.dll`: dlls/mfplat
+- `drive_c/windows/syswow64/mfplay.dll`: dlls/mfplay
+- `drive_c/windows/syswow64/mfreadwrite.dll`: dlls/mfreadwrite
+- `drive_c/windows/syswow64/mfsrcsnk.dll`: dlls/mfsrcsnk
+- `drive_c/windows/syswow64/mlang.dll`: dlls/mlang
+- `drive_c/windows/syswow64/mmdevapi.dll`: dlls/mmdevapi
+- `drive_c/windows/syswow64/mmsystem.dll16`: dlls/mmsystem.dll16
+- `drive_c/windows/syswow64/mouhid.sys`: dlls/mouhid.sys
+- `drive_c/windows/syswow64/mountmgr.sys`: dlls/mountmgr.sys
+- `drive_c/windows/syswow64/mouse.drv16`: dlls/mouse.drv16
+- `drive_c/windows/syswow64/mp3dmod.dll`: dlls/mp3dmod, libs/mpg123
+- `drive_c/windows/syswow64/mpr.dll`: dlls/mpr
+- `drive_c/windows/syswow64/msado15.dll`: dlls/msado15
+- `drive_c/windows/syswow64/msauddecmft.dll`: dlls/msauddecmft
+- `drive_c/windows/syswow64/mscat32.dll`: dlls/mscat32
+- `drive_c/windows/syswow64/mscms.dll`: dlls/mscms, libs/lcms2
+- `drive_c/windows/syswow64/mscoree.dll`: dlls/mscoree
+- `drive_c/windows/syswow64/msctf.dll`: dlls/msctf
+- `drive_c/windows/syswow64/msctfmonitor.dll`: dlls/msctfmonitor
+- `drive_c/windows/syswow64/msdmo.dll`: dlls/msdmo
+- `drive_c/windows/syswow64/msftedit.dll`: dlls/msftedit
+- `drive_c/windows/syswow64/msgsm32.acm`: dlls/msgsm32.acm, libs/gsm
+- `drive_c/windows/syswow64/mshtml.dll`: dlls/mshtml
+- `drive_c/windows/syswow64/msi.dll`: dlls/msi
+- `drive_c/windows/syswow64/msiexec.exe`: programs/msiexec
+- `drive_c/windows/syswow64/msmpeg2vdec.dll`: dlls/msmpeg2vdec, dlls/wmvdecod
+- `drive_c/windows/syswow64/msnet32.dll`: dlls/msnet32
+- `drive_c/windows/syswow64/mspatcha.dll`: dlls/mspatcha
+- `drive_c/windows/syswow64/msports.dll`: dlls/msports
+- `drive_c/windows/syswow64/mssip32.dll`: dlls/mssip32
+- `drive_c/windows/syswow64/msv1_0.dll`: dlls/msv1_0
+- `drive_c/windows/syswow64/msvcirt.dll`: dlls/msvcirt, dlls/msvcp90
+- `drive_c/windows/syswow64/msvcp100.dll`: dlls/msvcp100, dlls/msvcp90
+- `drive_c/windows/syswow64/msvcp110.dll`: dlls/msvcp110, dlls/msvcp90
+- `drive_c/windows/syswow64/msvcp120.dll`: dlls/msvcp120, dlls/msvcp90
+- `drive_c/windows/syswow64/msvcp120_app.dll`: dlls/msvcp120_app
+- `drive_c/windows/syswow64/msvcp140.dll`: dlls/msvcp140, dlls/msvcp90
+- `drive_c/windows/syswow64/msvcp140_1.dll`: dlls/msvcp140_1, dlls/msvcp90
+- `drive_c/windows/syswow64/msvcp140_2.dll`: dlls/msvcp140_2
+- `drive_c/windows/syswow64/msvcp60.dll`: dlls/msvcp60, dlls/msvcp90
+- `drive_c/windows/syswow64/msvcp70.dll`: dlls/msvcp70, dlls/msvcp90
+- `drive_c/windows/syswow64/msvcp71.dll`: dlls/msvcp71, dlls/msvcp90
+- `drive_c/windows/syswow64/msvcp80.dll`: dlls/msvcp80, dlls/msvcp90
+- `drive_c/windows/syswow64/msvcp90.dll`: dlls/msvcp90
+- `drive_c/windows/syswow64/msvcp_win.dll`: dlls/msvcp_win
+- `drive_c/windows/syswow64/msvcr100.dll`: dlls/msvcr100, dlls/msvcrt, libs/musl
+- `drive_c/windows/syswow64/msvcr110.dll`: dlls/msvcr110, dlls/msvcrt, libs/musl
+- `drive_c/windows/syswow64/msvcr120.dll`: dlls/msvcr120, dlls/msvcrt, libs/musl
+- `drive_c/windows/syswow64/msvcr120_app.dll`: dlls/msvcr120_app
+- `drive_c/windows/syswow64/msvcr70.dll`: dlls/msvcr70, dlls/msvcrt, libs/musl
+- `drive_c/windows/syswow64/msvcr71.dll`: dlls/msvcr71, dlls/msvcrt, libs/musl
+- `drive_c/windows/syswow64/msvcr80.dll`: dlls/msvcr80, dlls/msvcrt, libs/musl
+- `drive_c/windows/syswow64/msvcr90.dll`: dlls/msvcr90, dlls/msvcrt, libs/musl
+- `drive_c/windows/syswow64/msvcrt.dll`: dlls/msvcrt, libs/musl
+- `drive_c/windows/syswow64/msvcrtd.dll`: dlls/msvcrtd, dlls/msvcrt, libs/musl
+- `drive_c/windows/syswow64/msvfw32.dll`: dlls/msvfw32
+- `drive_c/windows/syswow64/msvproc.dll`: dlls/msvproc, libs/ffmpeg
+- `drive_c/windows/syswow64/mswsock.dll`: dlls/mswsock
+- `drive_c/windows/syswow64/msxml3.dll`: dlls/msxml3, libs/xml2, libs/xslt
+- `drive_c/windows/syswow64/msxml4.dll`: dlls/msxml4
+- `drive_c/windows/syswow64/msxml6.dll`: dlls/msxml6
+- `drive_c/windows/syswow64/ncrypt.dll`: dlls/ncrypt
+- `drive_c/windows/syswow64/ndfapi.dll`: dlls/ndfapi
+- `drive_c/windows/syswow64/ndis.sys`: dlls/ndis.sys
+- `drive_c/windows/syswow64/netapi32.dll`: dlls/netapi32
+- `drive_c/windows/syswow64/netio.sys`: dlls/netio.sys
+- `drive_c/windows/syswow64/netprofm.dll`: dlls/netprofm
+- `drive_c/windows/syswow64/netutils.dll`: dlls/netutils
+- `drive_c/windows/syswow64/ngen.exe`: programs/ngen
+- `drive_c/windows/syswow64/ninput.dll`: dlls/ninput
+- `drive_c/windows/syswow64/notepad.exe`: programs/notepad
+- `drive_c/windows/syswow64/npmshtml.dll`: dlls/npmshtml
+- `drive_c/windows/syswow64/nsiproxy.sys`: dlls/nsiproxy.sys
+- `drive_c/windows/syswow64/ntdll.dll`: dlls/ntdll, libs/musl, libs/symcrypt, libs/zlib
+- `drive_c/windows/syswow64/ntoskrnl.exe`: dlls/ntoskrnl.exe
+- `drive_c/windows/syswow64/ntprint.dll`: dlls/ntprint
+- `drive_c/windows/syswow64/objsel.dll`: dlls/objsel
+- `drive_c/windows/syswow64/odbc32.dll`: dlls/odbc32
+- `drive_c/windows/syswow64/odbcad32.exe`: programs/odbcad32
+- `drive_c/windows/syswow64/odbccp32.dll`: dlls/odbccp32
+- `drive_c/windows/syswow64/odbccu32.dll`: dlls/odbccu32
+- `drive_c/windows/syswow64/ole2nls.dll16`: dlls/ole2nls.dll16
+- `drive_c/windows/syswow64/ole32.dll`: dlls/ole32
+- `drive_c/windows/syswow64/oleacc.dll`: dlls/oleacc
+- `drive_c/windows/syswow64/oleaut32.dll`: dlls/oleaut32
+- `drive_c/windows/syswow64/oledb32.dll`: dlls/oledb32
+- `drive_c/windows/syswow64/olepro32.dll`: dlls/olepro32
+- `drive_c/windows/syswow64/olethk32.dll`: dlls/olethk32
+- `drive_c/windows/syswow64/oleview.exe`: programs/oleview
+- `drive_c/windows/syswow64/opcservices.dll`: dlls/opcservices, libs/zlib
 - `drive_c/windows/syswow64/opengl32.dll`: dlls/opengl32
+- `drive_c/windows/syswow64/packager.dll`: dlls/packager
+- `drive_c/windows/syswow64/pdh.dll`: dlls/pdh
+- `drive_c/windows/syswow64/photometadatahandler.dll`: dlls/photometadatahandler
+- `drive_c/windows/syswow64/powrprof.dll`: dlls/powrprof
+- `drive_c/windows/syswow64/printui.dll`: dlls/printui
+- `drive_c/windows/syswow64/prntvpt.dll`: dlls/prntvpt
+- `drive_c/windows/syswow64/propsys.dll`: dlls/propsys
+- `drive_c/windows/syswow64/psapi.dll`: dlls/psapi
+- `drive_c/windows/syswow64/pwrshplugin.dll`: dlls/pwrshplugin
+- `drive_c/windows/syswow64/qasf.dll`: dlls/qasf
+- `drive_c/windows/syswow64/qcap.dll`: dlls/qcap
+- `drive_c/windows/syswow64/qdvd.dll`: dlls/qdvd
+- `drive_c/windows/syswow64/qedit.dll`: dlls/qedit
 - `drive_c/windows/syswow64/quartz.dll`: dlls/quartz
+- `drive_c/windows/syswow64/qwave.dll`: dlls/qwave
+- `drive_c/windows/syswow64/regedit.exe`: programs/regedit
+- `drive_c/windows/syswow64/regsvr32.exe`: programs/regsvr32
+- `drive_c/windows/syswow64/resampledmo.dll`: dlls/resampledmo, libs/ffmpeg
+- `drive_c/windows/syswow64/riched20.dll`: dlls/riched20
+- `drive_c/windows/syswow64/riched32.dll`: dlls/riched32
+- `drive_c/windows/syswow64/robocopy.exe`: programs/robocopy
+- `drive_c/windows/syswow64/rometadata.dll`: dlls/rometadata
+- `drive_c/windows/syswow64/rpcrt4.dll`: dlls/rpcrt4
+- `drive_c/windows/syswow64/rsabase.dll`: dlls/rsabase
+- `drive_c/windows/syswow64/rsaenh.dll`: dlls/rsaenh, libs/symcrypt
+- `drive_c/windows/syswow64/rstrtmgr.dll`: dlls/rstrtmgr
+- `drive_c/windows/syswow64/rtscom.dll`: dlls/rtscom
+- `drive_c/windows/syswow64/rtutils.dll`: dlls/rtutils
+- `drive_c/windows/syswow64/sapi.dll`: dlls/sapi
+- `drive_c/windows/syswow64/sas.dll`: dlls/sas
+- `drive_c/windows/syswow64/schannel.dll`: dlls/schannel
+- `drive_c/windows/syswow64/scrobj.dll`: dlls/scrobj
+- `drive_c/windows/syswow64/scrrun.dll`: dlls/scrrun
+- `drive_c/windows/syswow64/scsiport.sys`: dlls/scsiport.sys
+- `drive_c/windows/syswow64/sechost.dll`: dlls/sechost
+- `drive_c/windows/syswow64/secur32.dll`: dlls/secur32
+- `drive_c/windows/syswow64/setupapi.dll`: dlls/setupapi
+- `drive_c/windows/syswow64/setupx.dll16`: dlls/setupx.dll16
+- `drive_c/windows/syswow64/setx.exe`: programs/setx
+- `drive_c/windows/syswow64/sfc.dll`: dlls/sfc
+- `drive_c/windows/syswow64/sfc_os.dll`: dlls/sfc_os
+- `drive_c/windows/syswow64/shcore.dll`: dlls/shcore
+- `drive_c/windows/syswow64/shdocvw.dll`: dlls/shdocvw
+- `drive_c/windows/syswow64/shell.dll16`: dlls/shell.dll16
+- `drive_c/windows/syswow64/shell32.dll`: dlls/shell32
+- `drive_c/windows/syswow64/shfolder.dll`: dlls/shfolder
+- `drive_c/windows/syswow64/shlwapi.dll`: dlls/shlwapi
+- `drive_c/windows/syswow64/slc.dll`: dlls/slc
+- `drive_c/windows/syswow64/sppc.dll`: dlls/sppc
+- `drive_c/windows/syswow64/srclient.dll`: dlls/srclient
+- `drive_c/windows/syswow64/sspicli.dll`: dlls/sspicli
+- `drive_c/windows/syswow64/start.exe`: programs/start
+- `drive_c/windows/syswow64/stdole2.tlb`: dlls/stdole2.tlb
+- `drive_c/windows/syswow64/stdole32.tlb`: dlls/stdole32.tlb
+- `drive_c/windows/syswow64/strmdll.dll`: dlls/strmdll
+- `drive_c/windows/syswow64/svrapi.dll`: dlls/svrapi
+- `drive_c/windows/syswow64/tasklist.exe`: programs/tasklist
+- `drive_c/windows/syswow64/taskmgr.exe`: programs/taskmgr
+- `drive_c/windows/syswow64/taskschd.dll`: dlls/taskschd
+- `drive_c/windows/syswow64/tdh.dll`: dlls/tdh
+- `drive_c/windows/syswow64/tdi.sys`: dlls/tdi.sys
+- `drive_c/windows/syswow64/thumbcache.dll`: dlls/thumbcache
+- `drive_c/windows/syswow64/tiptsf.dll`: dlls/tiptsf
+- `drive_c/windows/syswow64/twinapi.appcore.dll`: dlls/twinapi.appcore
+- `drive_c/windows/syswow64/ucrtbase.dll`: dlls/ucrtbase, dlls/msvcrt, libs/musl
+- `drive_c/windows/syswow64/uianimation.dll`: dlls/uianimation
+- `drive_c/windows/syswow64/uiautomationcore.dll`: dlls/uiautomationcore
+- `drive_c/windows/syswow64/uninstaller.exe`: programs/uninstaller
+- `drive_c/windows/syswow64/urlmon.dll`: dlls/urlmon
+- `drive_c/windows/syswow64/usbd.sys`: dlls/usbd.sys
+- `drive_c/windows/syswow64/user.exe16`: dlls/user.exe16
 - `drive_c/windows/syswow64/user32.dll`: dlls/user32, libs/png
+- `drive_c/windows/syswow64/userenv.dll`: dlls/userenv
+- `drive_c/windows/syswow64/uxtheme.dll`: dlls/uxtheme
+- `drive_c/windows/syswow64/vbscript.dll`: dlls/vbscript
+- `drive_c/windows/syswow64/vccorlib140.dll`: dlls/vccorlib140
+- `drive_c/windows/syswow64/vcomp.dll`: dlls/vcomp
+- `drive_c/windows/syswow64/vcomp100.dll`: dlls/vcomp100, dlls/vcomp
+- `drive_c/windows/syswow64/vcomp110.dll`: dlls/vcomp110, dlls/vcomp
+- `drive_c/windows/syswow64/vcomp120.dll`: dlls/vcomp120, dlls/vcomp
+- `drive_c/windows/syswow64/vcomp140.dll`: dlls/vcomp140, dlls/vcomp
+- `drive_c/windows/syswow64/vcruntime140.dll`: dlls/vcruntime140
+- `drive_c/windows/syswow64/version.dll`: dlls/version
+- `drive_c/windows/syswow64/vga.dll`: dlls/vga
+- `drive_c/windows/syswow64/vidreszr.dll`: dlls/vidreszr, dlls/colorcnv, libs/ffmpeg
+- `drive_c/windows/syswow64/virtdisk.dll`: dlls/virtdisk
+- `drive_c/windows/syswow64/vulkan-1.dll`: dlls/vulkan-1
+- `drive_c/windows/syswow64/wbemdisp.dll`: dlls/wbemdisp
+- `drive_c/windows/syswow64/wbemprox.dll`: dlls/wbemprox
+- `drive_c/windows/syswow64/webservices.dll`: dlls/webservices
+- `drive_c/windows/syswow64/websocket.dll`: dlls/websocket
+- `drive_c/windows/syswow64/wevtapi.dll`: dlls/wevtapi
+- `drive_c/windows/syswow64/where.exe`: programs/where
 - `drive_c/windows/syswow64/win32u.dll`: dlls/win32u
+- `drive_c/windows/syswow64/win87em.dll16`: dlls/win87em.dll16
+- `drive_c/windows/syswow64/winbrand.dll`: dlls/winbrand
+- `drive_c/windows/syswow64/windows.devices.bluetooth.dll`: dlls/windows.devices.bluetooth
+- `drive_c/windows/syswow64/windows.devices.radios.dll`: dlls/windows.devices.radios
+- `drive_c/windows/syswow64/windows.gaming.input.dll`: dlls/windows.gaming.input
+- `drive_c/windows/syswow64/windows.graphics.dll`: dlls/windows.graphics
+- `drive_c/windows/syswow64/windows.media.speech.dll`: dlls/windows.media.speech
+- `drive_c/windows/syswow64/windows.perception.stub.dll`: dlls/windows.perception.stub
+- `drive_c/windows/syswow64/windows.storage.dll`: dlls/windows.storage
+- `drive_c/windows/syswow64/windows.ui.core.textinput.dll`: dlls/windows.ui.core.textinput
+- `drive_c/windows/syswow64/windows.ui.dll`: dlls/windows.ui
+- `drive_c/windows/syswow64/windows.web.dll`: dlls/windows.web
+- `drive_c/windows/syswow64/windowscodecs.dll`: dlls/windowscodecs, libs/jpeg, libs/png, libs/tiff
+- `drive_c/windows/syswow64/winebrowser.exe`: programs/winebrowser
+- `drive_c/windows/syswow64/winebth.sys`: dlls/winebth.sys
+- `drive_c/windows/syswow64/winebus.sys`: dlls/winebus.sys
+- `drive_c/windows/syswow64/winecfg.exe`: programs/winecfg
 - `drive_c/windows/syswow64/wined3d.dll`: dlls/wined3d, libs/vkd3d
+- `drive_c/windows/syswow64/winedbg.exe`: programs/winedbg, libs/capstone
+- `drive_c/windows/syswow64/winedevice.exe`: programs/winedevice
+- `drive_c/windows/syswow64/winedmo.dll`: dlls/winedmo
+- `drive_c/windows/syswow64/winehid.sys`: dlls/winehid.sys
 - `drive_c/windows/syswow64/winenxaudio.drv`: wine-nx-probe/source/audio_driver.c
+- `drive_c/windows/syswow64/wineps.drv`: dlls/wineps.drv
+- `drive_c/windows/syswow64/winevdm.exe`: programs/winevdm
 - `drive_c/windows/syswow64/winevulkan.dll`: dlls/winevulkan
+- `drive_c/windows/syswow64/winexinput.sys`: dlls/winexinput.sys
+- `drive_c/windows/syswow64/winhlp32.exe`: programs/winhlp32
+- `drive_c/windows/syswow64/winhttp.dll`: dlls/winhttp, libs/zlib
+- `drive_c/windows/syswow64/wininet.dll`: dlls/wininet, libs/zlib
+- `drive_c/windows/syswow64/winmm.dll`: dlls/winmm
+- `drive_c/windows/syswow64/winnls32.dll`: dlls/winnls32
+- `drive_c/windows/syswow64/winspool.drv`: dlls/winspool.drv
+- `drive_c/windows/syswow64/winsqlite3.dll`: dlls/winsqlite3, libs/sqlite3
+- `drive_c/windows/syswow64/winsta.dll`: dlls/winsta
+- `drive_c/windows/syswow64/wintab32.dll`: dlls/wintab32
+- `drive_c/windows/syswow64/wintrust.dll`: dlls/wintrust
+- `drive_c/windows/syswow64/wintypes.dll`: dlls/wintypes
+- `drive_c/windows/syswow64/winver.exe`: programs/winver
+- `drive_c/windows/syswow64/wkscli.dll`: dlls/wkscli
+- `drive_c/windows/syswow64/wldap32.dll`: dlls/wldap32, libs/ldap
+- `drive_c/windows/syswow64/wldp.dll`: dlls/wldp
+- `drive_c/windows/syswow64/wmadmod.dll`: dlls/wmadmod
+- `drive_c/windows/syswow64/wmic.exe`: programs/wmic
+- `drive_c/windows/syswow64/wmilib.sys`: dlls/wmilib.sys
+- `drive_c/windows/syswow64/wminet_utils.dll`: dlls/wminet_utils
+- `drive_c/windows/syswow64/wmp.dll`: dlls/wmp
+- `drive_c/windows/syswow64/wmphoto.dll`: dlls/wmphoto, dlls/windowscodecs, libs/jxr
+- `drive_c/windows/syswow64/wmplayer.exe`: programs/wmplayer
+- `drive_c/windows/syswow64/wmvcore.dll`: dlls/wmvcore
+- `drive_c/windows/syswow64/wmvdecod.dll`: dlls/wmvdecod
+- `drive_c/windows/syswow64/wnaspi32.dll`: dlls/wnaspi32
+- `drive_c/windows/syswow64/wordpad.exe`: programs/wordpad
+- `drive_c/windows/syswow64/wpc.dll`: dlls/wpc
+- `drive_c/windows/syswow64/ws2_32.dll`: dlls/ws2_32
+- `drive_c/windows/syswow64/wscript.exe`: programs/wscript
+- `drive_c/windows/syswow64/wsock32.dll`: dlls/wsock32
+- `drive_c/windows/syswow64/wtsapi32.dll`: dlls/wtsapi32
+- `drive_c/windows/syswow64/wuaueng.dll`: dlls/wuaueng
+- `drive_c/windows/syswow64/wusa.exe`: programs/wusa
+- `drive_c/windows/syswow64/x3daudio1_0.dll`: dlls/x3daudio1_0, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/x3daudio1_1.dll`: dlls/x3daudio1_1, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/x3daudio1_2.dll`: dlls/x3daudio1_2, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/x3daudio1_3.dll`: dlls/x3daudio1_3, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/x3daudio1_4.dll`: dlls/x3daudio1_4, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/x3daudio1_5.dll`: dlls/x3daudio1_5, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/x3daudio1_6.dll`: dlls/x3daudio1_6, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/x3daudio1_7.dll`: dlls/x3daudio1_7, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xactengine2_0.dll`: dlls/xactengine2_0, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/syswow64/xactengine2_4.dll`: dlls/xactengine2_4, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/syswow64/xactengine2_7.dll`: dlls/xactengine2_7, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/syswow64/xactengine2_9.dll`: dlls/xactengine2_9, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/syswow64/xactengine3_0.dll`: dlls/xactengine3_0, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/syswow64/xactengine3_1.dll`: dlls/xactengine3_1, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/syswow64/xactengine3_2.dll`: dlls/xactengine3_2, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/syswow64/xactengine3_3.dll`: dlls/xactengine3_3, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/syswow64/xactengine3_4.dll`: dlls/xactengine3_4, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/syswow64/xactengine3_5.dll`: dlls/xactengine3_5, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/syswow64/xactengine3_6.dll`: dlls/xactengine3_6, dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/syswow64/xactengine3_7.dll`: dlls/xactengine3_7, libs/faudio
+- `drive_c/windows/syswow64/xapofx1_1.dll`: dlls/xapofx1_1, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xapofx1_2.dll`: dlls/xapofx1_2, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xapofx1_3.dll`: dlls/xapofx1_3, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xapofx1_4.dll`: dlls/xapofx1_4, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xapofx1_5.dll`: dlls/xapofx1_5, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xaudio2_0.dll`: dlls/xaudio2_0, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xaudio2_1.dll`: dlls/xaudio2_1, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xaudio2_2.dll`: dlls/xaudio2_2, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xaudio2_3.dll`: dlls/xaudio2_3, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xaudio2_4.dll`: dlls/xaudio2_4, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xaudio2_5.dll`: dlls/xaudio2_5, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xaudio2_6.dll`: dlls/xaudio2_6, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xaudio2_7.dll`: dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xaudio2_8.dll`: dlls/xaudio2_8, dlls/xaudio2_7, libs/faudio
+- `drive_c/windows/syswow64/xaudio2_9.dll`: dlls/xaudio2_9, dlls/xaudio2_7, libs/faudio
 - `drive_c/windows/syswow64/xinput1_1.dll`: dlls/xinput1_1, dlls/xinput1_3
 - `drive_c/windows/syswow64/xinput1_2.dll`: dlls/xinput1_2, dlls/xinput1_3
 - `drive_c/windows/syswow64/xinput1_3.dll`: dlls/xinput1_3
 - `drive_c/windows/syswow64/xinput1_4.dll`: dlls/xinput1_4, dlls/xinput1_3
+- `drive_c/windows/syswow64/xinput9_1_0.dll`: dlls/xinput9_1_0
 - `drive_c/windows/syswow64/xinputuap.dll`: dlls/xinputuap, dlls/xinput1_3
+- `drive_c/windows/syswow64/xmllite.dll`: dlls/xmllite
+- `drive_c/windows/syswow64/xpsprint.dll`: dlls/xpsprint

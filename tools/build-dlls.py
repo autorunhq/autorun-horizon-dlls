@@ -68,8 +68,9 @@ def autorun_checkout():
 root = autorun_checkout()
 probe = root / 'wine-nx-probe'
 tools = probe / 'tools'
-pe = probe / 'build-wine-wow64-pe'
-toolchain = probe / 'toolchains/llvm-mingw-20260505-ucrt-macos-universal/bin'
+pe = Path(os.environ.get('WINE_NX_PE_BUILD_DIR', probe / 'build-wine-wow64-pe')).resolve()
+toolchain = Path(os.environ.get('WINE_NX_LLVM_MINGW',
+                                probe / 'toolchains/llvm-mingw-20260505-ucrt-macos-universal')) / 'bin'
 assert (root / 'dlls/ntdll').is_dir() and pe.is_dir(), f'{root} is not an Autorun checkout with a PE build tree'
 
 DLL_REPO = 'autorunhq/autorun-horizon-dlls'
@@ -77,9 +78,9 @@ SOURCE_REPO = 'autorunhq/autorun'
 RAW = f'https://raw.githubusercontent.com/{DLL_REPO}'
 # Where a card, and the repo, keep the manifest; relative to switch/wine.
 MANIFEST = 'horizon-dlls/manifest.json'
-# The commit that imported Wine 11.0; a file whose sources a later commit
-# touched is a changed copy of Wine's.
+# The commit that first imported Wine into Autorun.
 WINE_IMPORT = 'eaa5b16e'
+WINE_VERSION = '11.18'
 SCHEMA = 1
 # The runtime these files are for. The AMD64 runtime has its own system32
 # (ARM64X, from build-wine-amd64-pe) at the same paths, and gets entries of its
@@ -129,14 +130,19 @@ LICENSES = {
     'capstone': ('BSD-3-Clause', 'libs/capstone/LICENSE.TXT', 'Capstone'),
     'musl': ('MIT', 'libs/musl/COPYRIGHT', 'musl'),
     'faudio': ('Zlib', 'libs/faudio/LICENSE', 'FAudio'),
+    'ffmpeg': ('LGPL-2.1-or-later', 'libs/ffmpeg/LICENSE.md', 'FFmpeg'),
     'fluidsynth': ('LGPL-2.1-or-later', 'COPYING.LIB', 'FluidSynth'),
     'gsm': ('TU-Berlin-2.0', 'libs/gsm/COPYRIGHT', 'libgsm'),
+    'icucommon': ('Unicode-DFS-2016 AND ICU', 'libs/icucommon/LICENSE', 'ICU Common'),
+    'icui18n': ('Unicode-DFS-2016 AND ICU AND BSD-3-Clause', 'libs/icui18n/LICENSE', 'ICU I18N'),
     'jpeg': ('IJG', 'libs/jpeg/LICENSE', 'libjpeg'),
     'jxr': ('BSD-2-Clause', 'libs/jxr/LICENSE', 'jxrlib'),
     'lcms2': ('MIT', 'libs/lcms2/COPYING', 'Little CMS'),
     'ldap': ('OLDAP-2.8', 'libs/ldap/LICENSE', 'OpenLDAP'),
     'mpg123': ('LGPL-2.1-only', 'libs/mpg123/LICENSE', 'mpg123'),
     'png': ('Libpng', 'libs/png/LICENSE', 'libpng'),
+    'sqlite3': ('blessing', repo / 'tools/sqlite-blessing.txt', 'SQLite'),
+    'symcrypt': ('MIT', 'libs/symcrypt/LICENSE.txt', 'SymCrypt'),
     'tiff': ('libtiff', 'libs/tiff/COPYRIGHT', 'libtiff'),
     'tomcrypt': ('Unlicense', 'libs/tomcrypt/LICENSE', 'LibTomCrypt'),
     'vkd3d': ('LGPL-2.1-or-later', 'libs/vkd3d/COPYING', 'vkd3d'),
@@ -145,7 +151,8 @@ LICENSES = {
     'zlib': ('Zlib', 'libs/zlib/LICENSE', 'zlib'),
 }
 
-env = dict(os.environ, PATH=f'{toolchain}:/opt/homebrew/opt/bison/bin:' + os.environ['PATH'])
+env = dict(os.environ, PATH=os.pathsep.join((str(toolchain), '/opt/homebrew/opt/bison/bin',
+                                            os.environ['PATH'])))
 
 def git(*args):
     return subprocess.check_output(['git', '-C', str(root), *args], text=True).strip()
@@ -215,8 +222,8 @@ def group_of(name):
             return group
     return 'wine'
 
-def build(modules):
-    subprocess.run(['make', '-C', str(pe), '-k', f'-j{os.cpu_count()}',
+def build(modules, jobs):
+    subprocess.run(['make', '-C', str(pe), '-k', f'-j{jobs}',
                     *[f'{directory}/{arch}-windows/{name}' for arch, directory, name in modules]],
                    env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
@@ -231,7 +238,11 @@ def main():
     parser.add_argument('--autorun', type=Path, help='the Autorun checkout to build from')
     parser.add_argument('--allow-dirty', action='store_true', help='build from uncommitted sources, for trying it')
     parser.add_argument('--no-build', action='store_true', help='use what is built already')
+    parser.add_argument('--ref', default='main', help='repository branch that will publish the DLLs')
+    parser.add_argument('--jobs', type=int, default=os.cpu_count() or 1)
     args = parser.parse_args()
+    assert re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._/-]*', args.ref) and '..' not in args.ref
+    assert args.jobs > 0
 
     assert not repo_git(repo, 'status', '--porcelain', '--', 'switch', 'LICENSES', 'README.md', 'NOTICE.md'), \
         f'{repo} has uncommitted changes to what it builds'
@@ -243,7 +254,7 @@ def main():
 
     modules = targets()
     if not args.no_build:
-        build(modules)
+        build(modules, args.jobs)
     missing = [f'{d}/{a}-windows/{n}' for a, d, n in modules if not (pe / d / f'{a}-windows' / n).exists()]
     assert not missing, f'{len(missing)} modules did not build, e.g. {missing[:5]}'
     entries = [dict(arch=a, name=n, file=pe / d / f'{a}-windows' / n, sources=sources(d),
@@ -253,6 +264,17 @@ def main():
                             sources=extra['sources'], libs=[], module_dir=None, origin=extra['origin']))
     names = [(e['arch'], e['name'].lower()) for e in entries]
     assert len(set(names)) == len(names), 'a file is built twice'
+    required_licenses = set(ALWAYS)
+    for entry in entries:
+        required_licenses.update(entry['libs'])
+    missing_licenses = sorted(key for key in required_licenses if key not in LICENSES or
+                              not (root / LICENSES[key][1]).is_file())
+    assert not missing_licenses, f'missing license metadata: {missing_licenses}'
+    for entry in entries:
+        found = classes.registered_classes_of(entry['file'])
+        if entry['module_dir'] and entry['module_dir'].startswith('dlls/'):
+            found = classes.classes_of(entry['module_dir'][5:]) + found
+        entry['classes'] = found
 
     commit = git('rev-parse', 'HEAD')
     dirty = git('status', '--porcelain', '--', 'include', 'libs', 'dlls', 'programs',
@@ -290,13 +312,10 @@ def main():
         digest = hashlib.sha256(shipped.read_bytes()).hexdigest()
         before = earlier.get(f'{path}/{name}')
         version = before['version'] + (before['sha256'] != digest) if before else 1
-        url = f'{RAW}/main/switch/wine/{path}/{name}'
+        url = f'{RAW}/{args.ref}/switch/wine/{path}/{name}'
 
         served = []
-        found = classes.registered_classes_of(shipped)
-        if entry['module_dir'] and entry['module_dir'].startswith('dlls/'):
-            found = classes.classes_of(entry['module_dir'][5:]) + found
-        for uuid, threading, coclass in found:
+        for uuid, threading, coclass in entry['classes']:
             if uuid in claimed[arch]:
                 continue
             claimed[arch][uuid] = name
@@ -329,7 +348,7 @@ def main():
     shutil.rmtree(scratch)
 
     manifest = dict(schema=SCHEMA, flavor=FLAVOR,
-                    source=dict(repo=SOURCE_REPO, commit=commit, wine='11.0', wine_import=WINE_IMPORT),
+                    source=dict(repo=SOURCE_REPO, commit=commit, wine=WINE_VERSION, wine_import=WINE_IMPORT),
                     files=files)
     (card / MANIFEST).parent.mkdir(parents=True, exist_ok=True)
     (card / MANIFEST).write_text(json.dumps(manifest, indent=1) + '\n')
@@ -346,7 +365,8 @@ def main():
         print(f'{path}: {len(mine)} files, {sum(f["size"] for f in mine) >> 20} MB')
     print(f'{len(files)} files ({sum(f["size"] for f in files) >> 20} MB), {len(new)} new or changed '
           f'({sum(f["size"] for f in new) >> 20} MB); source {commit[:12]}')
-    print(f'  modified from Wine 11.0 or Autorun\'s own: {sum(f["source"]["modified"] for f in files)}')
+    print(f'  modified since Wine 11.0 import or Autorun\'s own: '
+          f'{sum(f["source"]["modified"] for f in files)}')
     print(f'  tied to the runtime: {", ".join(f["arch"] + " " + f["name"] for f in files if f["requires"]["features"])}')
     print(f'  classes: {sum(len(f["classes"]) for f in files)}')
     if unresolved:
@@ -367,10 +387,10 @@ def write_notice(manifest, licenses):
     lines += ['', 'compiler-rt is built into every file; the other libraries besides Wine into the',
               'files whose manifest entry names their license.', '']
     if modified:
-        lines += ["Changed from Wine 11.0, or Autorun's own (see the commit history of the paths listed):", '']
+        lines += ["Changed since the Wine 11.0 import, or Autorun's own:", '']
         lines += [f"- `{f['path']}/{f['name']}`: {', '.join(f['source']['paths'])}" for f in modified]
     else:
-        lines.append('No file here is changed from Wine 11.0.')
+        lines.append('No file here was changed since the Wine 11.0 import.')
     return '\n'.join(lines) + '\n'
 
 README = '''# autorun-horizon-dlls
@@ -393,8 +413,8 @@ holds the files, and `switch/wine/horizon-dlls/manifest.json` describes them.
 
 ## manifest.json
 
-Autorun reads the manifest on `main`, and a card keeps the one it installed
-from in the same place.
+Autorun reads the manifest from the published branch, and a card keeps the one
+it installed from in the same place.
 
 ```
 schema        format version; Autorun ignores a manifest it does not know

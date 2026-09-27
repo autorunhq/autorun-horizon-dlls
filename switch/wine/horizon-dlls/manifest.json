@@ -3,7 +3,7 @@
  "flavor": "arm64x",
  "source": {
   "repo": "autorunhq/autorun",
-  "commit": "21ff18433b0ea580e2dbc516a8468be92c081fb1",
+  "commit": "13b7083cb74d34f471a6bb194aa6b5f72e4fd741",
   "wine": "11.18",
   "wine_import": "eaa5b16e"
  },

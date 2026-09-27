@@ -228,6 +228,13 @@ def readobj(option, path):
 def run(*command, **kwargs):
     subprocess.run([str(c) for c in command], env=env, check=True, **kwargs)
 
+# What a runtime reports, which is what the files here require of it: the same
+# reading of the same sources the runtime's own build makes.
+spec = importlib.util.spec_from_file_location('runtime_features', probe / 'tools/runtime_features.py')
+runtime_features = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(runtime_features)
+static_unix_libs, interfaces = runtime_features.static_unix_libs, runtime_features.interfaces
+
 spec = importlib.util.spec_from_file_location('classes', tools / 'make-classes-reg.py')
 classes = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(classes)
@@ -315,30 +322,6 @@ def sources(directory):
     if parent:
         paths.append(os.path.normpath(f'{directory}/{parent.strip()}'))
     return paths + [f'libs/{lib}' for lib in libraries(directory)]
-
-def static_unix_libs():
-    """The modules the runtime's static unix-call tables name: native ones by a
-    wide string, WoW64 ones by a narrow one."""
-    text = (root / 'dlls/ntdll/unix/virtual.c').read_text()
-    native = text[text.index('wine_nx_static_unix_libs[] ='):]
-    native = native[:native.index('};')]
-    wow64 = text[text.index('wine_nx_static_wow64_unix_libs[] ='):]
-    wow64 = wow64[:wow64.index('};')]
-    return ({''.join(re.findall(r"'(.)'", entry)) for entry in re.findall(r'\{\s*\{([^}]*)\}', native)},
-            set(re.findall(r'\{\s*"([^"]+)"', wow64)))
-
-def interfaces():
-    table = json.loads((probe / 'runtime-interfaces.json').read_text())
-    result = {}
-    for name, files in table.items():
-        if name.startswith('_'):
-            continue
-        digest = hashlib.sha256()
-        for path in files:
-            # As git holds it, so a Windows checkout's line ends hash the same.
-            digest.update((root / path).read_bytes().replace(b'\r\n', b'\n'))
-        result[name] = f'iface:{name}:{digest.hexdigest()[:12]}'
-    return result
 
 def category_of(name):
     for category, _, pattern in CATEGORIES:

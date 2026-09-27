@@ -1,6 +1,6 @@
 # autorun-horizon-dlls
 
-Built from Wine 11.18 as carried by https://github.com/autorunhq/autorun at commit `21ff18433b0ea580e2dbc516a8468be92c081fb1`. The source of every file is there, under the paths its manifest entry lists.
+Built from Wine 11.18 as carried by https://github.com/autorunhq/autorun at commit `13b7083cb74d34f471a6bb194aa6b5f72e4fd741`. The source of every file is there, under the paths its manifest entry lists.
 
 | Component | License | Text |
 |---|---|---|

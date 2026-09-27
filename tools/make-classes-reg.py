@@ -89,6 +89,42 @@ def registered_classes_of(path):
     return [(m.group('uuid').lower(), (m.group('threading') or 'both').capitalize(), m.group('name'))
             for m in RGS_CLASS.finditer(path.read_bytes().decode('latin-1'))]
 
+
+RGS_PROVIDER = re.compile(
+    r"ForceRemove '([^']+)'\s*\{\s*val 'Image Path' = s '%MODULE%'\s*"
+    r"(?:val 'Signature' = b ([0-9a-fA-F]+)\s*)?val 'Type' = d ([0-9]+)\s*\}")
+RGS_PROVIDER_TYPE = re.compile(
+    r"ForceRemove 'Type ([0-9]{3})'\s*\{\s*val 'Name' = s '([^']+)'\s*"
+    r"val 'TypeName' = s '([^']+)'\s*\}")
+
+
+def crypto_registry(paths):
+    """Register the staged CSPs from their embedded Wine registration scripts."""
+    lines, seen = [], set()
+    prefix = r'Software\\Microsoft\\Cryptography\\Defaults'
+    for path in paths:
+        dll = path.name.lower()
+        if dll not in ('rsaenh.dll', 'dssenh.dll') or dll in seen:
+            continue
+        script = path.read_bytes().decode('latin-1')
+        providers = RGS_PROVIDER.findall(script)
+        types = RGS_PROVIDER_TYPE.findall(script)
+        if not providers or not types:
+            raise ValueError(f'{path}: missing crypto provider registration')
+        seen.add(dll)
+        for name, signature, kind in providers:
+            lines += [f'[{prefix}\\\\Provider\\\\{name}]',
+                      f'"Image Path"="C:\\\\windows\\\\system32\\\\{dll}"',
+                      f'"Type"=dword:{int(kind):08x}']
+            if signature:
+                lines.append('"Signature"=hex:' + ','.join(f'{b:02x}' for b in bytes.fromhex(signature)))
+            lines.append('')
+        for kind, name, description in types:
+            lines += [f'[{prefix}\\\\Provider Types\\\\Type {kind}]',
+                      f'"Name"="{name}"', f'"TypeName"="{description}"', '']
+    return lines
+
+
 def write(stage, dlls):
     lines = ['WINE REGISTRY Version 2',
              ';; The classes the staged DLLs serve. Written by make-classes-reg.py from',
@@ -112,6 +148,8 @@ def write(stage, dlls):
             lines.append(f'@="{dll}.dll"')
             lines.append(f'"ThreadingModel"="{threading}"')
             lines.append('')
+    lines += crypto_registry(path for arch in ('system32', 'syswow64') for dll in sorted(dlls)
+                             if (path := stage / f'drive_c/windows/{arch}/{dll}.dll').is_file())
     out = stage / 'config/classes.reg'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text('\n'.join(lines))

@@ -1,5 +1,5 @@
 WINE REGISTRY Version 2
-;; The COM classes these DLLs serve, from the IDL each is built from and the
+;; The COM classes and crypto providers, from each DLL's IDL and embedded
 ;; registration script widl builds into it. Written by tools/build-dlls.py.
 
 ;; activeds: Pathname
@@ -3206,3 +3206,73 @@ WINE REGISTRY Version 2
 [Software\\Classes\\CLSID\\{6a93130e-1d53-41d1-a9cf-e758800bb179}\\InprocServer32]
 @="xaudio2_7.dll"
 "ThreadingModel"="Both"
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base DSS Cryptographic Provider]
+"Image Path"="C:\\windows\\system32\\dssenh.dll"
+"Type"=dword:00000003
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base DSS and Diffie-Hellman Cryptographic Provider]
+"Image Path"="C:\\windows\\system32\\dssenh.dll"
+"Type"=dword:0000000d
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced DSS and Diffie-Hellman Cryptographic Provider]
+"Image Path"="C:\\windows\\system32\\dssenh.dll"
+"Type"=dword:0000000d
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft DH SChannel Cryptographic Provider]
+"Image Path"="C:\\windows\\system32\\dssenh.dll"
+"Type"=dword:00000012
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 003]
+"Name"="Microsoft Base DSS Cryptographic Provider"
+"TypeName"="DSS Signature"
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 013]
+"Name"="Microsoft Enhanced DSS and Diffie-Hellman Cryptographic Provider"
+"TypeName"="DSS Signature with Diffie-Hellman Key Exchange"
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 018]
+"Name"="Microsoft DH SChannel Cryptographic Provider"
+"TypeName"="Diffie-Hellman SChannel"
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base Cryptographic Provider v1.0]
+"Image Path"="C:\\windows\\system32\\rsaenh.dll"
+"Type"=dword:00000001
+"Signature"=hex:de,ad,be,ef
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced Cryptographic Provider v1.0]
+"Image Path"="C:\\windows\\system32\\rsaenh.dll"
+"Type"=dword:00000001
+"Signature"=hex:de,ad,be,ef
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced RSA and AES Cryptographic Provider]
+"Image Path"="C:\\windows\\system32\\rsaenh.dll"
+"Type"=dword:00000018
+"Signature"=hex:de,ad,be,ef
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced RSA and AES Cryptographic Provider (Prototype)]
+"Image Path"="C:\\windows\\system32\\rsaenh.dll"
+"Type"=dword:00000018
+"Signature"=hex:de,ad,be,ef
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft RSA SChannel Cryptographic Provider]
+"Image Path"="C:\\windows\\system32\\rsaenh.dll"
+"Type"=dword:0000000c
+"Signature"=hex:de,ad,be,ef
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Strong Cryptographic Provider]
+"Image Path"="C:\\windows\\system32\\rsaenh.dll"
+"Type"=dword:00000001
+"Signature"=hex:de,ad,be,ef
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 001]
+"Name"="Microsoft Enhanced Cryptographic Provider v1.0"
+"TypeName"="RSA Full (Signature and Key Exchange)"
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 012]
+"Name"="Microsoft RSA SChannel Cryptographic Provider"
+"TypeName"="RSA SChannel"
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 024]
+"Name"="Microsoft Enhanced RSA and AES Cryptographic Provider"
+"TypeName"="RSA Full and AES"

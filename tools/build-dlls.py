@@ -739,7 +739,7 @@ def main():
                     licenses=licenses_in, files=files)
     (card / MANIFEST).parent.mkdir(parents=True, exist_ok=True)
     (card / MANIFEST).write_text(json.dumps(manifest, indent=1) + '\n')
-    (card / CLASSES).write_text(classes_reg(files))
+    (card / CLASSES).write_text(classes_reg(files, card))
 
     (repo / 'LICENSES').mkdir(exist_ok=True)
     wanted = {LICENSES[key][2] + '.txt': root / LICENSES[key][1] for key in wine_licenses}
@@ -769,12 +769,12 @@ def main():
         print(f'  imports nothing here provides ({len(unresolved)}): {", ".join(unresolved[:12])}')
     print(f'  publish: commit and push {repo}, then commit the new horizon-dlls in {root}')
 
-def classes_reg(files):
-    """The classes the files serve, as the registry the runtime loads before a
+def classes_reg(files, card):
+    """The classes and crypto providers the runtime loads before a
     program asks for one; the first file to claim a class keeps it, 32-bit
     first, as make-classes-reg.py wrote them."""
     lines = ['WINE REGISTRY Version 2',
-             ';; The COM classes these DLLs serve, from the IDL each is built from and the',
+             ';; The COM classes and crypto providers, from each DLL\'s IDL and embedded',
              ';; registration script widl builds into it. Written by tools/build-dlls.py.', '']
     seen = set()
     for f in sorted(files, key=lambda f: (f['arch'] != 'i386', f['name'].lower())):
@@ -786,6 +786,8 @@ def classes_reg(files):
             lines += [f";; {dll.removesuffix('.dll')}: {c['name']}",
                       f"[Software\\\\Classes\\\\CLSID\\\\{{{c['clsid']}}}\\\\InprocServer32]",
                       f'@="{dll}"', f'"ThreadingModel"="{c["threading"]}"', '']
+    lines += classes.crypto_registry(card / f['path'] / f['name']
+                                     for f in sorted(files, key=lambda f: (f['arch'] != 'aarch64', f['name'].lower())))
     return '\n'.join(lines)
 
 def write_notice(manifest, licenses, extra_licenses):

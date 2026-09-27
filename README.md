@@ -17,6 +17,9 @@ says which, and where their source is. None of it is Microsoft's.
 The repository is laid out as the SD card is: `switch/wine/drive_c/` holds the
 files, and `switch/wine/horizon-dlls/` the manifest that describes them and
 `classes.reg`, the COM classes they serve, which the runtime loads.
+`compressed/` holds each file again, zlib-compressed, which is what Autorun
+downloads: a fifth of the size, since the ARM64X modules are laid out in
+64 KiB blocks that are mostly padding.
 
 ## Categories
 
@@ -68,8 +71,10 @@ files[]       one per file:
   category    the part of Windows it belongs to
   version     this file's own version; it changes only when its bytes do
   size, sha256, url
-              what to download and how to check it; url is the file's raw
-              path on the published branch
+              the file and how to check it; url is its raw path on the
+              published branch
+  compressed  encoding (zlib), size, sha256 and url of the copy to download,
+              which unpacks to the file
   source      repo, the commit it was built from, origin (wine, autorun, fex,
               dxvk, vkd3d-proton), the source paths, whether they changed
               since Wine was imported, and for a file built from other

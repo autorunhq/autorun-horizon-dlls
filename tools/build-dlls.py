@@ -68,6 +68,7 @@ import struct
 import subprocess
 import sys
 import tempfile
+import zlib
 
 from autorun import root, probe, toolchain
 
@@ -505,7 +506,7 @@ def main():
     assert re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._/-]*', args.ref) and '..' not in args.ref
     assert args.jobs > 0
 
-    assert not repo_git('status', '--porcelain', '--', 'switch', 'LICENSES', 'README.md', 'NOTICE.md'), \
+    assert not repo_git('status', '--porcelain', '--', 'switch', 'compressed', 'LICENSES', 'README.md', 'NOTICE.md'), \
         f'{repo} has uncommitted changes to what it builds'
     card = repo / 'switch/wine'
     previous = json.loads((card / MANIFEST).read_text()) if (card / MANIFEST).exists() else None
@@ -693,6 +694,28 @@ def main():
     for key in set(earlier) - kept_paths:
         (card / key).unlink(missing_ok=True)
 
+    # What a card downloads: each file compressed, a fifth of its size or less,
+    # since the ARM64X modules are laid out in 64 KiB blocks that are mostly
+    # padding. The files as they are stay in switch/, for a copy made by hand.
+    packed = repo / 'compressed/switch/wine'
+    wanted = set()
+    for f in files:
+        before = earlier.get(f"{f['path']}/{f['name']}")
+        target = packed / f['path'] / (f['name'] + '.z')
+        wanted.add(target)
+        if before and before.get('compressed') and before['sha256'] == f['sha256'] and target.is_file():
+            f['compressed'] = before['compressed']
+        else:
+            data = zlib.compress((card / f['path'] / f['name']).read_bytes(), 9)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(data)
+            f['compressed'] = dict(encoding='zlib', size=len(data), sha256=hashlib.sha256(data).hexdigest())
+        f['compressed']['url'] = f"{RAW}/{args.ref}/compressed/switch/wine/{f['path']}/{f['name']}.z"
+    if packed.is_dir():
+        for stale in packed.rglob('*'):
+            if stale.is_file() and stale not in wanted:
+                stale.unlink()
+
     manifest = dict(schema=SCHEMA, flavor=FLAVOR,
                     source=dict(repo=SOURCE_REPO, commit=commit, wine=WINE_VERSION, wine_import=WINE_IMPORT),
                     categories={name: description for name, description, _ in CATEGORIES},
@@ -722,6 +745,7 @@ def main():
           f'({sum(f["size"] for f in new) >> 20} MB); source {commit[:12]}')
     for f in new[:40]:
         print(f'  {f["path"]}/{f["name"]} v{f["version"]}')
+    print(f'  download: {sum(f["compressed"]["size"] for f in files) >> 20} MB compressed')
     print(f'  tied to the runtime: {", ".join(f["arch"] + " " + f["name"] for f in files if f["requires"]["features"])}')
     print(f'  classes: {sum(len(f["classes"]) for f in files)}')
     if unresolved:
@@ -791,6 +815,9 @@ says which, and where their source is. None of it is Microsoft's.
 The repository is laid out as the SD card is: `switch/wine/drive_c/` holds the
 files, and `switch/wine/horizon-dlls/` the manifest that describes them and
 `classes.reg`, the COM classes they serve, which the runtime loads.
+`compressed/` holds each file again, zlib-compressed, which is what Autorun
+downloads: a fifth of the size, since the ARM64X modules are laid out in
+64 KiB blocks that are mostly padding.
 
 ## Categories
 
@@ -817,8 +844,10 @@ files[]       one per file:
   category    the part of Windows it belongs to
   version     this file's own version; it changes only when its bytes do
   size, sha256, url
-              what to download and how to check it; url is the file's raw
-              path on the published branch
+              the file and how to check it; url is its raw path on the
+              published branch
+  compressed  encoding (zlib), size, sha256 and url of the copy to download,
+              which unpacks to the file
   source      repo, the commit it was built from, origin (wine, autorun, fex,
               dxvk, vkd3d-proton), the source paths, whether they changed
               since Wine was imported, and for a file built from other

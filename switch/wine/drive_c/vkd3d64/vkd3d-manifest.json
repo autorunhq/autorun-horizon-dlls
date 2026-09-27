@@ -1,0 +1,30 @@
+{
+  "version": "3.0.1",
+  "revision": "3b10bd7a7ec6a7347e616cf8bea59333afec2255",
+  "architecture": "x86_64",
+  "submodules": [
+    "f88a2d766840fc825af1fc065977953ba1fa4a91 khronos/SPIRV-Headers (f88a2d7)",
+    " ad9ce1235e88dc09287e19171dfac384db8ec32c khronos/Vulkan-Headers (ad9ce12)",
+    " 62dbb07f771534c8ce924479efdc6c8fa510361d subprojects/dxil-spirv (62dbb07)",
+    " 29c93aeecd55533a357fdd7c95be5587d1c1f506 subprojects/dxil-spirv/subprojects/dxbc-spirv (29c93ae)",
+    " c8ad050fcb29e42a2f57d9f59e97488f465c436d subprojects/dxil-spirv/subprojects/dxbc-spirv/submodules/spirv_headers (c8ad050)",
+    " 4b7bcb7e5cf71015b3299088d22004bfe4e13a5e subprojects/dxil-spirv/third_party/SPIRV-Cross (4b7bcb7)",
+    " 64f5770f59db933d46b9cad6edc42b4186409ef4 subprojects/dxil-spirv/third_party/SPIRV-Tools (64f5770)",
+    " f88a2d766840fc825af1fc065977953ba1fa4a91 subprojects/dxil-spirv/third_party/spirv-headers (f88a2d7)"
+  ],
+  "compiler": "clang version 22.1.5 (https://github.com/llvm/llvm-project.git 5ea218a153f4d2f815b8244eab3e4b4ba5e00e6c)",
+  "files": {
+    "d3d12.dll": "6a9f7d7c8c1293802778fada0dbce120dee09249535f8ec12c133f9bd95dc196",
+    "d3d12core.dll": "de3bb3b5ebd3d284c8f5aa96e301e59c2b285ee802cb0170a6b1b4865e8abdfc"
+  },
+  "licenses": [
+    "DXIL-SPIRV-license.txt",
+    "VKD3D-DXBC-SPIRV-license.txt",
+    "VKD3D-LLVM-runtime-license.txt",
+    "VKD3D-Proton-LGPL-2.1.txt",
+    "VKD3D-Proton-authors.txt",
+    "VKD3D-Proton-copyright.txt",
+    "VKD3D-SPIRV-Headers-license.txt",
+    "VKD3D-Vulkan-Headers-license.txt"
+  ]
+}

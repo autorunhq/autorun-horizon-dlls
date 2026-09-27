@@ -1,0 +1,3208 @@
+WINE REGISTRY Version 2
+;; The COM classes these DLLs serve, from the IDL each is built from and the
+;; registration script widl builds into it. Written by tools/build-dlls.py.
+
+;; activeds: Pathname
+[Software\\Classes\\CLSID\\{080d0d78-f421-11d0-a36e-00c04fb950dc}\\InprocServer32]
+@="activeds.dll"
+"ThreadingModel"="Both"
+
+;; activeds: DNWithString
+[Software\\Classes\\CLSID\\{334857cc-f934-11d2-ba96-00c04fb6d0d1}\\InprocServer32]
+@="activeds.dll"
+"ThreadingModel"="Both"
+
+;; activeds: DNWithBinary
+[Software\\Classes\\CLSID\\{7e99c0a3-f935-11d2-ba96-00c04fb6d0d1}\\InprocServer32]
+@="activeds.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{b8da6310-e19b-11d0-933c-00a0c90dcaa9}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: ShellFolderViewOC
+[Software\\Classes\\CLSID\\{9ba05971-f6a8-11cf-a442-00a0c90a8f39}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: Shell
+[Software\\Classes\\CLSID\\{13709620-c279-11ce-a49e-444553540000}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: ShellDispatchInproc
+[Software\\Classes\\CLSID\\{0a89a860-d7b1-11ce-8350-444553540000}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: ShellFolderView
+[Software\\Classes\\CLSID\\{62112aa1-ebe4-11cf-a5fb-0020afe7292d}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: ShellLinkObject
+[Software\\Classes\\CLSID\\{11219420-1768-11d1-95be-00609797ea4f}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: ExplorerBrowser
+[Software\\Classes\\CLSID\\{71f96385-ddd6-48d3-a0c1-ae06e8b055fb}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: FileOpenDialog
+[Software\\Classes\\CLSID\\{dc1c5a9c-e88a-4dde-a5a1-60f82a20aef7}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: FileSaveDialog
+[Software\\Classes\\CLSID\\{c0b4e2f3-ba21-4773-8dba-335ec946eb8b}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: NamespaceTreeControl
+[Software\\Classes\\CLSID\\{ae054212-3535-4430-83ed-d501aa6680e6}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: KnownFolderManager
+[Software\\Classes\\CLSID\\{4df0c730-df9d-4ae3-9153-aa6b82e9795a}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: ApplicationAssociationRegistration
+[Software\\Classes\\CLSID\\{591209c7-767b-42b2-9fba-44ee4615f2c7}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: ApplicationDestinations
+[Software\\Classes\\CLSID\\{86c14003-4d6b-4ef3-a7b4-0506663b2e68}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: ApplicationDocumentLists
+[Software\\Classes\\CLSID\\{86bec222-30f2-47e0-9f25-60d11cd75c28}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: ShellLink
+[Software\\Classes\\CLSID\\{00021401-0000-0000-c000-000000000046}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: TaskbarList
+[Software\\Classes\\CLSID\\{56fdf344-fd6d-11d0-958a-006097c9a090}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: DestinationList
+[Software\\Classes\\CLSID\\{77f10cf0-3db5-4966-b520-b7c54fd35ed6}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: EnumerableObjectCollection
+[Software\\Classes\\CLSID\\{2d3468c1-36a7-43b6-ac24-d3f02fd9607a}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: QueryCancelAutoPlay
+[Software\\Classes\\CLSID\\{331f1768-05a9-4ddd-b86e-dae34ddc998a}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: ApplicationActivationManager
+[Software\\Classes\\CLSID\\{45ba127d-10a8-46ea-8ab7-56ea9078943c}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; actxprxy: FileOperation
+[Software\\Classes\\CLSID\\{3ad05575-8857-4850-9277-11b85bdb8e09}\\InprocServer32]
+@="actxprxy.dll"
+"ThreadingModel"="Both"
+
+;; adsldp: LDAP
+[Software\\Classes\\CLSID\\{228d9a81-c302-11cf-9aa4-00aa004a5691}\\InprocServer32]
+@="adsldp.dll"
+"ThreadingModel"="Both"
+
+;; adsldp: ADs
+[Software\\Classes\\CLSID\\{228d9a82-c302-11cf-9aa4-00aa004a5691}\\InprocServer32]
+@="adsldp.dll"
+"ThreadingModel"="Both"
+
+;; adsldp: ADSystemInfo
+[Software\\Classes\\CLSID\\{50b6327f-afd1-11d2-9cb9-0000f87a369e}\\InprocServer32]
+@="adsldp.dll"
+"ThreadingModel"="Both"
+
+;; amstream: MediaStreamFilter
+[Software\\Classes\\CLSID\\{49c47ce0-9ba4-11d0-8212-00c04fc32c45}\\InprocServer32]
+@="amstream.dll"
+"ThreadingModel"="Both"
+
+;; amstream: AMDirectDrawStream
+[Software\\Classes\\CLSID\\{49c47ce4-9ba4-11d0-8212-00c04fc32c45}\\InprocServer32]
+@="amstream.dll"
+"ThreadingModel"="Both"
+
+;; amstream: AMAudioStream
+[Software\\Classes\\CLSID\\{8496e040-af4c-11d0-8212-00c04fc32c45}\\InprocServer32]
+@="amstream.dll"
+"ThreadingModel"="Both"
+
+;; amstream: AMMultiMediaStream
+[Software\\Classes\\CLSID\\{49c47ce5-9ba4-11d0-8212-00c04fc32c45}\\InprocServer32]
+@="amstream.dll"
+"ThreadingModel"="Both"
+
+;; amstream: AMAudioData
+[Software\\Classes\\CLSID\\{f2468580-af8a-11d0-8212-00c04fc32c45}\\InprocServer32]
+@="amstream.dll"
+"ThreadingModel"="Both"
+
+;; atl: Registrar
+[Software\\Classes\\CLSID\\{44ec053a-400f-11d0-9dcd-00a0c90391d3}\\InprocServer32]
+@="atl.dll"
+"ThreadingModel"="Both"
+
+;; avifil32: AVIFile
+[Software\\Classes\\CLSID\\{00020000-0000-0000-c000-000000000046}\\InprocServer32]
+@="avifil32.dll"
+"ThreadingModel"="Both"
+
+;; avifil32: ICMStream
+[Software\\Classes\\CLSID\\{00020001-0000-0000-c000-000000000046}\\InprocServer32]
+@="avifil32.dll"
+"ThreadingModel"="Both"
+
+;; avifil32: WAVFile
+[Software\\Classes\\CLSID\\{00020003-0000-0000-c000-000000000046}\\InprocServer32]
+@="avifil32.dll"
+"ThreadingModel"="Both"
+
+;; avifil32: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{0002000d-0000-0000-c000-000000000046}\\InprocServer32]
+@="avifil32.dll"
+"ThreadingModel"="Both"
+
+;; avifil32: ACMStream
+[Software\\Classes\\CLSID\\{0002000f-0000-0000-c000-000000000046}\\InprocServer32]
+@="avifil32.dll"
+"ThreadingModel"="Both"
+
+;; browseui: ACLMulti
+[Software\\Classes\\CLSID\\{00bb2765-6a77-11d0-a535-00c04fd7d062}\\InprocServer32]
+@="browseui.dll"
+"ThreadingModel"="Apartment"
+
+;; browseui: ProgressDialog
+[Software\\Classes\\CLSID\\{f8383852-fcd3-11d1-a6b9-006097df5bd4}\\InprocServer32]
+@="browseui.dll"
+"ThreadingModel"="Both"
+
+;; browseui: CompCatCacheDaemon
+[Software\\Classes\\CLSID\\{8c7461ef-2b13-11d2-be35-3078302c2030}\\InprocServer32]
+@="browseui.dll"
+"ThreadingModel"="Apartment"
+
+;; browseui: ACListISF
+[Software\\Classes\\CLSID\\{03c036f1-a186-11d0-824a-00aa005b4383}\\InprocServer32]
+@="browseui.dll"
+"ThreadingModel"="Apartment"
+
+;; colorcnv: CColorConvertDMO
+[Software\\Classes\\CLSID\\{98230571-0087-4204-b020-3282538e57d3}\\InprocServer32]
+@="colorcnv.dll"
+"ThreadingModel"="Both"
+
+;; comsvcs: NewMoniker
+[Software\\Classes\\CLSID\\{ecabafc6-7f19-11d2-978e-0000f8757e2a}\\InprocServer32]
+@="comsvcs.dll"
+"ThreadingModel"="Both"
+
+;; comsvcs: DispenserManager
+[Software\\Classes\\CLSID\\{ecabb0c0-7f19-11d2-978e-0000f8757e2a}\\InprocServer32]
+@="comsvcs.dll"
+"ThreadingModel"="Both"
+
+;; comsvcs: SharedPropertyGroupManager
+[Software\\Classes\\CLSID\\{2a005c11-a5de-11cf-9e66-00aa00a3f464}\\InprocServer32]
+@="comsvcs.dll"
+"ThreadingModel"="Both"
+
+;; d3dxof: CDirectXFile
+[Software\\Classes\\CLSID\\{4516ec43-8f20-11d0-9b6d-0000c0781bc3}\\InprocServer32]
+@="d3dxof.dll"
+"ThreadingModel"="Both"
+
+;; ddraw: DirectDraw
+[Software\\Classes\\CLSID\\{d7b70ee0-4340-11cf-b063-0020afc2cd35}\\InprocServer32]
+@="ddraw.dll"
+"ThreadingModel"="Both"
+
+;; ddraw: DirectDraw7
+[Software\\Classes\\CLSID\\{3c305196-50db-11d3-9cfe-00c04fd930c5}\\InprocServer32]
+@="ddraw.dll"
+"ThreadingModel"="Both"
+
+;; ddraw: DirectDrawClipper
+[Software\\Classes\\CLSID\\{593817a0-7db3-11cf-a2de-00aa00b93356}\\InprocServer32]
+@="ddraw.dll"
+"ThreadingModel"="Both"
+
+;; ddrawex: DirectDrawFactory
+[Software\\Classes\\CLSID\\{4fd2a832-86c8-11d0-8fca-00c04fd9189d}\\InprocServer32]
+@="ddrawex.dll"
+"ThreadingModel"="Both"
+
+;; devenum: SystemDeviceEnum
+[Software\\Classes\\CLSID\\{62be5d10-60eb-11d0-bd3b-00a0c911ce86}\\InprocServer32]
+@="devenum.dll"
+"ThreadingModel"="Both"
+
+;; devenum: DeviceMoniker
+[Software\\Classes\\CLSID\\{4315d437-5b8c-11d0-bd3b-00a0c911ce86}\\InprocServer32]
+@="devenum.dll"
+"ThreadingModel"="Both"
+
+;; devenum: AudioCompressorCategory
+[Software\\Classes\\CLSID\\{33d9a761-90c8-11d0-bd43-00a0c911ce86}\\InprocServer32]
+@="devenum.dll"
+"ThreadingModel"="Both"
+
+;; devenum: VideoCompressorCategory
+[Software\\Classes\\CLSID\\{33d9a760-90c8-11d0-bd43-00a0c911ce86}\\InprocServer32]
+@="devenum.dll"
+"ThreadingModel"="Both"
+
+;; devenum: LegacyAmFilterCategory
+[Software\\Classes\\CLSID\\{083863f1-70de-11d0-bd40-00a0c911ce86}\\InprocServer32]
+@="devenum.dll"
+"ThreadingModel"="Both"
+
+;; devenum: VideoInputDeviceCategory
+[Software\\Classes\\CLSID\\{860bb310-5d01-11d0-bd3b-00a0c911ce86}\\InprocServer32]
+@="devenum.dll"
+"ThreadingModel"="Both"
+
+;; devenum: AudioInputDeviceCategory
+[Software\\Classes\\CLSID\\{33d9a762-90c8-11d0-bd43-00a0c911ce86}\\InprocServer32]
+@="devenum.dll"
+"ThreadingModel"="Both"
+
+;; devenum: AudioRendererCategory
+[Software\\Classes\\CLSID\\{e0f158e1-cb04-11d0-bd4e-00a0c911ce86}\\InprocServer32]
+@="devenum.dll"
+"ThreadingModel"="Both"
+
+;; devenum: MidiRendererCategory
+[Software\\Classes\\CLSID\\{4efe2452-168a-11d1-bc76-00c04fb9453b}\\InprocServer32]
+@="devenum.dll"
+"ThreadingModel"="Both"
+
+;; devenum: ActiveMovieCategories
+[Software\\Classes\\CLSID\\{da4e3da0-d07d-11d0-bd50-00a0c911ce86}\\InprocServer32]
+@="devenum.dll"
+"ThreadingModel"="Both"
+
+;; dhtmled.ocx: DHTMLSafe
+[Software\\Classes\\CLSID\\{2d360201-fff5-11d1-8d03-00a0c959bc0a}\\InprocServer32]
+@="dhtmled.ocx"
+"ThreadingModel"="Apartment"
+
+;; dhtmled.ocx: DHTMLEdit
+[Software\\Classes\\CLSID\\{2d360200-fff5-11d1-8d03-00a0c959bc0a}\\InprocServer32]
+@="dhtmled.ocx"
+"ThreadingModel"="Apartment"
+
+;; dinput: DirectInput
+[Software\\Classes\\CLSID\\{25e609e0-b259-11cf-bfc7-444553540000}\\InprocServer32]
+@="dinput.dll"
+"ThreadingModel"="Both"
+
+;; dinput: DirectInputDevice
+[Software\\Classes\\CLSID\\{25e609e1-b259-11cf-bfc7-444553540000}\\InprocServer32]
+@="dinput.dll"
+"ThreadingModel"="Both"
+
+;; dinput8: DirectInput8
+[Software\\Classes\\CLSID\\{25e609e4-b259-11cf-bfc7-444553540000}\\InprocServer32]
+@="dinput8.dll"
+"ThreadingModel"="Both"
+
+;; dinput8: DirectInputDevice
+[Software\\Classes\\CLSID\\{25e609e5-b259-11cf-bfc7-444553540000}\\InprocServer32]
+@="dinput8.dll"
+"ThreadingModel"="Both"
+
+;; directmanipulation: DirectManipulationManager
+[Software\\Classes\\CLSID\\{54e211b6-3650-4f75-8334-fa359598e1c5}\\InprocServer32]
+@="directmanipulation.dll"
+"ThreadingModel"="Both"
+
+;; directmanipulation: DirectManipulationSharedManager
+[Software\\Classes\\CLSID\\{99793286-77cc-4b57-96db-3b354f6f9fb5}\\InprocServer32]
+@="directmanipulation.dll"
+"ThreadingModel"="Both"
+
+;; directmanipulation: DCompManipulationCompositor
+[Software\\Classes\\CLSID\\{79dea627-a08a-43ac-8ef5-6900b9299126}\\InprocServer32]
+@="directmanipulation.dll"
+"ThreadingModel"="Both"
+
+;; dispex: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{10e2414a-ec59-49d2-bc51-5add2c36febc}\\InprocServer32]
+@="dispex.dll"
+"ThreadingModel"="Both"
+
+;; dmband: DirectMusicBand
+[Software\\Classes\\CLSID\\{79ba9e00-b6ee-11d1-86be-00c04fbf8fef}\\InprocServer32]
+@="dmband.dll"
+"ThreadingModel"="Both"
+
+;; dmband: DirectMusicBandTrack
+[Software\\Classes\\CLSID\\{d2ac2894-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmband.dll"
+"ThreadingModel"="Both"
+
+;; dmband: DirectMusic
+[Software\\Classes\\CLSID\\{636b9f10-0c7d-11d1-95b2-0020afdc7421}\\InprocServer32]
+@="dmband.dll"
+"ThreadingModel"="Both"
+
+;; dmband: DirectMusicCollection
+[Software\\Classes\\CLSID\\{480ff4b0-28b2-11d1-bef7-00c04fbf8fef}\\InprocServer32]
+@="dmband.dll"
+"ThreadingModel"="Both"
+
+;; dmcompos: DirectMusicChordMap
+[Software\\Classes\\CLSID\\{d2ac288f-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmcompos.dll"
+"ThreadingModel"="Both"
+
+;; dmcompos: DirectMusicComposer
+[Software\\Classes\\CLSID\\{d2ac2890-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmcompos.dll"
+"ThreadingModel"="Both"
+
+;; dmcompos: DirectMusicChordMapTrack
+[Software\\Classes\\CLSID\\{d2ac2896-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmcompos.dll"
+"ThreadingModel"="Both"
+
+;; dmcompos: DirectMusicTemplate
+[Software\\Classes\\CLSID\\{d30bcc65-60e8-11d1-a7ce-00a0c913f73c}\\InprocServer32]
+@="dmcompos.dll"
+"ThreadingModel"="Both"
+
+;; dmcompos: DirectMusicSignPostTrack
+[Software\\Classes\\CLSID\\{f17e8672-c3b4-11d1-870b-00600893b1bd}\\InprocServer32]
+@="dmcompos.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicPerformance
+[Software\\Classes\\CLSID\\{d2ac2881-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicSegment
+[Software\\Classes\\CLSID\\{d2ac2882-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicSegmentState
+[Software\\Classes\\CLSID\\{d2ac2883-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicGraph
+[Software\\Classes\\CLSID\\{d2ac2884-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicTempoTrack
+[Software\\Classes\\CLSID\\{d2ac2885-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicSeqTrack
+[Software\\Classes\\CLSID\\{d2ac2886-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicSysExTrack
+[Software\\Classes\\CLSID\\{d2ac2887-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicTimeSigTrack
+[Software\\Classes\\CLSID\\{d2ac2888-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicSong
+[Software\\Classes\\CLSID\\{aed5f0a5-d972-483d-a384-649dfeb9c181}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicParamControlTrack
+[Software\\Classes\\CLSID\\{4be0537b-5c19-11d3-8bdc-00600893b1b6}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicMarkerTrack
+[Software\\Classes\\CLSID\\{55a8fd00-4288-11d3-9bd1-8a0d61c88835}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicLyricsTrack
+[Software\\Classes\\CLSID\\{995c1cf5-54ff-11d3-8bda-00600893b1b6}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicSegTriggerTrack
+[Software\\Classes\\CLSID\\{bae4d665-4ea1-11d3-8bda-00600893b1b6}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicAudioPath
+[Software\\Classes\\CLSID\\{ee0b9ca0-a81e-11d3-9bd1-0080c7150a74}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmime: DirectMusicWaveTrack
+[Software\\Classes\\CLSID\\{eed36461-9ea5-11d3-9bd1-0080c7150a74}\\InprocServer32]
+@="dmime.dll"
+"ThreadingModel"="Both"
+
+;; dmloader: DirectMusicLoader
+[Software\\Classes\\CLSID\\{d2ac2892-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmloader.dll"
+"ThreadingModel"="Both"
+
+;; dmloader: DirectMusicContainer
+[Software\\Classes\\CLSID\\{9301e380-1f22-11d3-8226-d2fa76255d47}\\InprocServer32]
+@="dmloader.dll"
+"ThreadingModel"="Both"
+
+;; dmscript: DirectMusicScriptAutoImpSegment
+[Software\\Classes\\CLSID\\{4062c116-0270-11d3-8bcb-00600893b1b6}\\InprocServer32]
+@="dmscript.dll"
+"ThreadingModel"="Both"
+
+;; dmscript: DirectMusicScriptTrack
+[Software\\Classes\\CLSID\\{4108fa85-3586-11d3-8bd7-00600893b1b6}\\InprocServer32]
+@="dmscript.dll"
+"ThreadingModel"="Both"
+
+;; dmscript: DirectMusicScript
+[Software\\Classes\\CLSID\\{810b5013-e88d-11d2-8bc1-00600893b1b6}\\InprocServer32]
+@="dmscript.dll"
+"ThreadingModel"="Both"
+
+;; dmscript: DirectMusicScriptAutoImpPerformance
+[Software\\Classes\\CLSID\\{a861c6e2-fcfc-11d2-8bc9-00600893b1b6}\\InprocServer32]
+@="dmscript.dll"
+"ThreadingModel"="Both"
+
+;; dmscript: DirectMusicScriptSourceCodeLoader
+[Software\\Classes\\CLSID\\{c70eb77f-efd4-4678-a27b-bf1648f30d04}\\InprocServer32]
+@="dmscript.dll"
+"ThreadingModel"="Both"
+
+;; dmscript: DirectMusicScriptAutoImpSegmentState
+[Software\\Classes\\CLSID\\{ebf2320a-2502-11d3-8bd1-00600893b1b6}\\InprocServer32]
+@="dmscript.dll"
+"ThreadingModel"="Both"
+
+;; dmscript: DirectMusicScriptAutoImpAudioPathConfig
+[Software\\Classes\\CLSID\\{1cebde3e-6b91-484a-af48-5e4f4ed6b1e1}\\InprocServer32]
+@="dmscript.dll"
+"ThreadingModel"="Both"
+
+;; dmscript: DirectMusicScriptAutoImpAudioPath
+[Software\\Classes\\CLSID\\{2c5f9b72-7148-4d97-bfc9-68a0e076bebd}\\InprocServer32]
+@="dmscript.dll"
+"ThreadingModel"="Both"
+
+;; dmscript: DirectMusicScriptAutoImpSong
+[Software\\Classes\\CLSID\\{a16f1761-b6d8-42eb-8d57-4a44fedd3bd2}\\InprocServer32]
+@="dmscript.dll"
+"ThreadingModel"="Both"
+
+;; dmscript: AudioVBScript
+[Software\\Classes\\CLSID\\{4ee17959-931e-49e4-a2c6-977ecf3628f3}\\InprocServer32]
+@="dmscript.dll"
+"ThreadingModel"="Both"
+
+;; dmstyle: DirectMusicSection
+[Software\\Classes\\CLSID\\{3f037241-414e-11d1-a7ce-00a0c913f73c}\\InprocServer32]
+@="dmstyle.dll"
+"ThreadingModel"="Both"
+
+;; dmstyle: DirectMusicStyle
+[Software\\Classes\\CLSID\\{d2ac288a-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmstyle.dll"
+"ThreadingModel"="Both"
+
+;; dmstyle: DirectMusicChordTrack
+[Software\\Classes\\CLSID\\{d2ac288b-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmstyle.dll"
+"ThreadingModel"="Both"
+
+;; dmstyle: DirectMusicCommandTrack
+[Software\\Classes\\CLSID\\{d2ac288c-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmstyle.dll"
+"ThreadingModel"="Both"
+
+;; dmstyle: DirectMusicStyleTrack
+[Software\\Classes\\CLSID\\{d2ac288d-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmstyle.dll"
+"ThreadingModel"="Both"
+
+;; dmstyle: DirectMusicMotifTrack
+[Software\\Classes\\CLSID\\{d2ac288e-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmstyle.dll"
+"ThreadingModel"="Both"
+
+;; dmstyle: DirectMusicAuditionTrack
+[Software\\Classes\\CLSID\\{d2ac2897-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmstyle.dll"
+"ThreadingModel"="Both"
+
+;; dmstyle: DirectMusicMuteTrack
+[Software\\Classes\\CLSID\\{d2ac2898-b39b-11d1-8704-00600893b1bd}\\InprocServer32]
+@="dmstyle.dll"
+"ThreadingModel"="Both"
+
+;; dmstyle: DirectMusicMelodyFormulationTrack
+[Software\\Classes\\CLSID\\{b0684266-b57f-11d2-97f9-00c04fa36e58}\\InprocServer32]
+@="dmstyle.dll"
+"ThreadingModel"="Both"
+
+;; dmsynth: DirectMusicSynth
+[Software\\Classes\\CLSID\\{58c2b4d0-46e7-11d1-89ac-00a0c9054129}\\InprocServer32]
+@="dmsynth.dll"
+"ThreadingModel"="Both"
+
+;; dmsynth: DirectMusicSynthSink
+[Software\\Classes\\CLSID\\{aec17ce3-a514-11d1-afa6-00aa0024d8b6}\\InprocServer32]
+@="dmsynth.dll"
+"ThreadingModel"="Both"
+
+;; dplayx: DirectPlay
+[Software\\Classes\\CLSID\\{d1eb6d20-8923-11d0-9d97-00a0c90a43cb}\\InprocServer32]
+@="dplayx.dll"
+"ThreadingModel"="Both"
+
+;; dplayx: DirectPlayLobby
+[Software\\Classes\\CLSID\\{2fe8f810-b2a5-11d0-a787-0000f803abfc}\\InprocServer32]
+@="dplayx.dll"
+"ThreadingModel"="Both"
+
+;; dpnet: DirectPlay8Client
+[Software\\Classes\\CLSID\\{743f1dc6-5aba-429f-8bdf-c54d03253dc2}\\InprocServer32]
+@="dpnet.dll"
+"ThreadingModel"="Both"
+
+;; dpnet: DirectPlay8Server
+[Software\\Classes\\CLSID\\{da825e1b-6830-43d7-835d-0b5ad82956a2}\\InprocServer32]
+@="dpnet.dll"
+"ThreadingModel"="Both"
+
+;; dpnet: DirectPlay8Peer
+[Software\\Classes\\CLSID\\{286f484d-375e-4458-a272-b138e2f80a6a}\\InprocServer32]
+@="dpnet.dll"
+"ThreadingModel"="Both"
+
+;; dpnet: DirectPlay8Address
+[Software\\Classes\\CLSID\\{934a9523-a3ca-4bc5-ada0-d6d95d979421}\\InprocServer32]
+@="dpnet.dll"
+"ThreadingModel"="Both"
+
+;; dpnet: DirectPlay8LobbiedApplication
+[Software\\Classes\\CLSID\\{667955ad-6b3b-43ca-b949-bc69b5baff7f}\\InprocServer32]
+@="dpnet.dll"
+"ThreadingModel"="Both"
+
+;; dpnet: DirectPlay8LobbyClient
+[Software\\Classes\\CLSID\\{3b2b6775-70b6-45af-8dea-a209c69559f3}\\InprocServer32]
+@="dpnet.dll"
+"ThreadingModel"="Both"
+
+;; dpnet: DirectPlay8ThreadPool
+[Software\\Classes\\CLSID\\{fc47060e-6153-4b34-b975-8e4121eb7f3c}\\InprocServer32]
+@="dpnet.dll"
+"ThreadingModel"="Both"
+
+;; dpvoice: DirectPlayVoiceClient
+[Software\\Classes\\CLSID\\{b9f3eb85-b781-4ac1-8d90-93a05ee37d7d}\\InprocServer32]
+@="dpvoice.dll"
+"ThreadingModel"="Both"
+
+;; dpvoice: DirectPlayVoiceServer
+[Software\\Classes\\CLSID\\{d3f5b8e6-9b78-4a4c-94ea-ca2397b663d3}\\InprocServer32]
+@="dpvoice.dll"
+"ThreadingModel"="Both"
+
+;; dpvoice: DirectPlayVoiceTest
+[Software\\Classes\\CLSID\\{0f0f094b-b01c-4091-a14d-dd0cd807711a}\\InprocServer32]
+@="dpvoice.dll"
+"ThreadingModel"="Both"
+
+;; dsdmo: DirectSoundI3DL2ReverbDMO
+[Software\\Classes\\CLSID\\{ef985e71-d5c7-42d4-ba4d-2d073e2e96f4}\\InprocServer32]
+@="dsdmo.dll"
+"ThreadingModel"="Both"
+
+;; dsdmo: DirectSoundParamEqDMO
+[Software\\Classes\\CLSID\\{120ced89-3bf4-4173-a132-3cb406cf3231}\\InprocServer32]
+@="dsdmo.dll"
+"ThreadingModel"="Both"
+
+;; dsdmo: DirectSoundWavesReverbDMO
+[Software\\Classes\\CLSID\\{87fc0268-9a55-4360-95aa-004a1d9de26c}\\InprocServer32]
+@="dsdmo.dll"
+"ThreadingModel"="Both"
+
+;; dsdmo: DirectSoundEchoDMO
+[Software\\Classes\\CLSID\\{ef3e932c-d40b-4f51-8ccf-3f98f1b29d5d}\\InprocServer32]
+@="dsdmo.dll"
+"ThreadingModel"="Both"
+
+;; dsdmo: DirectSoundCompressorDMO
+[Software\\Classes\\CLSID\\{ef011f79-4000-406d-87af-bffb3fc39d57}\\InprocServer32]
+@="dsdmo.dll"
+"ThreadingModel"="Both"
+
+;; dsdmo: DirectSoundChorusDMO
+[Software\\Classes\\CLSID\\{efe6629c-81f7-4281-bd91-c9d604a95af6}\\InprocServer32]
+@="dsdmo.dll"
+"ThreadingModel"="Both"
+
+;; dsdmo: DirectSoundFlangerDMO
+[Software\\Classes\\CLSID\\{efca3d92-dfd8-4672-a603-7420894bad98}\\InprocServer32]
+@="dsdmo.dll"
+"ThreadingModel"="Both"
+
+;; dsdmo: DirectSoundDistortionDMO
+[Software\\Classes\\CLSID\\{ef114c90-cd1d-484e-96e5-09cfaf912a21}\\InprocServer32]
+@="dsdmo.dll"
+"ThreadingModel"="Both"
+
+;; dsdmo: DirectSoundGargleDMO
+[Software\\Classes\\CLSID\\{dafd8210-5711-4b91-9fe3-f75b7ae279bf}\\InprocServer32]
+@="dsdmo.dll"
+"ThreadingModel"="Both"
+
+;; dsound: DirectSound
+[Software\\Classes\\CLSID\\{47d4d946-62e8-11cf-93bc-444553540000}\\InprocServer32]
+@="dsound.dll"
+"ThreadingModel"="Both"
+
+;; dsound: DirectSound8
+[Software\\Classes\\CLSID\\{3901cc3f-84b5-4fa4-ba35-aa8172b8a09b}\\InprocServer32]
+@="dsound.dll"
+"ThreadingModel"="Both"
+
+;; dsound: DirectSoundBufferConfig
+[Software\\Classes\\CLSID\\{b2f586d4-5558-49d1-a07b-3249dbbb33c2}\\InprocServer32]
+@="dsound.dll"
+"ThreadingModel"="Both"
+
+;; dsound: DirectSoundCapture
+[Software\\Classes\\CLSID\\{b0210780-89cd-11d0-af08-00a0c925cd16}\\InprocServer32]
+@="dsound.dll"
+"ThreadingModel"="Both"
+
+;; dsound: DirectSoundCapture8
+[Software\\Classes\\CLSID\\{e4bcac13-7f99-4908-9a8e-74e3bf24b6e1}\\InprocServer32]
+@="dsound.dll"
+"ThreadingModel"="Both"
+
+;; dsound: DirectSoundFullDuplex
+[Software\\Classes\\CLSID\\{fea4300c-7959-4147-b26a-2377b9e7a91d}\\InprocServer32]
+@="dsound.dll"
+"ThreadingModel"="Both"
+
+;; dsquery: CommonQuery
+[Software\\Classes\\CLSID\\{83bc5ec0-6f2a-11d0-a1c4-00aa00c16e65}\\InprocServer32]
+@="dsquery.dll"
+"ThreadingModel"="Both"
+
+;; dsuiext: DisplaySpecifier
+[Software\\Classes\\CLSID\\{1ab4a8c0-6a0b-11d2-ad49-00c04fa31a86}\\InprocServer32]
+@="dsuiext.dll"
+"ThreadingModel"="Apartment"
+
+;; dswave: DirectSoundWave
+[Software\\Classes\\CLSID\\{8a667154-f9cb-11d2-ad8a-0060b0575abc}\\InprocServer32]
+@="dswave.dll"
+"ThreadingModel"="Both"
+
+;; dx8vb: D3DX8
+[Software\\Classes\\CLSID\\{58356c5d-0bfd-48ed-93c5-f4520b6233de}\\InprocServer32]
+@="dx8vb.dll"
+"ThreadingModel"="Both"
+
+;; dx8vb: DirectX8
+[Software\\Classes\\CLSID\\{e7ff1300-96a5-11d3-ac85-00c04fc2c602}\\InprocServer32]
+@="dx8vb.dll"
+"ThreadingModel"="Both"
+
+;; dxdiagn: DxDiagProvider
+[Software\\Classes\\CLSID\\{a65b8071-3bfe-4213-9a5b-491da4461ca7}\\InprocServer32]
+@="dxdiagn.dll"
+"ThreadingModel"="Apartment"
+
+;; evr: EnhancedVideoRenderer
+[Software\\Classes\\CLSID\\{fa10746c-9b63-4b6c-bc49-fc300ea5f256}\\InprocServer32]
+@="evr.dll"
+"ThreadingModel"="Both"
+
+;; evr: MFVideoMixer9
+[Software\\Classes\\CLSID\\{e474e05a-ab65-4f6a-827c-218b1baaf31f}\\InprocServer32]
+@="evr.dll"
+"ThreadingModel"="Both"
+
+;; evr: MFVideoPresenter9
+[Software\\Classes\\CLSID\\{98455561-5136-4d28-ab08-4cee40ea2781}\\InprocServer32]
+@="evr.dll"
+"ThreadingModel"="Both"
+
+;; gameux: GameExplorer
+[Software\\Classes\\CLSID\\{9a5ea990-3034-4d6f-9128-01f3c61022bc}\\InprocServer32]
+@="gameux.dll"
+"ThreadingModel"="Both"
+
+;; gameux: GameStatistics
+[Software\\Classes\\CLSID\\{dbc85a2c-c0dc-4961-b6e2-d28b62c11ad4}\\InprocServer32]
+@="gameux.dll"
+"ThreadingModel"="Both"
+
+;; hhctrl.ocx: HHCtrl Object
+[Software\\Classes\\CLSID\\{adb880a6-d8ff-11cf-9377-00aa003b7a11}\\InprocServer32]
+@="hhctrl.ocx"
+"ThreadingModel"="Apartment"
+
+;; hhctrl.ocx: HHCtrl Object
+[Software\\Classes\\CLSID\\{41b23c28-488e-4e5c-ace2-bb0bbabe99e8}\\InprocServer32]
+@="hhctrl.ocx"
+"ThreadingModel"="Apartment"
+
+;; hhctrl.ocx: HHCtrl Object
+[Software\\Classes\\CLSID\\{52a2aaae-085d-4187-97ea-8c30db990436}\\InprocServer32]
+@="hhctrl.ocx"
+"ThreadingModel"="Apartment"
+
+;; hlink: StdHlink
+[Software\\Classes\\CLSID\\{79eac9d0-baf9-11ce-8c82-00aa004ba90b}\\InprocServer32]
+@="hlink.dll"
+"ThreadingModel"="Apartment"
+
+;; hlink: StdHlinkBrowseContext
+[Software\\Classes\\CLSID\\{79eac9d1-baf9-11ce-8c82-00aa004ba90b}\\InprocServer32]
+@="hlink.dll"
+"ThreadingModel"="Apartment"
+
+;; hnetcfg: NetFwMgr
+[Software\\Classes\\CLSID\\{304ce942-6e39-40d8-943a-b913c40c9cd4}\\InprocServer32]
+@="hnetcfg.dll"
+"ThreadingModel"="Both"
+
+;; hnetcfg: NetFwAuthorizedApplication
+[Software\\Classes\\CLSID\\{ec9846b3-2762-4a6b-a214-6acb603462d2}\\InprocServer32]
+@="hnetcfg.dll"
+"ThreadingModel"="Both"
+
+;; hnetcfg: NetFwOpenPort
+[Software\\Classes\\CLSID\\{0ca545c6-37ad-4a6c-bf92-9f7610067ef5}\\InprocServer32]
+@="hnetcfg.dll"
+"ThreadingModel"="Both"
+
+;; hnetcfg: NetFwPolicy2
+[Software\\Classes\\CLSID\\{e2b3c97f-6ae1-41ac-817a-f6f92166d7dd}\\InprocServer32]
+@="hnetcfg.dll"
+"ThreadingModel"="Both"
+
+;; hnetcfg: NetFwRule
+[Software\\Classes\\CLSID\\{2c5bc43e-3369-4c33-ab0c-be9469677af4}\\InprocServer32]
+@="hnetcfg.dll"
+"ThreadingModel"="Both"
+
+;; hnetcfg: NetFwProduct
+[Software\\Classes\\CLSID\\{9d745ed8-c514-4d1d-bf42-751fed2d5ac7}\\InprocServer32]
+@="hnetcfg.dll"
+"ThreadingModel"="Both"
+
+;; hnetcfg: NetFwProducts
+[Software\\Classes\\CLSID\\{cc19079b-8272-4d73-bb70-cdb533527b61}\\InprocServer32]
+@="hnetcfg.dll"
+"ThreadingModel"="Both"
+
+;; hnetcfg: UPnPNAT
+[Software\\Classes\\CLSID\\{ae1e00aa-3fd5-403c-8a27-2bbdc30cd0e1}\\InprocServer32]
+@="hnetcfg.dll"
+"ThreadingModel"="Apartment"
+
+;; ia2comproxy: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{01c20f2b-3dd2-400f-949f-ad00bdab1d41}\\InprocServer32]
+@="ia2comproxy.dll"
+"ThreadingModel"="Both"
+
+;; ia2comproxy: CAccPropServices
+[Software\\Classes\\CLSID\\{b5f8350b-0548-48b1-a6ee-88bd00b4a5e7}\\InprocServer32]
+@="ia2comproxy.dll"
+"ThreadingModel"="Both"
+
+;; ieframe: WebBrowser_V1
+[Software\\Classes\\CLSID\\{eab22ac3-30c1-11cf-a7eb-0000c05bae0b}\\InprocServer32]
+@="ieframe.dll"
+"ThreadingModel"="Both"
+
+;; ieframe: WebBrowser
+[Software\\Classes\\CLSID\\{8856f961-340a-11d0-a96b-00c04fd705a2}\\InprocServer32]
+@="ieframe.dll"
+"ThreadingModel"="Both"
+
+;; ieframe: InternetExplorer
+[Software\\Classes\\CLSID\\{0002df01-0000-0000-c000-000000000046}\\InprocServer32]
+@="ieframe.dll"
+"ThreadingModel"="Both"
+
+;; ieframe: ShellBrowserWindow
+[Software\\Classes\\CLSID\\{c08afd90-f2a1-11d1-8455-00a0c91f3880}\\InprocServer32]
+@="ieframe.dll"
+"ThreadingModel"="Both"
+
+;; ieframe: ShellWindows
+[Software\\Classes\\CLSID\\{9ba05972-f6a8-11cf-a442-00a0c90a8f39}\\InprocServer32]
+@="ieframe.dll"
+"ThreadingModel"="Both"
+
+;; ieframe: ShellUIHelper
+[Software\\Classes\\CLSID\\{64ab4bb7-111e-11d1-8f79-00c04fc2fbe1}\\InprocServer32]
+@="ieframe.dll"
+"ThreadingModel"="Both"
+
+;; ieframe: ShellShellNameSpace
+[Software\\Classes\\CLSID\\{2f2f1f96-2bc1-4b1c-be28-ea3774f4676a}\\InprocServer32]
+@="ieframe.dll"
+"ThreadingModel"="Both"
+
+;; ieframe: ShellNameSpace
+[Software\\Classes\\CLSID\\{55136805-b2de-11d1-b9f2-00a0c98bc547}\\InprocServer32]
+@="ieframe.dll"
+"ThreadingModel"="Both"
+
+;; ieframe: CScriptErrorList
+[Software\\Classes\\CLSID\\{efd01300-160f-11d2-bb2e-00805ff7efca}\\InprocServer32]
+@="ieframe.dll"
+"ThreadingModel"="Both"
+
+;; ieframe: ShellSearchAssistantOC
+[Software\\Classes\\CLSID\\{2e71fd0f-aab1-42c0-9146-6d2c4edcf07d}\\InprocServer32]
+@="ieframe.dll"
+"ThreadingModel"="Both"
+
+;; ieframe: SearchAssistantOC
+[Software\\Classes\\CLSID\\{b45ff030-4447-11d2-85de-00c04fa35c89}\\InprocServer32]
+@="ieframe.dll"
+"ThreadingModel"="Both"
+
+;; ieframe: Internet
+[Software\\Classes\\CLSID\\{871c5380-42a0-1069-a2ea-08002b30309d}\\InprocServer32]
+@="ieframe.dll"
+"ThreadingModel"="Both"
+
+;; ieframe: CUrlHistory
+[Software\\Classes\\CLSID\\{3c374a40-bae4-11cf-bf7d-00aa006946ee}\\InprocServer32]
+@="ieframe.dll"
+"ThreadingModel"="Both"
+
+;; ieframe: InternetShortcut
+[Software\\Classes\\CLSID\\{fbf23b40-e3f0-101b-8488-00aa003e56f8}\\InprocServer32]
+@="ieframe.dll"
+"ThreadingModel"="Both"
+
+;; ieproxy: InternetExplorerManager
+[Software\\Classes\\CLSID\\{df4fcc34-067a-4e0a-8352-4a1a5095346e}\\InprocServer32]
+@="ieproxy.dll"
+"ThreadingModel"="Both"
+
+;; ieproxy: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{a4a1a128-768f-41e0-bf75-e4fddd701cba}\\InprocServer32]
+@="ieproxy.dll"
+"ThreadingModel"="Both"
+
+;; iertutil: CUri
+[Software\\Classes\\CLSID\\{df2fce13-25ec-45bb-9d4c-cecd47c2430c}\\InprocServer32]
+@="iertutil.dll"
+"ThreadingModel"="Apartment"
+
+;; inetcomm: IMimeBody
+[Software\\Classes\\CLSID\\{fd853cdb-7f86-11d0-8252-00c04fd85ab4}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: IMimeAllocator
+[Software\\Classes\\CLSID\\{fd853cdd-7f86-11d0-8252-00c04fd85ab4}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: IMimeSecurity
+[Software\\Classes\\CLSID\\{fd853cde-7f86-11d0-8252-00c04fd85ab4}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: IVirtualStream
+[Software\\Classes\\CLSID\\{fd853cdf-7f86-11d0-8252-00c04fd85ab4}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: IMimeMessage
+[Software\\Classes\\CLSID\\{fd853ce3-7f86-11d0-8252-00c04fd85ab4}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: ISMTPTransport
+[Software\\Classes\\CLSID\\{fd853ce6-7f86-11d0-8252-00c04fd85ab4}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: IPOP3Transport
+[Software\\Classes\\CLSID\\{fd853ce7-7f86-11d0-8252-00c04fd85ab4}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: INNTPTransport
+[Software\\Classes\\CLSID\\{fd853ce8-7f86-11d0-8252-00c04fd85ab4}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: IRASTransport
+[Software\\Classes\\CLSID\\{fd853ce9-7f86-11d0-8252-00c04fd85ab4}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: IRangeList
+[Software\\Classes\\CLSID\\{fd853cea-7f86-11d0-8252-00c04fd85ab4}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: IIMAPTransport
+[Software\\Classes\\CLSID\\{fd853ceb-7f86-11d0-8252-00c04fd85ab4}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: IHTTPMailTransport
+[Software\\Classes\\CLSID\\{5a580c11-e5eb-11d1-a86e-0000f8084f96}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: ISMTPTransport2
+[Software\\Classes\\CLSID\\{0df2c7ec-3435-11d0-81d0-00c04fd85ab4}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: IPropFindRequest
+[Software\\Classes\\CLSID\\{bb847b8a-054a-11d2-a894-0000f8084f96}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: IPropPatchRequest
+[Software\\Classes\\CLSID\\{ea678830-235d-11d2-a8b6-0000f8084f96}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; inetcomm: MimeHtmlProtocol
+[Software\\Classes\\CLSID\\{05300401-bcbc-11d0-85e3-00c04fd85ab4}\\InprocServer32]
+@="inetcomm.dll"
+"ThreadingModel"="Both"
+
+;; infosoft: wb_Neutral
+[Software\\Classes\\CLSID\\{369647e0-17b0-11ce-9950-00aa004bbb1f}\\InprocServer32]
+@="infosoft.dll"
+"ThreadingModel"="Both"
+
+;; inseng: InstallEngine
+[Software\\Classes\\CLSID\\{6e449686-c509-11cf-aafa-00aa00b6015c}\\InprocServer32]
+@="inseng.dll"
+"ThreadingModel"="Both"
+
+;; inseng: DownloadSiteMgr
+[Software\\Classes\\CLSID\\{bfc880f1-7484-11d0-8309-00aa00b6015c}\\InprocServer32]
+@="inseng.dll"
+"ThreadingModel"="Both"
+
+;; itss: MSITStore
+[Software\\Classes\\CLSID\\{9d148290-b9c8-11d0-a4cc-0000f80149f6}\\InprocServer32]
+@="itss.dll"
+"ThreadingModel"="Both"
+
+;; itss: ITSProtocol
+[Software\\Classes\\CLSID\\{9d148291-b9c8-11d0-a4cc-0000f80149f6}\\InprocServer32]
+@="itss.dll"
+"ThreadingModel"="Both"
+
+;; itss: MSFSStore
+[Software\\Classes\\CLSID\\{d54eee56-aaab-11d0-9e1d-00a0c922e6ec}\\InprocServer32]
+@="itss.dll"
+"ThreadingModel"="Both"
+
+;; itss: ITStorage
+[Software\\Classes\\CLSID\\{5d02926a-212e-11d0-9df9-00a0c922e6ec}\\InprocServer32]
+@="itss.dll"
+"ThreadingModel"="Both"
+
+;; jscript: JScript
+[Software\\Classes\\CLSID\\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58}\\InprocServer32]
+@="jscript.dll"
+"ThreadingModel"="Both"
+
+;; jscript: JScriptAuthor
+[Software\\Classes\\CLSID\\{f414c261-6ac0-11cf-b6d1-00aa00bbbb58}\\InprocServer32]
+@="jscript.dll"
+"ThreadingModel"="Both"
+
+;; jscript: JScriptEncode
+[Software\\Classes\\CLSID\\{f414c262-6ac0-11cf-b6d1-00aa00bbbb58}\\InprocServer32]
+@="jscript.dll"
+"ThreadingModel"="Both"
+
+;; l3codecx.ax: MPEGLayer3Decoder
+[Software\\Classes\\CLSID\\{38be3000-dbf4-11d0-860e-00a024cfef6d}\\InprocServer32]
+@="l3codecx.ax"
+"ThreadingModel"="Both"
+
+;; mf: FileSchemePlugin
+[Software\\Classes\\CLSID\\{477ec299-1421-4bdd-971f-7ccb933f21ad}\\InprocServer32]
+@="mf.dll"
+"ThreadingModel"="Both"
+
+;; mf: UrlmonSchemePlugin
+[Software\\Classes\\CLSID\\{9ec4b4f9-3029-45ad-947b-344de2a249e2}\\InprocServer32]
+@="mf.dll"
+"ThreadingModel"="Both"
+
+;; mfasfsrcsnk: AsfByteStreamPlugin
+[Software\\Classes\\CLSID\\{41457294-644c-4298-a28a-bd69f2c0cf3b}\\InprocServer32]
+@="mfasfsrcsnk.dll"
+"ThreadingModel"="Both"
+
+;; mfasfsrcsnk: AVIByteStreamPlugin
+[Software\\Classes\\CLSID\\{7afa253e-f823-42f6-a5d9-714bde467412}\\InprocServer32]
+@="mfasfsrcsnk.dll"
+"ThreadingModel"="Both"
+
+;; mfasfsrcsnk: MFWAVESinkClassFactory
+[Software\\Classes\\CLSID\\{36f99745-23c9-4c9c-8dd5-cc31ce964390}\\InprocServer32]
+@="mfasfsrcsnk.dll"
+"ThreadingModel"="Both"
+
+;; mfasfsrcsnk: WAVByteStreamPlugin
+[Software\\Classes\\CLSID\\{42c9b9f5-16fc-47ef-af22-da05f7c842e3}\\InprocServer32]
+@="mfasfsrcsnk.dll"
+"ThreadingModel"="Both"
+
+;; mfasfsrcsnk: MP3ByteStreamPlugin
+[Software\\Classes\\CLSID\\{a82e50ba-8e92-41eb-9df2-433f50ec2993}\\InprocServer32]
+@="mfasfsrcsnk.dll"
+"ThreadingModel"="Both"
+
+;; mfh264enc: CMSH264EncoderMFT
+[Software\\Classes\\CLSID\\{6ca50344-051a-4ded-9779-a43305165e35}\\InprocServer32]
+@="mfh264enc.dll"
+"ThreadingModel"="Both"
+
+;; mfmediaengine: MFMediaEngineClassFactory
+[Software\\Classes\\CLSID\\{b44392da-499b-446b-a4cb-005fead0e6d5}\\InprocServer32]
+@="mfmediaengine.dll"
+"ThreadingModel"="Both"
+
+;; mfmp4srcsnk: MPEG4ByteStreamHandlerPlugin
+[Software\\Classes\\CLSID\\{271c3902-6095-4c45-a22f-20091816ee9e}\\InprocServer32]
+@="mfmp4srcsnk.dll"
+"ThreadingModel"="Both"
+
+;; mfmp4srcsnk: MFMP3SinkClassFactory
+[Software\\Classes\\CLSID\\{11275a82-5e5a-47fd-a01c-3683c12fb196}\\InprocServer32]
+@="mfmp4srcsnk.dll"
+"ThreadingModel"="Both"
+
+;; mfmp4srcsnk: MFMPEG4SinkClassFactory
+[Software\\Classes\\CLSID\\{a22c4fc7-6e91-4e1d-89e9-53b2667b72ba}\\InprocServer32]
+@="mfmp4srcsnk.dll"
+"ThreadingModel"="Both"
+
+;; mfreadwrite: MFReadWriteClassFactory
+[Software\\Classes\\CLSID\\{48e2ed0f-98c2-4a37-bed5-166312ddd83f}\\InprocServer32]
+@="mfreadwrite.dll"
+"ThreadingModel"="Both"
+
+;; mlang: CMultiLanguage
+[Software\\Classes\\CLSID\\{275c23e2-3747-11d0-9fea-00aa003f8646}\\InprocServer32]
+@="mlang.dll"
+"ThreadingModel"="Both"
+
+;; mlang: CMLangString
+[Software\\Classes\\CLSID\\{c04d65cf-b70d-11d0-b188-00aa0038c969}\\InprocServer32]
+@="mlang.dll"
+"ThreadingModel"="Both"
+
+;; mlang: CMLangConvertCharset
+[Software\\Classes\\CLSID\\{d66d6f99-cdaa-11d0-b822-00c04fc9b31f}\\InprocServer32]
+@="mlang.dll"
+"ThreadingModel"="Both"
+
+;; mmcndmgr: MMCVersionInfo
+[Software\\Classes\\CLSID\\{d6fedb1d-cf21-4bd9-af3b-c5468e9c6684}\\InprocServer32]
+@="mmcndmgr.dll"
+"ThreadingModel"="Both"
+
+;; mmdevapi: MMDeviceEnumerator
+[Software\\Classes\\CLSID\\{bcde0395-e52f-467c-8e3d-c4579291692e}\\InprocServer32]
+@="mmdevapi.dll"
+"ThreadingModel"="Both"
+
+;; mp3dmod: CMP3DecMediaObject
+[Software\\Classes\\CLSID\\{bbeea841-0a63-4f52-a7ab-a9b3a84ed38a}\\InprocServer32]
+@="mp3dmod.dll"
+"ThreadingModel"="Both"
+
+;; msado15: Command
+[Software\\Classes\\CLSID\\{00000507-0000-0010-8000-00aa006d2ea4}\\InprocServer32]
+@="msado15.dll"
+"ThreadingModel"="Apartment"
+
+;; msado15: Connection
+[Software\\Classes\\CLSID\\{00000514-0000-0010-8000-00aa006d2ea4}\\InprocServer32]
+@="msado15.dll"
+"ThreadingModel"="Apartment"
+
+;; msado15: Recordset
+[Software\\Classes\\CLSID\\{00000535-0000-0010-8000-00aa006d2ea4}\\InprocServer32]
+@="msado15.dll"
+"ThreadingModel"="Both"
+
+;; msado15: Stream
+[Software\\Classes\\CLSID\\{00000566-0000-0010-8000-00aa006d2ea4}\\InprocServer32]
+@="msado15.dll"
+"ThreadingModel"="Both"
+
+;; msauddecmft: CMSAACDecMFT
+[Software\\Classes\\CLSID\\{32d186a7-218f-4c75-8876-dd77273a8999}\\InprocServer32]
+@="msauddecmft.dll"
+"ThreadingModel"="Both"
+
+;; mscoree: ICLRRuntimeHost
+[Software\\Classes\\CLSID\\{90f1a06e-7712-4762-86b5-7a5eba6bdb01}\\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+
+;; mscoree: CLRRuntimeHost
+[Software\\Classes\\CLSID\\{90f1a06e-7712-4762-86b5-7a5eba6bdb02}\\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+
+;; mscoree: CorMetaDataDispenser
+[Software\\Classes\\CLSID\\{e5cb7a31-7512-11d2-89ce-0080c792e5d8}\\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+
+;; mscoree: CorMetaDataDispenserRuntime
+[Software\\Classes\\CLSID\\{1ec2de53-75cc-11d2-9775-00a0c9b4d50c}\\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+
+;; mscoree: CorRuntimeHost
+[Software\\Classes\\CLSID\\{cb2f6723-ab3a-11d2-9c40-00c04fa30a3e}\\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+
+;; msctf: TF_ThreadMgr
+[Software\\Classes\\CLSID\\{529a9e6b-6587-4f23-ab9e-9c7d683e3c50}\\InprocServer32]
+@="msctf.dll"
+"ThreadingModel"="Apartment"
+
+;; msctf: TF_InputProcessorProfiles
+[Software\\Classes\\CLSID\\{33c53a50-f456-4884-b049-85fd643ecfed}\\InprocServer32]
+@="msctf.dll"
+"ThreadingModel"="Apartment"
+
+;; msctf: TF_CategoryMgr
+[Software\\Classes\\CLSID\\{a4b544a1-438d-4b41-9325-869523e2d6c7}\\InprocServer32]
+@="msctf.dll"
+"ThreadingModel"="Apartment"
+
+;; msctf: TF_LangBarMgr
+[Software\\Classes\\CLSID\\{ebb08c45-6c4a-4fdc-ae53-4eb8c4c7db8e}\\InprocServer32]
+@="msctf.dll"
+"ThreadingModel"="Apartment"
+
+;; msctf: TF_DisplayAttributeMgr
+[Software\\Classes\\CLSID\\{3ce74de4-53d3-4d74-8b83-431b3828ba53}\\InprocServer32]
+@="msctf.dll"
+"ThreadingModel"="Apartment"
+
+;; msctfp: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{b5f8fb3b-393f-4f7c-84cb-504924c2705a}\\InprocServer32]
+@="msctfp.dll"
+"ThreadingModel"="Both"
+
+;; msdaps: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{06210e88-01f5-11d1-b512-0080c781c384}\\InprocServer32]
+@="msdaps.dll"
+"ThreadingModel"="Both"
+
+;; msdaps: wine_row_server
+[Software\\Classes\\CLSID\\{38248178-cf6d-11de-abe5-000c2916d865}\\InprocServer32]
+@="msdaps.dll"
+"ThreadingModel"="Both"
+
+;; msdaps: wine_row_proxy
+[Software\\Classes\\CLSID\\{38248179-cf6d-11de-abe5-000c2916d865}\\InprocServer32]
+@="msdaps.dll"
+"ThreadingModel"="Both"
+
+;; msdaps: wine_rowset_server
+[Software\\Classes\\CLSID\\{3824817a-cf6d-11de-abe5-000c2916d865}\\InprocServer32]
+@="msdaps.dll"
+"ThreadingModel"="Both"
+
+;; msdaps: wine_rowset_proxy
+[Software\\Classes\\CLSID\\{3824817b-cf6d-11de-abe5-000c2916d865}\\InprocServer32]
+@="msdaps.dll"
+"ThreadingModel"="Both"
+
+;; msdasql: MSDASQL
+[Software\\Classes\\CLSID\\{c8b522cb-5cf3-11ce-ade5-00aa0044773d}\\InprocServer32]
+@="msdasql.dll"
+"ThreadingModel"="Both"
+
+;; msdasql: MSDASQLEnumerator
+[Software\\Classes\\CLSID\\{c8b522cd-5cf3-11ce-ade5-00aa0044773d}\\InprocServer32]
+@="msdasql.dll"
+"ThreadingModel"="Both"
+
+;; mshtml: AboutProtocol
+[Software\\Classes\\CLSID\\{3050f406-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CAnchorBrowsePropertyPage
+[Software\\Classes\\CLSID\\{3050f3bb-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CBackgroundPropertyPage
+[Software\\Classes\\CLSID\\{3050f232-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CCDAnchorPropertyPage
+[Software\\Classes\\CLSID\\{3050f1fc-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CCDGenericPropertyPage
+[Software\\Classes\\CLSID\\{3050f17f-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CDocBrowsePropertyPage
+[Software\\Classes\\CLSID\\{3050f3b4-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CDwnBindInfo
+[Software\\Classes\\CLSID\\{3050f3c2-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: ExternalFrameworkSite
+[Software\\Classes\\CLSID\\{3050f163-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CHiFiUses
+[Software\\Classes\\CLSID\\{5aaf51b3-b1f0-11d1-b6ab-00a0c90833e9}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CHtmlComponentConstructor
+[Software\\Classes\\CLSID\\{3050f4f8-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CImageBrowsePropertyPage
+[Software\\Classes\\CLSID\\{3050f3b3-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CInlineStylePropertyPage
+[Software\\Classes\\CLSID\\{3050f296-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CPeerHandler
+[Software\\Classes\\CLSID\\{5aaf51b2-b1f0-11d1-b6ab-00a0c90833e9}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CRecalcEngine
+[Software\\Classes\\CLSID\\{3050f499-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CrSource
+[Software\\Classes\\CLSID\\{65014010-9f62-11d1-a651-00600811d5ce}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CSvrOMUses
+[Software\\Classes\\CLSID\\{3050f4f0-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: HTADocument
+[Software\\Classes\\CLSID\\{3050f5c8-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: HTMLDocument
+[Software\\Classes\\CLSID\\{25336920-03f9-11cf-8fd0-00aa00686f13}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: HTMLPluginDocument
+[Software\\Classes\\CLSID\\{25336921-03f9-11cf-8fd0-00aa00686f13}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: HTMLPopup
+[Software\\Classes\\CLSID\\{3050f667-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: HTMLPopupDoc
+[Software\\Classes\\CLSID\\{3050f67d-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: HTMLServerDoc
+[Software\\Classes\\CLSID\\{3050f4e7-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: HTMLWindowProxy
+[Software\\Classes\\CLSID\\{3050f391-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: CoBMPFilter
+[Software\\Classes\\CLSID\\{607fd4e8-0a03-11d1-ab1d-00c04fc9b304}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: IImgCtx
+[Software\\Classes\\CLSID\\{3050f3d6-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: HTMLLoadOptions
+[Software\\Classes\\CLSID\\{18845040-0fa5-11d1-ba19-00c04fd912d0}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: IntDitherer
+[Software\\Classes\\CLSID\\{05f6fe1a-ecef-11d0-aae7-00c04fc9b304}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: JSProtocol
+[Software\\Classes\\CLSID\\{3050f3b2-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: MailtoProtocol
+[Software\\Classes\\CLSID\\{3050f3da-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: MHTMLDocument
+[Software\\Classes\\CLSID\\{3050f3d9-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: ResProtocol
+[Software\\Classes\\CLSID\\{3050f3bc-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: Scriptlet
+[Software\\Classes\\CLSID\\{ae24fdae-03c6-11d1-8b76-0080c744f389}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: SVGDocumentClass
+[Software\\Classes\\CLSID\\{30590066-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: SysimageProtocol
+[Software\\Classes\\CLSID\\{76e67a63-06e9-11d2-a840-006008059382}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: TridentAPI
+[Software\\Classes\\CLSID\\{429af92c-a51f-11d2-861e-00c04fa35c89}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; mshtml: XHTMLDocumentClass
+[Software\\Classes\\CLSID\\{30590067-98b5-11cf-bb82-00aa00bdce0b}\\InprocServer32]
+@="mshtml.dll"
+"ThreadingModel"="Apartment"
+
+;; msi: MsiServer
+[Software\\Classes\\CLSID\\{000c101c-0000-0000-c000-000000000046}\\InprocServer32]
+@="msi.dll"
+"ThreadingModel"="Both"
+
+;; msi: MsiServerMessage
+[Software\\Classes\\CLSID\\{000c101d-0000-0000-c000-000000000046}\\InprocServer32]
+@="msi.dll"
+"ThreadingModel"="Both"
+
+;; msi: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{000c103e-0000-0000-c000-000000000046}\\InprocServer32]
+@="msi.dll"
+"ThreadingModel"="Both"
+
+;; msi: MsiInstaller
+[Software\\Classes\\CLSID\\{000c1090-0000-0000-c000-000000000046}\\InprocServer32]
+@="msi.dll"
+"ThreadingModel"="Apartment"
+
+;; msi: MsiTransform
+[Software\\Classes\\CLSID\\{000c1082-0000-0000-c000-000000000046}\\InprocServer32]
+@="msi.dll"
+"ThreadingModel"="Both"
+
+;; msi: MsiDatabase
+[Software\\Classes\\CLSID\\{000c1084-0000-0000-c000-000000000046}\\InprocServer32]
+@="msi.dll"
+"ThreadingModel"="Both"
+
+;; msi: MsiPatch
+[Software\\Classes\\CLSID\\{000c1086-0000-0000-c000-000000000046}\\InprocServer32]
+@="msi.dll"
+"ThreadingModel"="Both"
+
+;; msi: MsiServerX3
+[Software\\Classes\\CLSID\\{000c1094-0000-0000-c000-000000000046}\\InprocServer32]
+@="msi.dll"
+"ThreadingModel"="Apartment"
+
+;; msident: UserIdentityManager
+[Software\\Classes\\CLSID\\{a9ae6c91-1d1b-11d2-b21a-00c04fa357fa}\\InprocServer32]
+@="msident.dll"
+"ThreadingModel"="Both"
+
+;; msimtf: CActiveIMM
+[Software\\Classes\\CLSID\\{4955dd33-b159-11d0-8fcf-00aa006bcc59}\\InprocServer32]
+@="msimtf.dll"
+"ThreadingModel"="Apartment"
+
+;; msimtf: CActiveIMMAppEx
+[Software\\Classes\\CLSID\\{c1ee01f2-b3b6-4a6a-9ddd-e988c088ec82}\\InprocServer32]
+@="msimtf.dll"
+"ThreadingModel"="Apartment"
+
+;; msimtf: CActiveIMMAppEx_Trident
+[Software\\Classes\\CLSID\\{50d5107a-d278-4871-8989-f4ceaaf59cfc}\\InprocServer32]
+@="msimtf.dll"
+"ThreadingModel"="Apartment"
+
+;; msmpeg2vdec: CMSH264DecoderMFT
+[Software\\Classes\\CLSID\\{62ce7e72-4c71-4d20-b15d-452831a87d9d}\\InprocServer32]
+@="msmpeg2vdec.dll"
+"ThreadingModel"="Both"
+
+;; msmpeg2vdec: CWMVDecMediaObject
+[Software\\Classes\\CLSID\\{82d353df-90bd-4382-8bc2-3f6192b76e34}\\InprocServer32]
+@="msmpeg2vdec.dll"
+"ThreadingModel"="Both"
+
+;; msscript.ocx: Procedure
+[Software\\Classes\\CLSID\\{0e59f1da-1fbe-11d0-8ff2-00a0d10038bc}\\InprocServer32]
+@="msscript.ocx"
+"ThreadingModel"="Both"
+
+;; msscript.ocx: Procedures
+[Software\\Classes\\CLSID\\{0e59f1db-1fbe-11d0-8ff2-00a0d10038bc}\\InprocServer32]
+@="msscript.ocx"
+"ThreadingModel"="Both"
+
+;; msscript.ocx: Module
+[Software\\Classes\\CLSID\\{0e59f1dc-1fbe-11d0-8ff2-00a0d10038bc}\\InprocServer32]
+@="msscript.ocx"
+"ThreadingModel"="Both"
+
+;; msscript.ocx: Modules
+[Software\\Classes\\CLSID\\{0e59f1dd-1fbe-11d0-8ff2-00a0d10038bc}\\InprocServer32]
+@="msscript.ocx"
+"ThreadingModel"="Both"
+
+;; msscript.ocx: Error
+[Software\\Classes\\CLSID\\{0e59f1de-1fbe-11d0-8ff2-00a0d10038bc}\\InprocServer32]
+@="msscript.ocx"
+"ThreadingModel"="Both"
+
+;; msscript.ocx: ScriptControl
+[Software\\Classes\\CLSID\\{0e59f1d5-1fbe-11d0-8ff2-00a0d10038bc}\\InprocServer32]
+@="msscript.ocx"
+"ThreadingModel"="Apartment"
+
+;; mstask: CTaskScheduler
+[Software\\Classes\\CLSID\\{148bd52a-a2ab-11ce-b11f-00aa00530503}\\InprocServer32]
+@="mstask.dll"
+"ThreadingModel"="Both"
+
+;; mstask: CTask
+[Software\\Classes\\CLSID\\{148bd520-a2ab-11ce-b11f-00aa00530503}\\InprocServer32]
+@="mstask.dll"
+"ThreadingModel"="Both"
+
+;; msttsengine: TTSEngineCom
+[Software\\Classes\\CLSID\\{c64501f6-e6e6-451f-a150-25d0839bc510}\\InprocServer32]
+@="msttsengine.dll"
+"ThreadingModel"="Both"
+
+;; msvdsp: CFrameRateConvertDmo
+[Software\\Classes\\CLSID\\{01f36ce2-0907-4d8b-979d-f151be91c883}\\InprocServer32]
+@="msvdsp.dll"
+"ThreadingModel"="Both"
+
+;; msvdsp: CColorControlDmo
+[Software\\Classes\\CLSID\\{798059f0-89ca-4160-b325-aeb48efe4f9a}\\InprocServer32]
+@="msvdsp.dll"
+"ThreadingModel"="Both"
+
+;; msvproc: VideoProcessorMFT
+[Software\\Classes\\CLSID\\{88753b26-5b24-49bd-b2e7-0c445c78c982}\\InprocServer32]
+@="msvproc.dll"
+"ThreadingModel"="Both"
+
+;; msxml: XML DOM Document
+[Software\\Classes\\CLSID\\{2933bf90-7b36-11d2-b20e-00c04f983e60}\\InprocServer32]
+@="msxml.dll"
+"ThreadingModel"="Both"
+
+;; msxml: Free Threaded XML DOM Document
+[Software\\Classes\\CLSID\\{2933bf91-7b36-11d2-b20e-00c04f983e60}\\InprocServer32]
+@="msxml.dll"
+"ThreadingModel"="Both"
+
+;; msxml: XML HTTP Request
+[Software\\Classes\\CLSID\\{ed8c108e-4349-11d2-91a4-00c04f7969e8}\\InprocServer32]
+@="msxml.dll"
+"ThreadingModel"="Apartment"
+
+;; msxml: XML Data Source Object
+[Software\\Classes\\CLSID\\{550dda30-0541-11d2-9ca9-0060b0ec3d39}\\InprocServer32]
+@="msxml.dll"
+"ThreadingModel"="Apartment"
+
+;; msxml: Msxml
+[Software\\Classes\\CLSID\\{cfc399af-d876-11d0-9c10-00c04fc99c8e}\\InprocServer32]
+@="msxml.dll"
+"ThreadingModel"="Both"
+
+;; msxml2: XML DOM Document 2.6
+[Software\\Classes\\CLSID\\{f5078f1b-c551-11d3-89b9-0000f81fe221}\\InprocServer32]
+@="msxml2.dll"
+"ThreadingModel"="Both"
+
+;; msxml2: Free Threaded XML DOM Document 2.6
+[Software\\Classes\\CLSID\\{f5078f1c-c551-11d3-89b9-0000f81fe221}\\InprocServer32]
+@="msxml2.dll"
+"ThreadingModel"="Both"
+
+;; msxml2: XML HTTP 2.6
+[Software\\Classes\\CLSID\\{f5078f1e-c551-11d3-89b9-0000f81fe221}\\InprocServer32]
+@="msxml2.dll"
+"ThreadingModel"="Apartment"
+
+;; msxml2: XML Schema Cache 2.6
+[Software\\Classes\\CLSID\\{f5078f1d-c551-11d3-89b9-0000f81fe221}\\InprocServer32]
+@="msxml2.dll"
+"ThreadingModel"="Both"
+
+;; msxml2: XSL Template 2.6
+[Software\\Classes\\CLSID\\{f5078f21-c551-11d3-89b9-0000f81fe221}\\InprocServer32]
+@="msxml2.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: DOMDocument30
+[Software\\Classes\\CLSID\\{f5078f32-c551-11d3-89b9-0000f81fe221}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: DOMDocument40
+[Software\\Classes\\CLSID\\{88d969c0-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: DOMDocument60
+[Software\\Classes\\CLSID\\{88d96a05-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: DOMDocument
+[Software\\Classes\\CLSID\\{f6d90f11-9c73-11d3-b32e-00c04f990bb4}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: FreeThreadedDOMDocument30
+[Software\\Classes\\CLSID\\{f5078f33-c551-11d3-89b9-0000f81fe221}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: FreeThreadedDOMDocument40
+[Software\\Classes\\CLSID\\{88d969c1-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: FreeThreadedDOMDocument
+[Software\\Classes\\CLSID\\{f6d90f12-9c73-11d3-b32e-00c04f990bb4}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: XMLHTTP30
+[Software\\Classes\\CLSID\\{f5078f35-c551-11d3-89b9-0000f81fe221}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: XMLHTTP40
+[Software\\Classes\\CLSID\\{88d969c5-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: XMLHTTP
+[Software\\Classes\\CLSID\\{f6d90f16-9c73-11d3-b32e-00c04f990bb4}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: ServerXMLHTTP30
+[Software\\Classes\\CLSID\\{afb40ffd-b609-40a3-9828-f88bbe11e4e3}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: ServerXMLHTTP40
+[Software\\Classes\\CLSID\\{88d969c6-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: ServerXMLHTTP
+[Software\\Classes\\CLSID\\{afba6b42-5692-48ea-8141-dc517dcf0ef1}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: XMLSchemaCache30
+[Software\\Classes\\CLSID\\{f5078f34-c551-11d3-89b9-0000f81fe221}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: XMLSchemaCache40
+[Software\\Classes\\CLSID\\{88d969c2-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: XMLSchemaCache
+[Software\\Classes\\CLSID\\{373984c9-b845-449b-91e7-45ac83036ade}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: XSLTemplate30
+[Software\\Classes\\CLSID\\{f5078f36-c551-11d3-89b9-0000f81fe221}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: XSLTemplate40
+[Software\\Classes\\CLSID\\{88d969c3-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: XSLTemplate
+[Software\\Classes\\CLSID\\{2933bf94-7b36-11d2-b20e-00c04f983e60}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: SAXXMLReader30
+[Software\\Classes\\CLSID\\{3124c396-fb13-4836-a6ad-1317f1713688}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: SAXXMLReader40
+[Software\\Classes\\CLSID\\{7c6e29bc-8b8b-4c3d-859e-af6cd158be0f}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: SAXXMLReader
+[Software\\Classes\\CLSID\\{079aa557-4a18-424a-8eee-e39f0a8d41b9}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: MXHTMLWriter
+[Software\\Classes\\CLSID\\{a4c23ec3-6b70-4466-9127-550077239978}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: MXHTMLWriter30
+[Software\\Classes\\CLSID\\{853d1540-c1a7-4aa9-a226-4d3bd301146d}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: MXHTMLWriter40
+[Software\\Classes\\CLSID\\{88d969c9-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: MXXMLWriter30
+[Software\\Classes\\CLSID\\{3d813dfe-6c91-4a4e-8f41-04346a841d9c}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: MXXMLWriter40
+[Software\\Classes\\CLSID\\{88d969c8-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: MXXMLWriter
+[Software\\Classes\\CLSID\\{fc220ad8-a72a-4ee8-926e-0b7ad152a020}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: MXNamespaceManager
+[Software\\Classes\\CLSID\\{88d969d5-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: MXNamespaceManager40
+[Software\\Classes\\CLSID\\{88d969d6-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: SAXAttributes30
+[Software\\Classes\\CLSID\\{3e784a01-f3ae-4dc0-9354-9526b9370eba}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: SAXAttributes40
+[Software\\Classes\\CLSID\\{88d969ca-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: SAXAttributes
+[Software\\Classes\\CLSID\\{4dd441ad-526d-4a77-9f1b-9841ed802fb0}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: XMLParser
+[Software\\Classes\\CLSID\\{f5078f19-c551-11d3-89b9-0000f81fe221}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: XMLParser26
+[Software\\Classes\\CLSID\\{f5078f20-c551-11d3-89b9-0000f81fe221}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: XMLParser30
+[Software\\Classes\\CLSID\\{f5078f31-c551-11d3-89b9-0000f81fe221}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Both"
+
+;; msxml3: XMLView
+[Software\\Classes\\CLSID\\{48123bc4-99d9-11d1-a6b3-00c04fd91555}\\InprocServer32]
+@="msxml3.dll"
+"ThreadingModel"="Apartment"
+
+;; msxml6: Free threaded XML DOM Document 6.0
+[Software\\Classes\\CLSID\\{88d96a06-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml6.dll"
+"ThreadingModel"="Both"
+
+;; msxml6: SAX XML Reader 6.0
+[Software\\Classes\\CLSID\\{88d96a0c-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml6.dll"
+"ThreadingModel"="Both"
+
+;; msxml6: XML Schema Cache 6.0
+[Software\\Classes\\CLSID\\{88d96a07-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml6.dll"
+"ThreadingModel"="Both"
+
+;; msxml6: MXHTMLWriter 6.0
+[Software\\Classes\\CLSID\\{88d96a10-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml6.dll"
+"ThreadingModel"="Both"
+
+;; msxml6: MXXMLWriter 6.0
+[Software\\Classes\\CLSID\\{88d96a0f-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml6.dll"
+"ThreadingModel"="Both"
+
+;; msxml6: MXNamespaceManager 6.0
+[Software\\Classes\\CLSID\\{88d96a11-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml6.dll"
+"ThreadingModel"="Both"
+
+;; msxml6: SAXAttributes 6.0
+[Software\\Classes\\CLSID\\{88d96a0e-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml6.dll"
+"ThreadingModel"="Both"
+
+;; msxml6: XSL Template 6.0
+[Software\\Classes\\CLSID\\{88d96a08-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml6.dll"
+"ThreadingModel"="Both"
+
+;; msxml6: XML HTTP 6.0
+[Software\\Classes\\CLSID\\{88d96a0a-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml6.dll"
+"ThreadingModel"="Apartment"
+
+;; msxml6: Server XML HTTP 6.0
+[Software\\Classes\\CLSID\\{88d96a0b-f192-11d4-a65f-0040963251e5}\\InprocServer32]
+@="msxml6.dll"
+"ThreadingModel"="Apartment"
+
+;; netcfgx: CNetCfg
+[Software\\Classes\\CLSID\\{5b035261-40f9-11d1-aaec-00805fc1270e}\\InprocServer32]
+@="netcfgx.dll"
+"ThreadingModel"="Both"
+
+;; netprofm: NetworkListManager
+[Software\\Classes\\CLSID\\{dcb00c01-570f-4a9b-8d69-199fdba5723b}\\InprocServer32]
+@="netprofm.dll"
+"ThreadingModel"="Both"
+
+;; objsel: DsObjectPicker
+[Software\\Classes\\CLSID\\{17d6ccd8-3b7b-11d2-b9e0-00c04fd8dbf7}\\InprocServer32]
+@="objsel.dll"
+"ThreadingModel"="Both"
+
+;; ole32: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{00000320-0000-0000-c000-000000000046}\\InprocServer32]
+@="ole32.dll"
+"ThreadingModel"="Both"
+
+;; ole32: StdOleLink
+[Software\\Classes\\CLSID\\{00000300-0000-0000-c000-000000000046}\\InprocServer32]
+@="ole32.dll"
+"ThreadingModel"="Both"
+
+;; ole32: FileMoniker
+[Software\\Classes\\CLSID\\{00000303-0000-0000-c000-000000000046}\\InprocServer32]
+@="ole32.dll"
+"ThreadingModel"="Both"
+
+;; ole32: ItemMoniker
+[Software\\Classes\\CLSID\\{00000304-0000-0000-c000-000000000046}\\InprocServer32]
+@="ole32.dll"
+"ThreadingModel"="Both"
+
+;; ole32: AntiMoniker
+[Software\\Classes\\CLSID\\{00000305-0000-0000-c000-000000000046}\\InprocServer32]
+@="ole32.dll"
+"ThreadingModel"="Both"
+
+;; ole32: PointerMoniker
+[Software\\Classes\\CLSID\\{00000306-0000-0000-c000-000000000046}\\InprocServer32]
+@="ole32.dll"
+"ThreadingModel"="Both"
+
+;; ole32: PackagerMoniker
+[Software\\Classes\\CLSID\\{00000308-0000-0000-c000-000000000046}\\InprocServer32]
+@="ole32.dll"
+"ThreadingModel"="Both"
+
+;; ole32: CompositeMoniker
+[Software\\Classes\\CLSID\\{00000309-0000-0000-c000-000000000046}\\InprocServer32]
+@="ole32.dll"
+"ThreadingModel"="Both"
+
+;; ole32: DfMarshal
+[Software\\Classes\\CLSID\\{0000030b-0000-0000-c000-000000000046}\\InprocServer32]
+@="ole32.dll"
+"ThreadingModel"="Both"
+
+;; ole32: Picture_Metafile
+[Software\\Classes\\CLSID\\{00000315-0000-0000-c000-000000000046}\\InprocServer32]
+@="ole32.dll"
+"ThreadingModel"="Both"
+
+;; ole32: Picture_Dib
+[Software\\Classes\\CLSID\\{00000316-0000-0000-c000-000000000046}\\InprocServer32]
+@="ole32.dll"
+"ThreadingModel"="Both"
+
+;; ole32: ClassMoniker
+[Software\\Classes\\CLSID\\{0000031a-0000-0000-c000-000000000046}\\InprocServer32]
+@="ole32.dll"
+"ThreadingModel"="Both"
+
+;; ole32: ObjrefMoniker
+[Software\\Classes\\CLSID\\{00000327-0000-0000-c000-000000000046}\\InprocServer32]
+@="ole32.dll"
+"ThreadingModel"="Both"
+
+;; ole32: StdComponentCategoriesMgr
+[Software\\Classes\\CLSID\\{0002e005-0000-0000-c000-000000000046}\\InprocServer32]
+@="ole32.dll"
+"ThreadingModel"="Both"
+
+;; oleacc: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{03022430-abc4-11d0-bde2-00aa001a1953}\\InprocServer32]
+@="oleacc.dll"
+"ThreadingModel"="Both"
+
+;; oleaut32: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{b196b286-bab4-101a-b69c-00aa00341d07}\\InprocServer32]
+@="oleaut32.dll"
+"ThreadingModel"="Both"
+
+;; oleaut32: StdFont
+[Software\\Classes\\CLSID\\{0be35203-8f91-11ce-9de3-00aa004bb851}\\InprocServer32]
+@="oleaut32.dll"
+"ThreadingModel"="Both"
+
+;; oleaut32: OldFont
+[Software\\Classes\\CLSID\\{46763ee0-cab2-11ce-8c20-00aa0051e5d4}\\InprocServer32]
+@="oleaut32.dll"
+"ThreadingModel"="Both"
+
+;; oleaut32: StdPicture
+[Software\\Classes\\CLSID\\{0be35204-8f91-11ce-9de3-00aa004bb851}\\InprocServer32]
+@="oleaut32.dll"
+"ThreadingModel"="Apartment"
+
+;; oleaut32: PSDispatch
+[Software\\Classes\\CLSID\\{00020420-0000-0000-c000-000000000046}\\InprocServer32]
+@="oleaut32.dll"
+"ThreadingModel"="Both"
+
+;; oleaut32: PSEnumVariant
+[Software\\Classes\\CLSID\\{00020421-0000-0000-c000-000000000046}\\InprocServer32]
+@="oleaut32.dll"
+"ThreadingModel"="Both"
+
+;; oleaut32: PSTypeInfo
+[Software\\Classes\\CLSID\\{00020422-0000-0000-c000-000000000046}\\InprocServer32]
+@="oleaut32.dll"
+"ThreadingModel"="Both"
+
+;; oleaut32: PSTypeLib
+[Software\\Classes\\CLSID\\{00020423-0000-0000-c000-000000000046}\\InprocServer32]
+@="oleaut32.dll"
+"ThreadingModel"="Both"
+
+;; oleaut32: PSOAInterface
+[Software\\Classes\\CLSID\\{00020424-0000-0000-c000-000000000046}\\InprocServer32]
+@="oleaut32.dll"
+"ThreadingModel"="Both"
+
+;; oleaut32: PSTypeComp
+[Software\\Classes\\CLSID\\{00020425-0000-0000-c000-000000000046}\\InprocServer32]
+@="oleaut32.dll"
+"ThreadingModel"="Both"
+
+;; oleaut32: PSSupportErrorInfo
+[Software\\Classes\\CLSID\\{df0b3d60-548f-101b-8e65-08002b2bd119}\\InprocServer32]
+@="oleaut32.dll"
+"ThreadingModel"="Both"
+
+;; oleaut32: CLSID_RecordInfo
+[Software\\Classes\\CLSID\\{0000002f-0000-0000-c000-000000000046}\\InprocServer32]
+@="oleaut32.dll"
+"ThreadingModel"="Both"
+
+;; oledb32: OLEDB_CONVERSIONLIBRARY
+[Software\\Classes\\CLSID\\{c8b522d1-5cf3-11ce-ade5-00aa0044773d}\\InprocServer32]
+@="oledb32.dll"
+"ThreadingModel"="Both"
+
+;; oledb32: OLEDB_EXTENDEDERRORINFO
+[Software\\Classes\\CLSID\\{c8b522cf-5cf3-11ce-ade5-00aa0044773d}\\InprocServer32]
+@="oledb32.dll"
+"ThreadingModel"="Both"
+
+;; oledb32: OLEDB_ROWPOSITIONLIBRARY
+[Software\\Classes\\CLSID\\{2048eee6-7fa2-11d0-9e6a-00a0c9138c29}\\InprocServer32]
+@="oledb32.dll"
+"ThreadingModel"="Both"
+
+;; oledb32: MSDAINITIALIZE
+[Software\\Classes\\CLSID\\{2206cdb0-19c1-11d1-89e0-00c04fd7a829}\\InprocServer32]
+@="oledb32.dll"
+"ThreadingModel"="Both"
+
+;; oledb32: DataLinks
+[Software\\Classes\\CLSID\\{2206cdb2-19c1-11d1-89e0-00c04fd7a829}\\InprocServer32]
+@="oledb32.dll"
+"ThreadingModel"="Both"
+
+;; opcservices: OpcFactory
+[Software\\Classes\\CLSID\\{6b2d6ba0-9f3e-4f27-920b-313cc426a39e}\\InprocServer32]
+@="opcservices.dll"
+"ThreadingModel"="Both"
+
+;; packager: Package
+[Software\\Classes\\CLSID\\{f20da720-c02f-11ce-927b-0800095ae340}\\InprocServer32]
+@="packager.dll"
+"ThreadingModel"="Apartment"
+
+;; propsys: InMemoryPropertyStore
+[Software\\Classes\\CLSID\\{9a02e012-6303-4e1e-b9a1-630f802592c5}\\InprocServer32]
+@="propsys.dll"
+"ThreadingModel"="Both"
+
+;; propsys: PropertySystem
+[Software\\Classes\\CLSID\\{b8967f85-58ae-4f46-9fb2-5d7904798f4b}\\InprocServer32]
+@="propsys.dll"
+"ThreadingModel"="Both"
+
+;; qasf: DMOWrapperFilter
+[Software\\Classes\\CLSID\\{94297043-bd82-4dfd-b0de-8177739c6d20}\\InprocServer32]
+@="qasf.dll"
+"ThreadingModel"="Both"
+
+;; qasf: WMAsfReader
+[Software\\Classes\\CLSID\\{187463a0-5bb7-11d3-acbe-0080c75e246e}\\InprocServer32]
+@="qasf.dll"
+"ThreadingModel"="Both"
+
+;; qcap: AudioRecord
+[Software\\Classes\\CLSID\\{e30629d2-27e5-11ce-875d-00608cb78066}\\InprocServer32]
+@="qcap.dll"
+"ThreadingModel"="Both"
+
+;; qcap: AVICo
+[Software\\Classes\\CLSID\\{d76e2820-1563-11cf-ac98-00aa004c0fa9}\\InprocServer32]
+@="qcap.dll"
+"ThreadingModel"="Both"
+
+;; qcap: AviDest
+[Software\\Classes\\CLSID\\{e2510970-f137-11ce-8b67-00aa00a3f1a6}\\InprocServer32]
+@="qcap.dll"
+"ThreadingModel"="Both"
+
+;; qcap: CaptureGraphBuilder
+[Software\\Classes\\CLSID\\{bf87b6e0-8c27-11d0-b3f0-00aa003761c5}\\InprocServer32]
+@="qcap.dll"
+"ThreadingModel"="Both"
+
+;; qcap: CaptureGraphBuilder2
+[Software\\Classes\\CLSID\\{bf87b6e1-8c27-11d0-b3f0-00aa003761c5}\\InprocServer32]
+@="qcap.dll"
+"ThreadingModel"="Both"
+
+;; qcap: FileWriter
+[Software\\Classes\\CLSID\\{8596e5f0-0da5-11d0-bd21-00a0c911ce86}\\InprocServer32]
+@="qcap.dll"
+"ThreadingModel"="Both"
+
+;; qcap: SmartTee
+[Software\\Classes\\CLSID\\{cc58e280-8aa1-11d1-b3f1-00aa003761c5}\\InprocServer32]
+@="qcap.dll"
+"ThreadingModel"="Both"
+
+;; qcap: VfwCapture
+[Software\\Classes\\CLSID\\{1b544c22-fd0b-11ce-8c63-00aa0044b51e}\\InprocServer32]
+@="qcap.dll"
+"ThreadingModel"="Both"
+
+;; qdvd: DvdGraphBuilder
+[Software\\Classes\\CLSID\\{fcc152b7-f372-11d0-8e00-00c04fd7c08b}\\InprocServer32]
+@="qdvd.dll"
+"ThreadingModel"="Both"
+
+;; qdvd: DVDNavigator
+[Software\\Classes\\CLSID\\{9b8c4620-2c1a-11d0-8493-00a02438ad48}\\InprocServer32]
+@="qdvd.dll"
+"ThreadingModel"="Both"
+
+;; qedit: AMTimeline
+[Software\\Classes\\CLSID\\{78530b75-61f9-11d2-8cad-00a024580902}\\InprocServer32]
+@="qedit.dll"
+"ThreadingModel"="Both"
+
+;; qedit: MediaDet
+[Software\\Classes\\CLSID\\{65bd0711-24d2-4ff7-9324-ed2e5d3abafa}\\InprocServer32]
+@="qedit.dll"
+"ThreadingModel"="Both"
+
+;; qedit: NullRenderer
+[Software\\Classes\\CLSID\\{c1f400a4-3f08-11d3-9f0b-006008039e37}\\InprocServer32]
+@="qedit.dll"
+"ThreadingModel"="Both"
+
+;; qedit: SampleGrabber
+[Software\\Classes\\CLSID\\{c1f400a0-3f08-11d3-9f0b-006008039e37}\\InprocServer32]
+@="qedit.dll"
+"ThreadingModel"="Both"
+
+;; qmgrprxy: BackgroundCopyManager
+[Software\\Classes\\CLSID\\{4991d34b-80a1-4291-83b6-3328366b9097}\\InprocServer32]
+@="qmgrprxy.dll"
+"ThreadingModel"="Both"
+
+;; qmgrprxy: BackgroundCopyManager1_5
+[Software\\Classes\\CLSID\\{f087771f-d74f-4c1a-bb8a-e16aca9124ea}\\InprocServer32]
+@="qmgrprxy.dll"
+"ThreadingModel"="Both"
+
+;; qmgrprxy: BackgroundCopyManager2_0
+[Software\\Classes\\CLSID\\{6d18ad12-bde3-4393-b311-099c346e6df9}\\InprocServer32]
+@="qmgrprxy.dll"
+"ThreadingModel"="Both"
+
+;; qmgrprxy: BackgroundCopyManager2_5
+[Software\\Classes\\CLSID\\{03ca98d6-ff5d-49b8-abc6-03dd84127020}\\InprocServer32]
+@="qmgrprxy.dll"
+"ThreadingModel"="Both"
+
+;; qmgrprxy: BackgroundCopyManager3_0
+[Software\\Classes\\CLSID\\{659cdea7-489e-11d9-a9cd-000d56965251}\\InprocServer32]
+@="qmgrprxy.dll"
+"ThreadingModel"="Both"
+
+;; qmgrprxy: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{5ce34c0d-0dc9-4c1f-897c-daa1b78cee7c}\\InprocServer32]
+@="qmgrprxy.dll"
+"ThreadingModel"="Both"
+
+;; quartz: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{670d1d20-a068-11d0-b3f0-00aa003761c5}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: FilterGraph
+[Software\\Classes\\CLSID\\{e436ebb3-524f-11ce-9f53-0020af0ba770}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: FilterGraphNoThread
+[Software\\Classes\\CLSID\\{e436ebb8-524f-11ce-9f53-0020af0ba770}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: FilterMapper
+[Software\\Classes\\CLSID\\{e436ebb2-524f-11ce-9f53-0020af0ba770}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: FilterMapper2
+[Software\\Classes\\CLSID\\{cda42200-bd88-11d0-bd4e-00a0c911ce86}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: SystemClock
+[Software\\Classes\\CLSID\\{e436ebb1-524f-11ce-9f53-0020af0ba770}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: MemoryAllocator
+[Software\\Classes\\CLSID\\{1e651cc0-b199-11d0-8212-00c04fc32c45}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: SeekingPassThru
+[Software\\Classes\\CLSID\\{060af76c-68dd-11d0-8fc1-00c04fd9189d}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: AsyncReader
+[Software\\Classes\\CLSID\\{e436ebb5-524f-11ce-9f53-0020af0ba770}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: AVIDec
+[Software\\Classes\\CLSID\\{cf49d4e0-1115-11ce-b03a-0020af0ba770}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: DSoundRender
+[Software\\Classes\\CLSID\\{79376820-07d0-11cf-a24d-0020afd79767}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: AudioRender
+[Software\\Classes\\CLSID\\{e30629d1-27e5-11ce-875d-00608cb78066}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: VideoRenderer
+[Software\\Classes\\CLSID\\{70e102b0-5556-11ce-97c0-00aa0055595a}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: VideoRendererDefault
+[Software\\Classes\\CLSID\\{6bc1cffa-8fc1-4261-ac22-cfb4cc38db50}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: ACMWrapper
+[Software\\Classes\\CLSID\\{6a08cf80-0e18-11cf-a24d-0020afd79767}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: VideoMixingRenderer
+[Software\\Classes\\CLSID\\{b87beb7b-8d29-423f-ae4d-6582c10175ac}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: VideoMixingRenderer9
+[Software\\Classes\\CLSID\\{51b4abf3-748f-4e3b-a276-c828330e926a}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: AllocPresenter
+[Software\\Classes\\CLSID\\{99d54f63-1a69-41ae-aa4d-c976eb3f0713}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: MPEG1Splitter
+[Software\\Classes\\CLSID\\{336475d0-942a-11ce-a870-00aa002feab5}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: AviSplitter
+[Software\\Classes\\CLSID\\{1b544c20-fd0b-11ce-8c63-00aa0044b51e}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: WAVEParser
+[Software\\Classes\\CLSID\\{d51bd5a1-7548-11cf-a520-0080c77ef58a}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: CMpegAudioCodec
+[Software\\Classes\\CLSID\\{4a2286e0-7bef-11ce-9bd9-0000e202599c}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; quartz: CMpegVideoCodec
+[Software\\Classes\\CLSID\\{feb50740-7bef-11ce-9bd9-0000e202599c}\\InprocServer32]
+@="quartz.dll"
+"ThreadingModel"="Both"
+
+;; resampledmo: CResamplerMediaObject
+[Software\\Classes\\CLSID\\{f447b69e-1884-4a7e-8055-346f74d6edb3}\\InprocServer32]
+@="resampledmo.dll"
+"ThreadingModel"="Both"
+
+;; rtscom: RealTimeStylus
+[Software\\Classes\\CLSID\\{e26b366d-f998-43ce-836f-cb6d904432b0}\\InprocServer32]
+@="rtscom.dll"
+"ThreadingModel"="Both"
+
+;; sapi: SpDataKey
+[Software\\Classes\\CLSID\\{d9f6ee60-58c9-458b-88e1-2f908fd7f87c}\\InprocServer32]
+@="sapi.dll"
+"ThreadingModel"="Both"
+
+;; sapi: SpObjectTokenEnum
+[Software\\Classes\\CLSID\\{3918d75f-0acb-41f2-b733-92aa15bcecf6}\\InprocServer32]
+@="sapi.dll"
+"ThreadingModel"="Both"
+
+;; sapi: SpObjectToken
+[Software\\Classes\\CLSID\\{ef411752-3736-4cb4-9c8c-8ef4ccb58efe}\\InprocServer32]
+@="sapi.dll"
+"ThreadingModel"="Both"
+
+;; sapi: SpStream
+[Software\\Classes\\CLSID\\{715d9c59-4442-11d2-9605-00c04f8ee628}\\InprocServer32]
+@="sapi.dll"
+"ThreadingModel"="Both"
+
+;; sapi: SpVoice
+[Software\\Classes\\CLSID\\{96749377-3391-11d2-9ee3-00c04f797396}\\InprocServer32]
+@="sapi.dll"
+"ThreadingModel"="Both"
+
+;; sapi: SpFileStream
+[Software\\Classes\\CLSID\\{947812b3-2ae1-4644-ba86-9e90ded7ec91}\\InprocServer32]
+@="sapi.dll"
+"ThreadingModel"="Both"
+
+;; sapi: SpMMAudioOut
+[Software\\Classes\\CLSID\\{a8c680eb-3d32-11d2-9ee7-00c04f797396}\\InprocServer32]
+@="sapi.dll"
+"ThreadingModel"="Both"
+
+;; sapi: SpObjectTokenCategory
+[Software\\Classes\\CLSID\\{a910187f-0c7a-45ac-92cc-59edafb77b53}\\InprocServer32]
+@="sapi.dll"
+"ThreadingModel"="Both"
+
+;; sapi: SpResourceManager
+[Software\\Classes\\CLSID\\{96749373-3391-11d2-9ee3-00c04f797396}\\InprocServer32]
+@="sapi.dll"
+"ThreadingModel"="Both"
+
+;; sapi: SpSharedRecognizer
+[Software\\Classes\\CLSID\\{3bee4890-4fe9-4a37-8c1e-5e7e12791c1f}\\InprocServer32]
+@="sapi.dll"
+"ThreadingModel"="Both"
+
+;; sapi: SpMMAudioEnum
+[Software\\Classes\\CLSID\\{ab1890a0-e91f-11d2-bb91-00c04f8ee6c0}\\InprocServer32]
+@="sapi.dll"
+"ThreadingModel"="Both"
+
+;; sapi: SpMMAudioIn
+[Software\\Classes\\CLSID\\{cf3d2e50-53f2-11d2-960c-00c04f8ee628}\\InprocServer32]
+@="sapi.dll"
+"ThreadingModel"="Both"
+
+;; scrobj: TypeLib
+[Software\\Classes\\CLSID\\{06290bd5-48aa-11d2-8432-006008c3fbfc}\\InprocServer32]
+@="scrobj.dll"
+"ThreadingModel"="Apartment"
+
+;; scrrun: Dictionary
+[Software\\Classes\\CLSID\\{ee09b103-97e0-11cf-978f-00a02463e06f}\\InprocServer32]
+@="scrrun.dll"
+"ThreadingModel"="Apartment"
+
+;; scrrun: FileSystemObject
+[Software\\Classes\\CLSID\\{0d43fe01-f093-11cf-8940-00a0c9054228}\\InprocServer32]
+@="scrrun.dll"
+"ThreadingModel"="Both"
+
+;; scrrun: Drive
+[Software\\Classes\\CLSID\\{c7c3f5b1-88a3-11d0-abcb-00a0c90fffc0}\\InprocServer32]
+@="scrrun.dll"
+"ThreadingModel"="Both"
+
+;; scrrun: Drives
+[Software\\Classes\\CLSID\\{c7c3f5b2-88a3-11d0-abcb-00a0c90fffc0}\\InprocServer32]
+@="scrrun.dll"
+"ThreadingModel"="Both"
+
+;; scrrun: Folder
+[Software\\Classes\\CLSID\\{c7c3f5b3-88a3-11d0-abcb-00a0c90fffc0}\\InprocServer32]
+@="scrrun.dll"
+"ThreadingModel"="Both"
+
+;; scrrun: Folders
+[Software\\Classes\\CLSID\\{c7c3f5b4-88a3-11d0-abcb-00a0c90fffc0}\\InprocServer32]
+@="scrrun.dll"
+"ThreadingModel"="Both"
+
+;; scrrun: File
+[Software\\Classes\\CLSID\\{c7c3f5b5-88a3-11d0-abcb-00a0c90fffc0}\\InprocServer32]
+@="scrrun.dll"
+"ThreadingModel"="Both"
+
+;; scrrun: Files
+[Software\\Classes\\CLSID\\{c7c3f5b6-88a3-11d0-abcb-00a0c90fffc0}\\InprocServer32]
+@="scrrun.dll"
+"ThreadingModel"="Both"
+
+;; scrrun: TextStream
+[Software\\Classes\\CLSID\\{0bb02ec0-ef49-11cf-8940-00a0c9054228}\\InprocServer32]
+@="scrrun.dll"
+"ThreadingModel"="Both"
+
+;; scrrun: Encoder
+[Software\\Classes\\CLSID\\{32da2b15-cfed-11d1-b747-00c04fc2b085}\\InprocServer32]
+@="scrrun.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: Printers
+[Software\\Classes\\CLSID\\{2227a280-3aea-1069-a2de-08002b30309d}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: QueryAssociations
+[Software\\Classes\\CLSID\\{a07034fd-6caa-4954-ac3f-97a27216f98a}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: DragDropHelper
+[Software\\Classes\\CLSID\\{4657278a-411b-11d2-839a-00c04fd918d0}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: AutoComplete
+[Software\\Classes\\CLSID\\{00bb2763-6a77-11d0-a535-00c04fd7d062}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: ShellFSFolder
+[Software\\Classes\\CLSID\\{f3364ba0-65b9-11ce-a9ba-00aa004ae837}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: NetworkPlaces
+[Software\\Classes\\CLSID\\{208d2c60-3aea-1069-a2d7-08002b30309d}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: ShellDesktop
+[Software\\Classes\\CLSID\\{00021400-0000-0000-c000-000000000046}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: MyComputer
+[Software\\Classes\\CLSID\\{20d04fe0-3aea-1069-a2d8-08002b30309d}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: FolderShortcut
+[Software\\Classes\\CLSID\\{0afaced1-e828-11d1-9187-b532f1e9575d}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: UnixFolder
+[Software\\Classes\\CLSID\\{cc702eb2-7dc5-11d9-c687-0004238a01cd}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: UnixDosFolder
+[Software\\Classes\\CLSID\\{9d20aae8-0625-44b0-9ca7-71889c2254d9}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: MyDocuments
+[Software\\Classes\\CLSID\\{450d8fba-ad25-11d0-98a8-0800361b1103}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: RecycleBin
+[Software\\Classes\\CLSID\\{645ff040-5081-101b-9f08-00aa002f954e}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: ControlPanel
+[Software\\Classes\\CLSID\\{21ec2020-3aea-1069-a2dd-08002b30309d}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: MruLongList
+[Software\\Classes\\CLSID\\{53bd6b4e-3780-4693-afc3-7161c2f3ee9c}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: ShellImageDataFactory
+[Software\\Classes\\CLSID\\{66e4e4fb-f385-4dd0-8d74-a2efd1bc6178}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: ActiveDesktop
+[Software\\Classes\\CLSID\\{75048700-ef1f-11d0-9888-006097deacf9}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: NewMenu
+[Software\\Classes\\CLSID\\{d969a300-e7ff-11d0-a93b-00a0c90f2719}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; shell32: ShellItem
+[Software\\Classes\\CLSID\\{9ac9fbe1-e0a2-4ad6-b4ee-e212013ea917}\\InprocServer32]
+@="shell32.dll"
+"ThreadingModel"="Apartment"
+
+;; sti: WiaDevMgr2
+[Software\\Classes\\CLSID\\{b6c292bc-7c88-41ee-8b54-8ec92617e599}\\InprocServer32]
+@="sti.dll"
+"ThreadingModel"="Both"
+
+;; sti: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{4db1ad10-3391-11d2-9a33-00c04fa36145}\\InprocServer32]
+@="sti.dll"
+"ThreadingModel"="Both"
+
+;; sti: StillImage
+[Software\\Classes\\CLSID\\{b323f8e0-2e68-11d0-90ea-00aa0060f86c}\\InprocServer32]
+@="sti.dll"
+"ThreadingModel"="Both"
+
+;; taskschd: TaskScheduler
+[Software\\Classes\\CLSID\\{0f87369f-a4e5-4cfc-bd3e-73e6154572dd}\\InprocServer32]
+@="taskschd.dll"
+"ThreadingModel"="Both"
+
+;; thumbcache: LocalThumbnailCache
+[Software\\Classes\\CLSID\\{50ef4544-ac9f-4a8e-b21b-8a26180db13f}\\InprocServer32]
+@="thumbcache.dll"
+"ThreadingModel"="Both"
+
+;; thumbcache: SharedBitmap
+[Software\\Classes\\CLSID\\{4db26476-6787-4046-b836-e8412a9e8a27}\\InprocServer32]
+@="thumbcache.dll"
+"ThreadingModel"="Both"
+
+;; tiptsf: TextInputPanel
+[Software\\Classes\\CLSID\\{f9b189d7-228b-4f2b-8650-b97f59e02c8c}\\InprocServer32]
+@="tiptsf.dll"
+"ThreadingModel"="Both"
+
+;; uianimation: UIAnimationTimer
+[Software\\Classes\\CLSID\\{bfcd4a0c-06b6-4384-b768-0daa792c380e}\\InprocServer32]
+@="uianimation.dll"
+"ThreadingModel"="Both"
+
+;; uianimation: UIAnimationManager
+[Software\\Classes\\CLSID\\{4c1fc63a-695c-47e8-a339-1a194be3d0b8}\\InprocServer32]
+@="uianimation.dll"
+"ThreadingModel"="Both"
+
+;; uianimation: UIAnimationTransitionFactory
+[Software\\Classes\\CLSID\\{8a9b1cdd-fcd7-419c-8b44-42fd17db1887}\\InprocServer32]
+@="uianimation.dll"
+"ThreadingModel"="Both"
+
+;; uianimation: UIAnimationTransitionLibrary
+[Software\\Classes\\CLSID\\{1d6322ad-aa85-4ef5-a828-86d71067d145}\\InprocServer32]
+@="uianimation.dll"
+"ThreadingModel"="Both"
+
+;; uiautomationcore: CUIAutomation
+[Software\\Classes\\CLSID\\{ff48dba4-60ef-4201-aa87-54103eef594e}\\InprocServer32]
+@="uiautomationcore.dll"
+"ThreadingModel"="Both"
+
+;; uiautomationcore: CUIAutomation8
+[Software\\Classes\\CLSID\\{e22ad333-b25f-460c-83d0-0581107395c9}\\InprocServer32]
+@="uiautomationcore.dll"
+"ThreadingModel"="Both"
+
+;; uiautomationcore: CUIAutomationRegistrar
+[Software\\Classes\\CLSID\\{6e29fabf-9977-42d1-8d0e-ca7e61ad87e6}\\InprocServer32]
+@="uiautomationcore.dll"
+"ThreadingModel"="Both"
+
+;; uiribbon: UIRibbonFramework
+[Software\\Classes\\CLSID\\{926749fa-2615-4987-8845-c33e65f2b957}\\InprocServer32]
+@="uiribbon.dll"
+"ThreadingModel"="Both"
+
+;; uiribbon: UIRibbonImageFromBitmapFactory
+[Software\\Classes\\CLSID\\{0f7434b6-59b6-4250-999e-d168d6ae4293}\\InprocServer32]
+@="uiribbon.dll"
+"ThreadingModel"="Both"
+
+;; urlmon: StdURLMoniker
+[Software\\Classes\\CLSID\\{79eac9e0-baf9-11ce-8c82-00aa004ba90b}\\InprocServer32]
+@="urlmon.dll"
+"ThreadingModel"="Apartment"
+
+;; urlmon: HttpProtocol
+[Software\\Classes\\CLSID\\{79eac9e2-baf9-11ce-8c82-00aa004ba90b}\\InprocServer32]
+@="urlmon.dll"
+"ThreadingModel"="Apartment"
+
+;; urlmon: FtpProtocol
+[Software\\Classes\\CLSID\\{79eac9e3-baf9-11ce-8c82-00aa004ba90b}\\InprocServer32]
+@="urlmon.dll"
+"ThreadingModel"="Apartment"
+
+;; urlmon: GopherProtocol
+[Software\\Classes\\CLSID\\{79eac9e4-baf9-11ce-8c82-00aa004ba90b}\\InprocServer32]
+@="urlmon.dll"
+"ThreadingModel"="Apartment"
+
+;; urlmon: HttpsProtocol
+[Software\\Classes\\CLSID\\{79eac9e5-baf9-11ce-8c82-00aa004ba90b}\\InprocServer32]
+@="urlmon.dll"
+"ThreadingModel"="Apartment"
+
+;; urlmon: MkProtocol
+[Software\\Classes\\CLSID\\{79eac9e6-baf9-11ce-8c82-00aa004ba90b}\\InprocServer32]
+@="urlmon.dll"
+"ThreadingModel"="Apartment"
+
+;; urlmon: FileProtocol
+[Software\\Classes\\CLSID\\{79eac9e7-baf9-11ce-8c82-00aa004ba90b}\\InprocServer32]
+@="urlmon.dll"
+"ThreadingModel"="Apartment"
+
+;; urlmon: CdlProtocol
+[Software\\Classes\\CLSID\\{3dd53d40-7b8b-11d0-b013-00aa0059ce02}\\InprocServer32]
+@="urlmon.dll"
+"ThreadingModel"="Apartment"
+
+;; urlmon: InternetSecurityManager
+[Software\\Classes\\CLSID\\{7b8a2d94-0ac9-11d1-896c-00c04fb6bfc4}\\InprocServer32]
+@="urlmon.dll"
+"ThreadingModel"="Both"
+
+;; urlmon: InternetZoneManager
+[Software\\Classes\\CLSID\\{7b8a2d95-0ac9-11d1-896c-00c04fb6bfc4}\\InprocServer32]
+@="urlmon.dll"
+"ThreadingModel"="Both"
+
+;; urlmon: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{79eac9f1-baf9-11ce-8c82-00aa004ba90b}\\InprocServer32]
+@="urlmon.dll"
+"ThreadingModel"="Apartment"
+
+;; urlmon: DeCompMimeFilter
+[Software\\Classes\\CLSID\\{8f6b0360-b80d-11d0-a9b3-006097942311}\\InprocServer32]
+@="urlmon.dll"
+"ThreadingModel"="Apartment"
+
+;; urlmon: PersistentZoneIdentifier
+[Software\\Classes\\CLSID\\{0968e258-16c7-4dba-aa86-462dd61e31a3}\\InprocServer32]
+@="urlmon.dll"
+"ThreadingModel"="Both"
+
+;; vbscript: VBScriptRegExp
+[Software\\Classes\\CLSID\\{3f4daca4-160d-11d2-a8e9-00104b365c9f}\\InprocServer32]
+@="vbscript.dll"
+"ThreadingModel"="Apartment"
+
+;; vbscript: VBScript
+[Software\\Classes\\CLSID\\{b54f3741-5b07-11cf-a4b0-00aa004a55e8}\\InprocServer32]
+@="vbscript.dll"
+"ThreadingModel"="Both"
+
+;; vbscript: VBScriptAuthor
+[Software\\Classes\\CLSID\\{b54f3742-5b07-11cf-a4b0-00aa004a55e8}\\InprocServer32]
+@="vbscript.dll"
+"ThreadingModel"="Both"
+
+;; vbscript: VBScriptEncode
+[Software\\Classes\\CLSID\\{b54f3743-5b07-11cf-a4b0-00aa004a55e8}\\InprocServer32]
+@="vbscript.dll"
+"ThreadingModel"="Both"
+
+;; vbscript: Match
+[Software\\Classes\\CLSID\\{3f4daca5-160d-11d2-a8e9-00104b365c9f}\\InprocServer32]
+@="vbscript.dll"
+"ThreadingModel"="Both"
+
+;; vbscript: MatchCollection
+[Software\\Classes\\CLSID\\{3f4daca6-160d-11d2-a8e9-00104b365c9f}\\InprocServer32]
+@="vbscript.dll"
+"ThreadingModel"="Both"
+
+;; vbscript: SubMatches
+[Software\\Classes\\CLSID\\{3f4dacc0-160d-11d2-a8e9-00104b365c9f}\\InprocServer32]
+@="vbscript.dll"
+"ThreadingModel"="Both"
+
+;; vidreszr: CResizerDMO
+[Software\\Classes\\CLSID\\{1ea1ea14-48f4-4054-ad1a-e8aee10ac805}\\InprocServer32]
+@="vidreszr.dll"
+"ThreadingModel"="Both"
+
+;; wbemdisp: WinMGMTS
+[Software\\Classes\\CLSID\\{172bddf8-ceea-11d1-8b05-00600806d9b6}\\InprocServer32]
+@="wbemdisp.dll"
+"ThreadingModel"="Apartment"
+
+;; wbemdisp: SWbemLocator
+[Software\\Classes\\CLSID\\{76a64158-cb41-11d1-8b02-00600806d9b6}\\InprocServer32]
+@="wbemdisp.dll"
+"ThreadingModel"="Apartment"
+
+;; wbemdisp: SWbemNamedValueSet
+[Software\\Classes\\CLSID\\{9aed384e-ce8b-11d1-8b05-00600806d9b6}\\InprocServer32]
+@="wbemdisp.dll"
+"ThreadingModel"="Apartment"
+
+;; wbemprox: WbemLocator
+[Software\\Classes\\CLSID\\{4590f811-1d3a-11d0-891f-00aa004b2e24}\\InprocServer32]
+@="wbemprox.dll"
+"ThreadingModel"="Both"
+
+;; wbemprox: WbemContext
+[Software\\Classes\\CLSID\\{674b6698-ee92-11d0-ad71-00c04fd8fdff}\\InprocServer32]
+@="wbemprox.dll"
+"ThreadingModel"="Both"
+
+;; wbemprox: WbemAdministrativeLocator
+[Software\\Classes\\CLSID\\{cb8555cc-9128-11d1-ad9b-00c04fd8fdff}\\InprocServer32]
+@="wbemprox.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: PSFactoryBuffer
+[Software\\Classes\\CLSID\\{00000301-a8f2-4877-ba0a-fd2b6645fb94}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICImagingFactory
+[Software\\Classes\\CLSID\\{cacaf262-9370-4615-a13b-9f5539da4c0a}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICImagingFactory2
+[Software\\Classes\\CLSID\\{317d06e8-5f24-433d-bdf7-79ce68d8abc2}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICBmpDecoder
+[Software\\Classes\\CLSID\\{6b462062-7cbf-400d-9fdb-813dd10f2778}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICPngDecoder
+[Software\\Classes\\CLSID\\{389ea17b-5078-4cde-b6ef-25c15175c751}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICPngEncoder
+[Software\\Classes\\CLSID\\{27949969-876a-41d7-9447-568f6a35a4dc}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICBmpEncoder
+[Software\\Classes\\CLSID\\{69be8bb4-d66d-47c8-865a-ed1589433782}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Apartment"
+
+;; windowscodecs: WICGifDecoder
+[Software\\Classes\\CLSID\\{381dda3c-9ce9-4834-a23e-1f98f8fc52be}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICGifEncoder
+[Software\\Classes\\CLSID\\{114f5598-0b22-40a0-86a1-c83ea495adbd}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICIcoDecoder
+[Software\\Classes\\CLSID\\{c61bfcdf-2e0f-4aad-a8d7-e06bafebcdfe}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICJpegDecoder
+[Software\\Classes\\CLSID\\{9456a480-e88b-43ea-9e73-0b2d9b71b1ca}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICJpegEncoder
+[Software\\Classes\\CLSID\\{1a34f5c1-4a5a-46dc-b644-1f4567e7a676}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICTiffDecoder
+[Software\\Classes\\CLSID\\{b54e85d9-fe23-499f-8b88-6acea713752b}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICTiffEncoder
+[Software\\Classes\\CLSID\\{0131be10-2001-4c5f-a9b0-cc88fab64ce8}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICDdsDecoder
+[Software\\Classes\\CLSID\\{9053699f-a341-429d-9e90-ee437cf80c73}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICDdsEncoder
+[Software\\Classes\\CLSID\\{a61dde94-66ce-4ac1-881b-71680588895e}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICDefaultFormatConverter
+[Software\\Classes\\CLSID\\{1a3f11dc-b514-4b17-8c5f-2154513852f1}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICUnknownMetadataReader
+[Software\\Classes\\CLSID\\{699745c2-5066-4b82-a8e3-d40478dbec8c}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICUnknownMetadataWriter
+[Software\\Classes\\CLSID\\{a09cca86-27ba-4f39-9053-121fa4dc08fc}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICIfdMetadataReader
+[Software\\Classes\\CLSID\\{8f914656-9d0a-4eb2-9019-0bf96d8a9ee6}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICIfdMetadataWriter
+[Software\\Classes\\CLSID\\{b1ebfc28-c9bd-47a2-8d33-b948769777a7}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICGpsMetadataReader
+[Software\\Classes\\CLSID\\{3697790b-223b-484e-9925-c4869218f17a}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICGpsMetadataWriter
+[Software\\Classes\\CLSID\\{cb8c13e4-62b5-4c96-a48b-6ba6ace39c76}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICExifMetadataReader
+[Software\\Classes\\CLSID\\{d9403860-297f-4a49-bf9b-77898150a442}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICExifMetadataWriter
+[Software\\Classes\\CLSID\\{c9a14cda-c339-460b-9078-d4debcfabe91}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICApp1MetadataReader
+[Software\\Classes\\CLSID\\{dde33513-774e-4bcd-ae79-02f4adfe62fc}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICApp1MetadataWriter
+[Software\\Classes\\CLSID\\{ee366069-1832-420f-b381-0479ad066f19}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICPngChrmMetadataReader
+[Software\\Classes\\CLSID\\{f90b5f36-367b-402a-9dd1-bc0fd59d8f62}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICPngGamaMetadataReader
+[Software\\Classes\\CLSID\\{3692ca39-e082-4350-9e1f-3704cb083cd5}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICPngHistMetadataReader
+[Software\\Classes\\CLSID\\{877a0bb7-a313-4491-87b5-2e6d0594f520}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICPngTextMetadataReader
+[Software\\Classes\\CLSID\\{4b59afcc-b8c3-408a-b670-89e5fab6fda7}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICPngTimeMetadataReader
+[Software\\Classes\\CLSID\\{d94edf02-efe5-4f0d-85c8-f5a68b3000b1}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICPngTimeMetadataWriter
+[Software\\Classes\\CLSID\\{1ab78400-b5a3-4d91-8ace-33fcd1499be6}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICPngBkgdMetadataReader
+[Software\\Classes\\CLSID\\{0ce7a4a6-03e8-4a60-9d15-282ef32ee7da}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICPngBkgdMetadataWriter
+[Software\\Classes\\CLSID\\{68e3f2fd-31ae-4441-bb6a-fd7047525f90}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICLSDMetadataReader
+[Software\\Classes\\CLSID\\{41070793-59e4-479a-a1f7-954adc2ef5fc}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICIMDMetadataReader
+[Software\\Classes\\CLSID\\{7447a267-0015-42c8-a8f1-fb3b94c68361}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICGCEMetadataReader
+[Software\\Classes\\CLSID\\{b92e345d-f52d-41f3-b562-081bc772e3b9}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICAPEMetadataReader
+[Software\\Classes\\CLSID\\{1767b93a-b021-44ea-920f-863c11f4f768}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; windowscodecs: WICGifCommentMetadataReader
+[Software\\Classes\\CLSID\\{32557d3b-69dc-4f95-836e-f5972b2f6159}\\InprocServer32]
+@="windowscodecs.dll"
+"ThreadingModel"="Both"
+
+;; winhttp: WinHttpRequest Component version 5.1
+[Software\\Classes\\CLSID\\{2087c2f4-2cef-4953-a8ab-66779b670495}\\InprocServer32]
+@="winhttp.dll"
+"ThreadingModel"="Apartment"
+
+;; wmadmod: CWMADecMediaObject
+[Software\\Classes\\CLSID\\{2eeb4adf-4578-4d10-bca7-bb955f56320a}\\InprocServer32]
+@="wmadmod.dll"
+"ThreadingModel"="Both"
+
+;; wmiutils: WbemDefPath
+[Software\\Classes\\CLSID\\{cf4cc405-e2c5-4ddd-b3ce-5e7582d8c9fa}\\InprocServer32]
+@="wmiutils.dll"
+"ThreadingModel"="Both"
+
+;; wmiutils: WbemStatusCode
+[Software\\Classes\\CLSID\\{eb87e1bd-3233-11d2-aec9-00c04fb68820}\\InprocServer32]
+@="wmiutils.dll"
+"ThreadingModel"="Both"
+
+;; wmp: WindowsMediaPlayer
+[Software\\Classes\\CLSID\\{6bf52a52-394a-11d3-b153-00c04f79faa6}\\InprocServer32]
+@="wmp.dll"
+"ThreadingModel"="Both"
+
+;; wmphoto: WICWmpDecoder
+[Software\\Classes\\CLSID\\{a26cec36-234c-4950-ae16-e34aace71d0d}\\InprocServer32]
+@="wmphoto.dll"
+"ThreadingModel"="Both"
+
+;; wmphoto: WICWmpEncoder
+[Software\\Classes\\CLSID\\{ac4ce3cb-e1c1-44cd-8215-5a1665509ec2}\\InprocServer32]
+@="wmphoto.dll"
+"ThreadingModel"="Both"
+
+;; wpc: WindowsParentalControls
+[Software\\Classes\\CLSID\\{e77cc89b-7401-4c04-8ced-149db35add04}\\InprocServer32]
+@="wpc.dll"
+"ThreadingModel"="Both"
+
+;; wshom.ocx: IWshShell_Class
+[Software\\Classes\\CLSID\\{f935dc22-1cf0-11d0-adb9-00c04fd58a0b}\\InprocServer32]
+@="wshom.ocx"
+"ThreadingModel"="Apartment"
+
+;; wshom.ocx: WshShell
+[Software\\Classes\\CLSID\\{72c24dd5-d70a-438b-8a42-98424b88afb8}\\InprocServer32]
+@="wshom.ocx"
+"ThreadingModel"="Apartment"
+
+;; wshom.ocx: IWshNetwork_Class
+[Software\\Classes\\CLSID\\{f935dc26-1cf0-11d0-adb9-00c04fd58a0b}\\InprocServer32]
+@="wshom.ocx"
+"ThreadingModel"="Apartment"
+
+;; wshom.ocx: WshNetwork
+[Software\\Classes\\CLSID\\{093ff999-1ea0-4079-9525-9614c3504b74}\\InprocServer32]
+@="wshom.ocx"
+"ThreadingModel"="Apartment"
+
+;; wshom.ocx: WshExec
+[Software\\Classes\\CLSID\\{08fed191-be19-11d3-a28b-00104bd35090}\\InprocServer32]
+@="wshom.ocx"
+"ThreadingModel"="Apartment"
+
+;; wuapi: AutomaticUpdates Class
+[Software\\Classes\\CLSID\\{bfe18e9c-6d87-4450-b37c-e02f0b373803}\\InprocServer32]
+@="wuapi.dll"
+"ThreadingModel"="Both"
+
+;; wuapi: UpdateInstaller Class
+[Software\\Classes\\CLSID\\{d2e0fe7f-d23e-48e1-93c0-6fa8cc346474}\\InprocServer32]
+@="wuapi.dll"
+"ThreadingModel"="Both"
+
+;; wuapi: UpdateSession Class
+[Software\\Classes\\CLSID\\{4cb43d7f-7eee-4906-8698-60da1c38f2fe}\\InprocServer32]
+@="wuapi.dll"
+"ThreadingModel"="Both"
+
+;; wuapi: SystemInformation Class
+[Software\\Classes\\CLSID\\{c01b9ba0-bea7-41ba-b604-d0a36f469133}\\InprocServer32]
+@="wuapi.dll"
+"ThreadingModel"="Both"
+
+;; wuapi: WindowsUpdateAgentInfo Class
+[Software\\Classes\\CLSID\\{c2e88c2f-6f5b-4aaa-894b-55c847ad3a2d}\\InprocServer32]
+@="wuapi.dll"
+"ThreadingModel"="Both"
+
+;; xactengine2_0: XACTEngine
+[Software\\Classes\\CLSID\\{0aa000aa-f404-11d9-bd7a-0010dc4f8f81}\\InprocServer32]
+@="xactengine2_0.dll"
+"ThreadingModel"="Both"
+
+;; xactengine2_4: XACTEngine
+[Software\\Classes\\CLSID\\{bc3e0fc6-2e0d-4c45-bc61-d9c328319bd8}\\InprocServer32]
+@="xactengine2_4.dll"
+"ThreadingModel"="Both"
+
+;; xactengine2_7: XACTEngine
+[Software\\Classes\\CLSID\\{cd0d66ec-8057-43f5-acbd-66dfb36fd78c}\\InprocServer32]
+@="xactengine2_7.dll"
+"ThreadingModel"="Both"
+
+;; xactengine2_9: XACTEngine
+[Software\\Classes\\CLSID\\{343e68e6-8f82-4a8d-a2da-6e9a944b378c}\\InprocServer32]
+@="xactengine2_9.dll"
+"ThreadingModel"="Both"
+
+;; xactengine3_0: XACTEngine
+[Software\\Classes\\CLSID\\{3b80ee2a-b0f5-4780-9e30-90cb39685b03}\\InprocServer32]
+@="xactengine3_0.dll"
+"ThreadingModel"="Both"
+
+;; xactengine3_1: XACTEngine
+[Software\\Classes\\CLSID\\{962f5027-99be-4692-a468-85802cf8de61}\\InprocServer32]
+@="xactengine3_1.dll"
+"ThreadingModel"="Both"
+
+;; xactengine3_2: XACTEngine
+[Software\\Classes\\CLSID\\{d3332f02-3dd0-4de9-9aec-20d85c4111b6}\\InprocServer32]
+@="xactengine3_2.dll"
+"ThreadingModel"="Both"
+
+;; xactengine3_3: XACTEngine
+[Software\\Classes\\CLSID\\{94c1affa-66e7-4961-9521-cfdef3128d4f}\\InprocServer32]
+@="xactengine3_3.dll"
+"ThreadingModel"="Both"
+
+;; xactengine3_4: XACTEngine
+[Software\\Classes\\CLSID\\{0977d092-2d95-4e43-8d42-9ddcc2545ed5}\\InprocServer32]
+@="xactengine3_4.dll"
+"ThreadingModel"="Both"
+
+;; xactengine3_5: XACTEngine
+[Software\\Classes\\CLSID\\{074b110f-7f58-4743-aea5-12f15b5074ed}\\InprocServer32]
+@="xactengine3_5.dll"
+"ThreadingModel"="Both"
+
+;; xactengine3_6: XACTEngine
+[Software\\Classes\\CLSID\\{248d8a3b-6256-44d3-a018-2ac96c459f47}\\InprocServer32]
+@="xactengine3_6.dll"
+"ThreadingModel"="Both"
+
+;; xactengine3_7: XACTEngine
+[Software\\Classes\\CLSID\\{bcc782bc-6492-4c22-8c35-f5d72fe73c6e}\\InprocServer32]
+@="xactengine3_7.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_0: XAudio2
+[Software\\Classes\\CLSID\\{fac23f48-31f5-45a8-b49b-5225d61401aa}\\InprocServer32]
+@="xaudio2_0.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_0: AudioVolumeMeter
+[Software\\Classes\\CLSID\\{c0c56f46-29b1-44e9-9939-a32ce86867e2}\\InprocServer32]
+@="xaudio2_0.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_0: AudioReverb
+[Software\\Classes\\CLSID\\{6f6ea3a9-2cf5-41cf-91c1-2170b1540063}\\InprocServer32]
+@="xaudio2_0.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_1: XAudio2
+[Software\\Classes\\CLSID\\{e21a7345-eb21-468e-be50-804db97cf708}\\InprocServer32]
+@="xaudio2_1.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_1: AudioVolumeMeter
+[Software\\Classes\\CLSID\\{c1e3f122-a2ea-442c-854f-20d98f8357a1}\\InprocServer32]
+@="xaudio2_1.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_1: AudioReverb
+[Software\\Classes\\CLSID\\{f4769300-b949-4df9-b333-00d33932e9a6}\\InprocServer32]
+@="xaudio2_1.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_2: XAudio2
+[Software\\Classes\\CLSID\\{b802058a-464a-42db-bc10-b650d6f2586a}\\InprocServer32]
+@="xaudio2_2.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_2: AudioVolumeMeter
+[Software\\Classes\\CLSID\\{f5ca7b34-8055-42c0-b836-216129eb7e30}\\InprocServer32]
+@="xaudio2_2.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_2: AudioReverb
+[Software\\Classes\\CLSID\\{629cf0de-3ecc-41e7-9926-f7e43eebec51}\\InprocServer32]
+@="xaudio2_2.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_3: XAudio2
+[Software\\Classes\\CLSID\\{4c5e637a-16c7-4de3-9c46-5ed22181962d}\\InprocServer32]
+@="xaudio2_3.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_3: AudioVolumeMeter
+[Software\\Classes\\CLSID\\{e180344b-ac83-4483-959e-18a5c56a5e19}\\InprocServer32]
+@="xaudio2_3.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_3: AudioReverb
+[Software\\Classes\\CLSID\\{9cab402c-1d37-44b4-886d-fa4f36170a4c}\\InprocServer32]
+@="xaudio2_3.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_4: XAudio2
+[Software\\Classes\\CLSID\\{03219e78-5bc3-44d1-b92e-f63d89cc6526}\\InprocServer32]
+@="xaudio2_4.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_4: AudioVolumeMeter
+[Software\\Classes\\CLSID\\{c7338b95-52b8-4542-aa79-42eb016c8c1c}\\InprocServer32]
+@="xaudio2_4.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_4: AudioReverb
+[Software\\Classes\\CLSID\\{8bb7778b-645b-4475-9a73-1de3170bd3af}\\InprocServer32]
+@="xaudio2_4.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_5: XAudio2
+[Software\\Classes\\CLSID\\{4c9b6dde-6809-46e6-a278-9b6a97588670}\\InprocServer32]
+@="xaudio2_5.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_5: AudioVolumeMeter
+[Software\\Classes\\CLSID\\{2139e6da-c341-4774-9ac3-b4e026347f64}\\InprocServer32]
+@="xaudio2_5.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_5: AudioReverb
+[Software\\Classes\\CLSID\\{d06df0d0-8518-441e-822f-5451d5c595b8}\\InprocServer32]
+@="xaudio2_5.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_6: XAudio2
+[Software\\Classes\\CLSID\\{3eda9b49-2085-498b-9bb2-39a6778493de}\\InprocServer32]
+@="xaudio2_6.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_6: AudioVolumeMeter
+[Software\\Classes\\CLSID\\{e48c5a3f-93ef-43bb-a092-2c7ceb946f27}\\InprocServer32]
+@="xaudio2_6.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_6: AudioReverb
+[Software\\Classes\\CLSID\\{cecec95a-d894-491a-bee3-5e106fb59f2d}\\InprocServer32]
+@="xaudio2_6.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_7: XAudio2
+[Software\\Classes\\CLSID\\{5a508685-a254-4fba-9b82-9a24b00306af}\\InprocServer32]
+@="xaudio2_7.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_7: AudioVolumeMeter
+[Software\\Classes\\CLSID\\{cac1105f-619b-4d04-831a-44e1cbf12d57}\\InprocServer32]
+@="xaudio2_7.dll"
+"ThreadingModel"="Both"
+
+;; xaudio2_7: AudioReverb
+[Software\\Classes\\CLSID\\{6a93130e-1d53-41d1-a9cf-e758800bb179}\\InprocServer32]
+@="xaudio2_7.dll"
+"ThreadingModel"="Both"

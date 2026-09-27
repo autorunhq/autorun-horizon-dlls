@@ -1,6 +1,6 @@
 # autorun-horizon-dlls
 
-Built from Wine 11.18 as carried by https://github.com/autorunhq/autorun at commit `14ebe6b92ea5631b3b9d8b687a20503655d40eb1`. The source of every file is there, under the paths its manifest entry lists.
+Built from Wine 11.18 as carried by https://github.com/autorunhq/autorun at commit `21ff18433b0ea580e2dbc516a8468be92c081fb1`. The source of every file is there, under the paths its manifest entry lists.
 
 | Component | License | Text |
 |---|---|---|
@@ -27,11 +27,39 @@ Built from Wine 11.18 as carried by https://github.com/autorunhq/autorun at comm
 | libxml2 | MIT | `LICENSES/libxml2.txt` |
 | libxslt | MIT | `LICENSES/libxslt.txt` |
 | zlib | Zlib | `LICENSES/zlib.txt` |
+| DXBC-SPIRV-license | see the text | `LICENSES/DXBC-SPIRV-license.txt` |
+| DXIL-SPIRV-license | see the text | `LICENSES/DXIL-SPIRV-license.txt` |
+| DXVK-zlib | see the text | `LICENSES/DXVK-zlib.txt` |
+| FEX-LLVM | see the text | `LICENSES/FEX-LLVM.txt` |
+| FEX-MIT | see the text | `LICENSES/FEX-MIT.txt` |
+| FEX-SoftFloat | see the text | `LICENSES/FEX-SoftFloat.txt` |
+| FEX-cephes | see the text | `LICENSES/FEX-cephes.txt` |
+| FEX-fmt | see the text | `LICENSES/FEX-fmt.txt` |
+| FEX-optparse | see the text | `LICENSES/FEX-optparse.txt` |
+| FEX-range-v3 | see the text | `LICENSES/FEX-range-v3.txt` |
+| FEX-rpmalloc | see the text | `LICENSES/FEX-rpmalloc.txt` |
+| FEX-tiny-json | see the text | `LICENSES/FEX-tiny-json.txt` |
+| FEX-unordered_dense | see the text | `LICENSES/FEX-unordered_dense.txt` |
+| FEX-xxhash | see the text | `LICENSES/FEX-xxhash.txt` |
+| LLVM-runtime-license | see the text | `LICENSES/LLVM-runtime-license.txt` |
+| MinGW-w64-license | see the text | `LICENSES/MinGW-w64-license.txt` |
+| OpenVR-license | see the text | `LICENSES/OpenVR-license.txt` |
+| SPIRV-Headers-license | see the text | `LICENSES/SPIRV-Headers-license.txt` |
+| VKD3D-DXBC-SPIRV-license | see the text | `LICENSES/VKD3D-DXBC-SPIRV-license.txt` |
+| VKD3D-LLVM-runtime-license | see the text | `LICENSES/VKD3D-LLVM-runtime-license.txt` |
+| VKD3D-Proton-LGPL-2.1 | see the text | `LICENSES/VKD3D-Proton-LGPL-2.1.txt` |
+| VKD3D-Proton-authors | see the text | `LICENSES/VKD3D-Proton-authors.txt` |
+| VKD3D-Proton-copyright | see the text | `LICENSES/VKD3D-Proton-copyright.txt` |
+| VKD3D-SPIRV-Headers-license | see the text | `LICENSES/VKD3D-SPIRV-Headers-license.txt` |
+| VKD3D-Vulkan-Headers-license | see the text | `LICENSES/VKD3D-Vulkan-Headers-license.txt` |
+| Vulkan-Headers-license | see the text | `LICENSES/Vulkan-Headers-license.txt` |
+| libdisplay-info-license | see the text | `LICENSES/libdisplay-info-license.txt` |
 
-compiler-rt is built into every file; the other libraries besides Wine into the
-files whose manifest entry names their license.
+compiler-rt is built into every Wine file; the other libraries besides Wine into the
+files whose manifest entry names their license. FEX, DXVK and VKD3D-Proton are built
+from their pinned releases by this repository's tools.
 
-Changed since the Wine 11.0 import, or Autorun's own:
+Changed since the Wine import, or Autorun's own:
 
 - `drive_c/windows/system32/acledit.dll`: dlls/acledit
 - `drive_c/windows/system32/actxprxy.dll`: dlls/actxprxy
@@ -424,6 +452,7 @@ Changed since the Wine 11.0 import, or Autorun's own:
 - `drive_c/windows/system32/winedmo.dll`: dlls/winedmo
 - `drive_c/windows/system32/winehid.sys`: dlls/winehid.sys
 - `drive_c/windows/system32/winemenubuilder.exe`: programs/winemenubuilder
+- `drive_c/windows/system32/winenxaudio.drv`: wine-nx-probe/source/audio_driver.c
 - `drive_c/windows/system32/wineps.drv`: dlls/wineps.drv
 - `drive_c/windows/system32/winevulkan.dll`: dlls/winevulkan
 - `drive_c/windows/system32/winexinput.sys`: dlls/winexinput.sys

@@ -1,0 +1,31 @@
+{
+  "version": "3.1.1",
+  "revision": "b1a1c99ab52b687cf950d62c88bc2fa316b41663",
+  "architecture": "x86_64",
+  "submodules": [
+    "9df86f2341616ef1888ae59919feaa6d4fad693d include/native/directx (heads/main)",
+    " 04f10f650d514df88b76d25e83db360142c7b174 include/spirv (04f10f6)",
+    " 8864cdc896bbc2a9b6eb36b3218fc9ef57908d77 include/vulkan (8864cdc)",
+    " bf14419e5fa7eacb817b7b632f03cb61d61bbad7 subprojects/dxbc-spirv (bf14419)",
+    " c8ad050fcb29e42a2f57d9f59e97488f465c436d subprojects/dxbc-spirv/submodules/spirv_headers (c8ad050)",
+    " 275e6459c7ab1ddd4b125f28d0440716e4888078 subprojects/libdisplay-info (heads/windows)"
+  ],
+  "compiler": "clang version 22.1.5 (https://github.com/llvm/llvm-project.git 5ea218a153f4d2f815b8244eab3e4b4ba5e00e6c)",
+  "files": {
+    "d3d8.dll": "af6a3f6b0ad0d87e9a61bf65fbe7e44612b87fa52397d6f45ee04ec38f086c20",
+    "d3d9.dll": "7ac17886a58bc77d840e66b04d6ed907d4594e7af1b825af9b62d8c6283f3544",
+    "d3d10core.dll": "04ce5afd17b546e9a364b57872439054829f76dd3c94855a3798fb8b58fb81a7",
+    "d3d11.dll": "2b1ea9fd573831bc6ec3e386264fe7ba9a3eab86cf058d3cb00481c971ae71b7",
+    "dxgi.dll": "6d09c2dcd55723976a2da0723c307026347a5dc2a61490983514a95723cbf3d3"
+  },
+  "licenses": [
+    "DXBC-SPIRV-license.txt",
+    "DXVK-zlib.txt",
+    "LLVM-runtime-license.txt",
+    "MinGW-w64-license.txt",
+    "OpenVR-license.txt",
+    "SPIRV-Headers-license.txt",
+    "Vulkan-Headers-license.txt",
+    "libdisplay-info-license.txt"
+  ]
+}

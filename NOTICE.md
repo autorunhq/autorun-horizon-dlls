@@ -59,6 +59,10 @@ compiler-rt is built into every Wine file; the other libraries besides Wine into
 files whose manifest entry names their license. FEX, DXVK and VKD3D-Proton are built
 from their pinned releases by this repository's tools.
 
+The compatibility payload includes unmodified NVIDIA PhysX 9.13.0604 runtimes
+and standalone XLiveLess, without the ASI loader. Their manifest entries identify
+the original sources and build files; see `LICENSES/XLiveLess.txt`.
+
 Changed since the Wine import, or Autorun's own:
 
 - `drive_c/windows/system32/acledit.dll`: dlls/acledit

@@ -70,7 +70,10 @@
    "VKD3D-SPIRV-Headers-license",
    "VKD3D-Vulkan-Headers-license"
   ],
-  "dxvk32": []
+  "dxvk32": [],
+  "compat-runtime": [
+   "XLiveLess"
+  ]
  },
  "files": [
   {
@@ -56134,6 +56137,652 @@
     "size": 1923,
     "sha256": "13920bfbda735aa1d4f5256c59f54c9e1774c39f54822ab65742ad9218cd8bc6",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/xpssvcs.dll.z"
+   }
+  },
+  {
+   "name": "xlive.dll",
+   "path": "drive_c/windows/syswow64",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 321536,
+   "sha256": "641e4882cd04f9383ed9cdb9b0334354a2f063611465994e71ff3f1dbc574339",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/xlive.dll",
+   "source": {
+    "repo": "https://github.com/ThirteenAG/Ultimate-ASI-Loader",
+    "commit": "071dcede74841a311b801e111e2872487139430a",
+    "origin": "xliveless",
+    "modified": false,
+    "build": {
+     "repo": "https://github.com/autorunhq/autorun-horizon-dlls",
+     "ref": "main",
+     "paths": [
+      "runtime/xlive/dllmain.cpp",
+      "tools/xlive_runtime.py"
+     ]
+    },
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "MIT",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 123567,
+    "sha256": "aef7537f2e6a30b6a22da25950860897822d9010c3dfbfd7e918383d1bca3ff7",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/xlive.dll.z"
+   }
+  },
+  {
+   "name": "physxloader.dll",
+   "path": "drive_c/windows/syswow64",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 57224,
+   "sha256": "690f548b2340d79e72c2a0c1503697d03eb24c65870a730088da4db6abda69d5",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/physxloader.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 29882,
+    "sha256": "1ebceebb5e7116b08518b6761f8c522f5b3e7ab87dedf9c2fd82ce914366434f",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/physxloader.dll.z"
+   }
+  },
+  {
+   "name": "physxdevice.dll",
+   "path": "drive_c/windows/syswow64",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 53640,
+   "sha256": "d87f3312358e8c6c053cc367535aae187eedf185ef58ecaf010412815533943f",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/physxdevice.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 28640,
+    "sha256": "6183ae3d1f54cbd696bb8639a4f2a4c910546cecc34032d09fa089437812d335",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/physxdevice.dll.z"
+   }
+  },
+  {
+   "name": "cudart32_41_22.dll",
+   "path": "drive_c/windows/syswow64",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 437640,
+   "sha256": "71eb02a18149de04da7d1c5aa6bcd1324015a7e8d8c48f19b7b2c4b65fca2300",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/cudart32_41_22.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 148697,
+    "sha256": "97c994a14ed03eaac47e0429f932176162117def478900e61d29bc940d62dfc5",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/cudart32_41_22.dll.z"
+   }
+  },
+  {
+   "name": "physxcore.dll",
+   "path": "drive_c/physx/Engine/v2.7.1",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 3954568,
+   "sha256": "5807a46e38d723e05079ac8bad464f1fa51b1139019abd444255108b750923cc",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.7.1/physxcore.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 1523161,
+    "sha256": "f731f938336f4072bfbec01eb8fc100df95bc668ab2b0ef5f7d4b8c608ed6265",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.7.1/physxcore.dll.z"
+   }
+  },
+  {
+   "name": "physxcooking.dll",
+   "path": "drive_c/physx/Engine/v2.7.1",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 391048,
+   "sha256": "2ec391afb21e6f4fab3c1bb9b93e5e7d7eb21aa4f7806e90e8053651c09368de",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.7.1/physxcooking.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 197462,
+    "sha256": "f011ecad8e09edb17387b42af435d677bc78cb4777c630bac5e286d93d088bff",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.7.1/physxcooking.dll.z"
+   }
+  },
+  {
+   "name": "physxcore.dll",
+   "path": "drive_c/physx/Engine/v2.7.3",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 4106120,
+   "sha256": "19938357b73b6729c34e4555dbfe73fb2f3bcdb3c07d1f76b0f1bdfa1f0c791a",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.7.3/physxcore.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 1592815,
+    "sha256": "3908ea2089c892b1dddbc8eea7d36e19e027e0c7d9cbdb777d9937a1281d8965",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.7.3/physxcore.dll.z"
+   }
+  },
+  {
+   "name": "physxcooking.dll",
+   "path": "drive_c/physx/Engine/v2.7.3",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 391048,
+   "sha256": "542b94808b7113dd9ccc9fa5961596ca99238d23cf45078e23f4c3b001aa898a",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.7.3/physxcooking.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 197635,
+    "sha256": "a1dd2e5776af24fc83b35604cb50d716fa40d7f58e22d671a0bfe1321baa7840",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.7.3/physxcooking.dll.z"
+   }
+  },
+  {
+   "name": "physxcore.dll",
+   "path": "drive_c/physx/Engine/v2.7.4",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 4065160,
+   "sha256": "e1ceb6c6eef37db4fa5de6b169b2b851a1e1fc7b572a8be1c6f17ad202742a9a",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.7.4/physxcore.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 1571709,
+    "sha256": "c9e9a0d279854d928478c74484b48cca268b603ca5927aca6c35a5bc6718c5cf",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.7.4/physxcore.dll.z"
+   }
+  },
+  {
+   "name": "physxcooking.dll",
+   "path": "drive_c/physx/Engine/v2.7.4",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 391048,
+   "sha256": "056b3c87da00bd0f3486768f18240a8268c87c1e3278a47a8b9c64f79f0b0d8e",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.7.4/physxcooking.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 197629,
+    "sha256": "fdebaa8ad1dd31a5c707fb6e4c3ddd75e41076ea386614e8d6ee1b778dda057e",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.7.4/physxcooking.dll.z"
+   }
+  },
+  {
+   "name": "physxcore.dll",
+   "path": "drive_c/physx/Engine/v2.7.5",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 5396360,
+   "sha256": "7d090faded1439e5c7123ae87a6dbddee98ed59adffa327a7f129ff14a2fa05c",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.7.5/physxcore.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 1774242,
+    "sha256": "6260f9c5f47a492c1c637d3ab5a140bdfea54df42704947b88565020ec2a0aa2",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.7.5/physxcore.dll.z"
+   }
+  },
+  {
+   "name": "physxcooking.dll",
+   "path": "drive_c/physx/Engine/v2.7.5",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 391048,
+   "sha256": "fea281722a1263ef9358dc9f63419bccd351c775124cb505747340aefa9c1fc9",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.7.5/physxcooking.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 197636,
+    "sha256": "1d9eca2679b551d47eb5752fe221edc515c4acb3603496500198d3150c2ea7b2",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.7.5/physxcooking.dll.z"
+   }
+  },
+  {
+   "name": "physxcore.dll",
+   "path": "drive_c/physx/Engine/v2.7.6",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 4126600,
+   "sha256": "86d50ca5ccb0eef6dfbbc7abb8801cb873d24b9f4f8ebc8849ed094b57bc8f94",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.7.6/physxcore.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 1601114,
+    "sha256": "19461ca5db08c7ed97941d49a1235b35b17e441c1b7a0c9b07beec14dc57d844",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.7.6/physxcore.dll.z"
+   }
+  },
+  {
+   "name": "physxcooking.dll",
+   "path": "drive_c/physx/Engine/v2.7.6",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 399240,
+   "sha256": "63b567c2a39f892fa8c246aeb2b57dc2699e6012a26a0ad566e3a1b49847e6ec",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.7.6/physxcooking.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 203378,
+    "sha256": "c3155530f219d1eba9df777748149aa872beb85c17e1bddb38812d23816317fb",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.7.6/physxcooking.dll.z"
+   }
+  },
+  {
+   "name": "physxcore.dll",
+   "path": "drive_c/physx/Engine/v2.8.0",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 4315016,
+   "sha256": "d50941a22c05a99dcefd637dd25343b5f1d1182d8aa97b41c65d30642aac8fc7",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.8.0/physxcore.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 1678399,
+    "sha256": "175c1ad393c72ab9ddd390b68e94747f037c563abe9af4fa8aa201aa27585f4d",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.8.0/physxcore.dll.z"
+   }
+  },
+  {
+   "name": "physxcooking.dll",
+   "path": "drive_c/physx/Engine/v2.8.0",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 391048,
+   "sha256": "7294d00ebc1d12591c351caa390a4a64fb9b5ed73fcd8520450a24974a88e567",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.8.0/physxcooking.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 197268,
+    "sha256": "701f09a3755528740d62a939d43d80da55ef53ee5bb08e80d9f07b7722012c7d",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.8.0/physxcooking.dll.z"
+   }
+  },
+  {
+   "name": "physxcore.dll",
+   "path": "drive_c/physx/Engine/v2.8.1",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 4528008,
+   "sha256": "212f88c3018327589b4fb55adbd55367b85f592f1fc3a7942b70e61f8c91ce07",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.8.1/physxcore.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 1751524,
+    "sha256": "48f15f6bce8724f0a6041e0c0ada384766f10a8243faa4cd6bcdfdb21319dbd9",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.8.1/physxcore.dll.z"
+   }
+  },
+  {
+   "name": "physxcooking.dll",
+   "path": "drive_c/physx/Engine/v2.8.1",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 391048,
+   "sha256": "c5d6784caadfb050aee16509064d0a840a74e9168371bc4617b5ede5adebda21",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.8.1/physxcooking.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 197451,
+    "sha256": "3312157716bd9628790179f5814208b47cfb9cd9eaa1b38008ec5b3bdafcc906",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.8.1/physxcooking.dll.z"
+   }
+  },
+  {
+   "name": "physxcore.dll",
+   "path": "drive_c/physx/Engine/v2.8.3",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 3454856,
+   "sha256": "361ab4c9d2609a6720e2b7193f4328495f74a552fc55474c94911d0f2c4d83ae",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.8.3/physxcore.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 1341730,
+    "sha256": "1b734b345328be4236cafe52eb00bbe8f55885020270478a279f018f605576fd",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.8.3/physxcore.dll.z"
+   }
+  },
+  {
+   "name": "physxcooking.dll",
+   "path": "drive_c/physx/Engine/v2.8.3",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 362376,
+   "sha256": "9940194a8491006f0a29ebce252eb2d2ae2e8cfcaa1840fd3c44b6afad101961",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.8.3/physxcooking.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.13.0604",
+    "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
+    "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
+    "extra": "compat-runtime",
+    "pin": "ef96d5d95e69344a"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 183928,
+    "sha256": "89fbf669c532668e8f38edda106d322040219ccd790d619ffb542691343ec374",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.8.3/physxcooking.dll.z"
    }
   }
  ]

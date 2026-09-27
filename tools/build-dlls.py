@@ -71,6 +71,7 @@ import tempfile
 import zlib
 
 from autorun import root, probe, toolchain
+from compat_runtime import COMPAT_PATHS, stage_runtime
 
 repo = Path(__file__).resolve().parents[1]
 tools = Path(__file__).resolve().parent
@@ -687,6 +688,22 @@ def main():
             source=source, license=license,
             requires=dict(flavor=FLAVOR, features=entry['features']),
             classes=kept_classes))
+    compat_pin = pin('compat-runtime', repo_inputs=['tools/compat_runtime.py', 'tools/xlive_runtime.py',
+                                                   'runtime/xlive/dllmain.cpp'])
+    compatibility = [f for f in earlier.values() if f['source'].get('extra') == 'compat-runtime']
+    if (args.all or {f"{f['path']}/{f['name']}" for f in compatibility} != COMPAT_PATHS or
+            any(f['source'].get('pin') != compat_pin for f in compatibility)):
+        compatibility, texts = stage_runtime(scratch / 'compat', probe / 'toolchains/compat-runtime',
+                                              earlier, args.ref, toolchain)
+        for entry in compatibility:
+            entry['source'].update(extra='compat-runtime', pin=compat_pin)
+        shutil.copytree(scratch / 'compat', card, dirs_exist_ok=True)
+        (repo / 'LICENSES').mkdir(exist_ok=True)
+        for name, data in texts.items():
+            (repo / 'LICENSES' / name).write_bytes(data)
+    files.extend(compatibility)
+    extra_licenses['XLiveLess'] = None
+    licenses_in['compat-runtime'] = ['XLiveLess']
     shutil.rmtree(scratch)
 
     # What was here and is built no more goes.
@@ -787,6 +804,9 @@ def write_notice(manifest, licenses, extra_licenses):
     lines += ['', 'compiler-rt is built into every Wine file; the other libraries besides Wine into the',
               'files whose manifest entry names their license. FEX, DXVK and VKD3D-Proton are built',
               "from their pinned releases by this repository's tools.", '']
+    lines += ['The compatibility payload includes unmodified NVIDIA PhysX 9.13.0604 runtimes',
+              'and standalone XLiveLess, without the ASI loader. Their manifest entries identify',
+              'the original sources and build files; see `LICENSES/XLiveLess.txt`.', '']
     if modified:
         lines += ["Changed since the Wine import, or Autorun's own:", '']
         lines += [f"- `{f['path']}/{f['name']}`: {', '.join(f['source']['paths'])}" for f in modified]
@@ -809,6 +829,7 @@ its `switch` folder to the root of the SD card, merging folders.
 
 Every Wine file is built from Wine, some with changes for Horizon; `NOTICE.md`
 says which, and where their source is. None of it is Microsoft's.
+The shared compatibility payload also includes standalone XLiveLess and PhysX.
 
 ## Layout
 

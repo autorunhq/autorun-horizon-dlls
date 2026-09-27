@@ -22895,13 +22895,13 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "core",
-   "version": 2,
+   "version": 3,
    "size": 458752,
-   "sha256": "5a78b2c7083d2292b446302dd4b0e78aaaf7155d989793e59c491103bdfff55e",
+   "sha256": "dd0903fd6b56e4bd99b2bb4b05c28fa9470d5e1ed4a778938e8ef2bf5d5f2f28",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/winebox64.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "d7c1ab1b596a17f2d6d3d16e7053d2f967bf58b5",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -22916,8 +22916,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 5732,
-    "sha256": "f824a2a6b2a8657a9060ed77d563cbf1ad1ab6339319615ae7c447b6573f6930",
+    "size": 5737,
+    "sha256": "c35ab78507e7358c87da0b9b17ac38cf3b83f1f347395e5630ca509d3a18dab6",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/winebox64.dll.z"
    }
   },
@@ -22926,13 +22926,13 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "core",
-   "version": 1,
+   "version": 2,
    "size": 589824,
-   "sha256": "2def1f9d7e6f161f7c10ed46736473986d519c1e4fb3ec7ad0b3a73e7f3ffd81",
+   "sha256": "5dfec370430e144f7f454c48a4c6a7669c581a5853d53af9336b0c9150a61087",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/winebox64ec.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "d7c1ab1b596a17f2d6d3d16e7053d2f967bf58b5",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -22947,8 +22947,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 8364,
-    "sha256": "49d268f5ea32de003105b1116c69d48e22d136e9c13392caa0e327e2934a60a8",
+    "size": 8378,
+    "sha256": "b774d65b55924b3525dd4d18f45ff72f1f68a6e012bbe211d8ea1ef310acb454",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/winebox64ec.dll.z"
    }
   },

@@ -45,10 +45,10 @@ def source_tree(source):
 
 
 def main():
-    from autorun import horizon_wine
+    from autorun import horizon_wine, repo
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source', type=Path, default=horizon_wine / 'vendor/vkd3d-proton')
-    parser.add_argument('--build', type=Path, default=horizon_wine / 'build-vkd3d-amd64')
+    parser.add_argument('--build', type=Path, default=repo / 'build/vkd3d-amd64')
     parser.add_argument('--jobs', type=int, default=int(os.environ.get('WINE_NX_JOBS', '8')))
     args = parser.parse_args()
     source, build = args.source.resolve(), args.build.resolve()

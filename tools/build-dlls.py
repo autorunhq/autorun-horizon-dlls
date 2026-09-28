@@ -383,7 +383,7 @@ def build_fex(scratch):
 
 def build_dxvk64(scratch):
     run(sys.executable, tools / 'build-dxvk.py')
-    payload = horizon_wine / 'build-dxvk-amd64/payload'
+    payload = repo / 'build/dxvk-amd64/payload'
     manifest = json.loads((payload / 'dxvk-manifest.json').read_text())
     return [dict(file=payload / name, name=name, path='drive_c/dxvk64', arch='x86_64')
             for name in list(manifest['files']) + ['dxvk-manifest.json']] + \
@@ -391,7 +391,7 @@ def build_dxvk64(scratch):
 
 def build_vkd3d64(scratch):
     run(sys.executable, tools / 'build-vkd3d.py')
-    payload = horizon_wine / 'build-vkd3d-amd64/payload'
+    payload = repo / 'build/vkd3d-amd64/payload'
     manifest = json.loads((payload / 'vkd3d-manifest.json').read_text())
     return [dict(file=payload / name, name=name, path='drive_c/vkd3d64', arch='x86_64')
             for name in list(manifest['files']) + ['vkd3d-manifest.json']] + \
@@ -401,7 +401,7 @@ def build_dxvk_d3d9(scratch):
     """DXVK's d3d9 for 32-bit programs, from the same pinned DXVK as C:\\dxvk64.
     A program uses it from C:\\dxvk, or copied beside its executable."""
     run(sys.executable, tools / 'build-dxvk.py')
-    source, build = horizon_wine / 'vendor/dxvk', horizon_wine / 'build-dxvk-i386'
+    source, build = horizon_wine / 'vendor/dxvk', repo / 'build/dxvk-i386'
     if not (build / 'build.ninja').is_file():
         build.mkdir(parents=True, exist_ok=True)
         cross = build / 'llvm-mingw-i386.txt'

@@ -1,1 +1,3 @@
 /dist/
+# DXVK and VKD3D-Proton, built by their tools/ scripts.
+/build/

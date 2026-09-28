@@ -3,7 +3,7 @@
  "flavor": "arm64x",
  "source": {
   "repo": "autorunhq/autorun",
-  "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
+  "commit": "b698a1ec6613acca9b87736e37751384eabbb6a8",
   "wine": "11.18",
   "wine_import": "eaa5b16e"
  },
@@ -92,7 +92,7 @@
     "modified": true,
     "paths": [],
     "extra": "dxvk32",
-    "pin": "8e928ef99c7a4ef5"
+    "pin": "4487be6482fe5295"
    },
    "license": "Zlib",
    "requires": {
@@ -123,7 +123,7 @@
     "modified": true,
     "paths": [],
     "extra": "dxvk64",
-    "pin": "d822e75476f89b46"
+    "pin": "646e51ff77a4b26e"
    },
    "license": "Zlib",
    "requires": {
@@ -154,7 +154,7 @@
     "modified": true,
     "paths": [],
     "extra": "dxvk64",
-    "pin": "d822e75476f89b46"
+    "pin": "646e51ff77a4b26e"
    },
    "license": "Zlib",
    "requires": {
@@ -185,7 +185,7 @@
     "modified": true,
     "paths": [],
     "extra": "dxvk64",
-    "pin": "d822e75476f89b46"
+    "pin": "646e51ff77a4b26e"
    },
    "license": "Zlib",
    "requires": {
@@ -216,7 +216,7 @@
     "modified": true,
     "paths": [],
     "extra": "dxvk64",
-    "pin": "d822e75476f89b46"
+    "pin": "646e51ff77a4b26e"
    },
    "license": "Zlib",
    "requires": {
@@ -247,7 +247,7 @@
     "modified": true,
     "paths": [],
     "extra": "dxvk64",
-    "pin": "d822e75476f89b46"
+    "pin": "646e51ff77a4b26e"
    },
    "license": "Zlib",
    "requires": {
@@ -278,7 +278,7 @@
     "modified": true,
     "paths": [],
     "extra": "dxvk64",
-    "pin": "d822e75476f89b46"
+    "pin": "646e51ff77a4b26e"
    },
    "license": "Zlib",
    "requires": {
@@ -309,7 +309,7 @@
     "modified": true,
     "paths": [],
     "extra": "vkd3d64",
-    "pin": "110d01f620a3415f"
+    "pin": "48286deb60299699"
    },
    "license": "LGPL-2.1-or-later",
    "requires": {
@@ -340,7 +340,7 @@
     "modified": true,
     "paths": [],
     "extra": "vkd3d64",
-    "pin": "110d01f620a3415f"
+    "pin": "48286deb60299699"
    },
    "license": "LGPL-2.1-or-later",
    "requires": {
@@ -371,7 +371,7 @@
     "modified": true,
     "paths": [],
     "extra": "vkd3d64",
-    "pin": "110d01f620a3415f"
+    "pin": "48286deb60299699"
    },
    "license": "LGPL-2.1-or-later",
    "requires": {

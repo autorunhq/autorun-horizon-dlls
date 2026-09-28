@@ -11,6 +11,7 @@ its `switch` folder to the root of the SD card, merging folders.
 
 Every Wine file is built from Wine, some with changes for Horizon; `NOTICE.md`
 says which, and where their source is. None of it is Microsoft's.
+The shared compatibility payload also includes standalone XLiveLess and PhysX.
 
 ## Layout
 
@@ -98,7 +99,7 @@ git submodule update --init horizon-dlls
 horizon-dlls/tools/build-dlls.py
 ```
 
-It builds in Autorun's `wine-nx-probe/build-wine-amd64-pe`, configured as
+It builds in Autorun's `horizon-wine/build-wine-amd64-pe`, configured as
 `build-amd64-components.sh` does, and writes over `switch/` only what changed
 since the commit the manifest names: a Wine module whose sources, headers,
 import libraries or build tools changed, as Wine's make knows them, and a file
@@ -106,7 +107,7 @@ built from other sources whose recipe or inputs changed. The rest keep their
 bytes and versions. `--all` rebuilds everything. FEX, DXVK and VKD3D-Proton are
 built by `tools/build-fex.sh`, `tools/build-dxvk.py` and `tools/build-vkd3d.py`
 from their pinned releases; FEX's Horizon patch and the ABI it shares with the
-runtime stay in Autorun's `wine-nx-probe/fex`, and the headers a Wine module
-shares with the runtime are listed in `wine-nx-probe/runtime-interfaces.json`.
+runtime stay in Autorun's `horizon-wine/fex`, and the headers a Wine module
+shares with the runtime are listed in `horizon-wine/runtime-interfaces.json`.
 Commit and push here, then commit the new `horizon-dlls` in Autorun, so each
 Autorun commit names the DLLs that go with it.

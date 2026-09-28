@@ -24,6 +24,6 @@ def checkout():
 
 
 root = checkout()
-probe = root / 'wine-nx-probe'
+horizon_wine = root / 'horizon-wine'
 toolchain = Path(os.environ.get('WINE_NX_LLVM_MINGW',
-                                probe / 'toolchains/llvm-mingw-20260505-ucrt-macos-universal')) / 'bin'
+                                horizon_wine / 'toolchains/llvm-mingw-20260505-ucrt-macos-universal')) / 'bin'

@@ -5,12 +5,12 @@ here="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 # fex/ holds the Horizon patch and the ABI the runtime shares with it.
 autorun="${AUTORUN:-$(git -C "$here" rev-parse --show-superproject-working-tree)}"
 [ -n "$autorun" ] || { echo "Not inside an Autorun checkout; set AUTORUN." >&2; exit 1; }
-probe="$autorun/wine-nx-probe"
-source_dir="${WINE_NX_FEX_DIR:-$probe/toolchains/fex-2609}"
-build="${WINE_NX_FEX_BUILD_DIR:-$probe/toolchains/build-fex-2609-horizon}"
+horizon_wine="$autorun/horizon-wine"
+source_dir="${WINE_NX_FEX_DIR:-$horizon_wine/toolchains/fex-2609}"
+build="${WINE_NX_FEX_BUILD_DIR:-$horizon_wine/toolchains/build-fex-2609-horizon}"
 wow64_build="$build-wow64"
 revision=395b132f346b1a45def246d10c52245edba1ef02
-patch="$probe/fex/horizon.patch"
+patch="$horizon_wine/fex/horizon.patch"
 
 if [ -n "${WINE_NX_LLVM_MINGW:-}" ]; then
     export PATH="$WINE_NX_LLVM_MINGW/bin:$PATH"
@@ -33,15 +33,25 @@ if [ "$(git -C "$source_dir" rev-parse HEAD)" != "$revision" ]; then
     echo "FEX must be at $revision; no files were reset." >&2
     exit 1
 fi
+# The patch last applied is kept beside the checkout, so a changed patch
+# replaces it; any other change to FEX is left alone.
+applied="$source_dir/.git/horizon-applied.patch"
 if git -C "$source_dir" apply --reverse --check "$patch" 2>/dev/null; then
     :
-elif [ -z "$(git -C "$source_dir" status --porcelain)" ]; then
+else
+    if [ -n "$(git -C "$source_dir" status --porcelain)" ]; then
+        if [ -f "$applied" ] && git -C "$source_dir" apply --reverse --check "$applied" 2>/dev/null; then
+            git -C "$source_dir" apply --reverse "$applied"
+        fi
+        if [ -n "$(git -C "$source_dir" status --porcelain)" ]; then
+            echo "FEX has unexpected changes; no files were reset." >&2
+            exit 1
+        fi
+    fi
     git -C "$source_dir" apply --check "$patch"
     git -C "$source_dir" apply "$patch"
-else
-    echo "FEX has unexpected changes; no files were reset." >&2
-    exit 1
 fi
+cp "$patch" "$applied"
 git -C "$source_dir" submodule update --init --depth=1 \
     External/fmt External/xxhash External/range-v3 External/unordered_dense \
     External/rpmalloc Source/Common/cpp-optparse
@@ -55,7 +65,7 @@ build_module()
         -DOVERRIDE_VERSION=FEX-2609 -DOVERRIDE_HASH="$revision" \
         -DENABLE_LTO=OFF -DBUILD_TESTING=OFF -DBUILD_FEXCONFIG=OFF \
         -DENABLE_JEMALLOC_GLIBC_ALLOC=OFF -DENABLE_OFFLINE_TELEMETRY=OFF -DTUNE_CPU=none \
-        -DFEX_HORIZON=ON -DFEX_HORIZON_ABI_DIR="$probe/fex"
+        -DFEX_HORIZON=ON -DFEX_HORIZON_ABI_DIR="$horizon_wine/fex"
     cmake --build "$1" --target "$3" -j "${WINE_NX_JOBS:-4}"
 }
 build_module "$build" arm64ec-w64-mingw32 arm64ecfex

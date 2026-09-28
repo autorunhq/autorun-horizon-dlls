@@ -49,10 +49,10 @@ def source_tree(source):
 
 
 def main():
-    from autorun import probe
+    from autorun import horizon_wine
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--source', type=Path, default=probe / 'vendor/dxvk')
-    parser.add_argument('--build', type=Path, default=probe / 'build-dxvk-amd64')
+    parser.add_argument('--source', type=Path, default=horizon_wine / 'vendor/dxvk')
+    parser.add_argument('--build', type=Path, default=horizon_wine / 'build-dxvk-amd64')
     parser.add_argument('--jobs', type=int, default=int(os.environ.get('WINE_NX_JOBS', '8')))
     args = parser.parse_args()
     source, build = args.source.resolve(), args.build.resolve()

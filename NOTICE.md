@@ -1,6 +1,6 @@
 # autorun-horizon-dlls
 
-Built from Wine 11.18 as carried by https://github.com/autorunhq/autorun at commit `dfd6a01c84ed105c1f0f49afb6c58cc6df807590`. The source of every file is there, under the paths its manifest entry lists.
+Built from Wine 11.18 as carried by https://github.com/autorunhq/autorun at commit `3efb9316f09d07462116c39cf93b99f600d3bcb2`. The source of every file is there, under the paths its manifest entry lists.
 
 | Component | License | Text |
 |---|---|---|
@@ -53,6 +53,7 @@ Built from Wine 11.18 as carried by https://github.com/autorunhq/autorun at comm
 | VKD3D-SPIRV-Headers-license | see the text | `LICENSES/VKD3D-SPIRV-Headers-license.txt` |
 | VKD3D-Vulkan-Headers-license | see the text | `LICENSES/VKD3D-Vulkan-Headers-license.txt` |
 | Vulkan-Headers-license | see the text | `LICENSES/Vulkan-Headers-license.txt` |
+| XLiveLess | see the text | `LICENSES/XLiveLess.txt` |
 | libdisplay-info-license | see the text | `LICENSES/libdisplay-info-license.txt` |
 
 compiler-rt is built into every Wine file; the other libraries besides Wine into the
@@ -456,7 +457,7 @@ Changed since the Wine import, or Autorun's own:
 - `drive_c/windows/system32/winedmo.dll`: dlls/winedmo
 - `drive_c/windows/system32/winehid.sys`: dlls/winehid.sys
 - `drive_c/windows/system32/winemenubuilder.exe`: programs/winemenubuilder
-- `drive_c/windows/system32/winenxaudio.drv`: wine-nx-probe/source/audio_driver.c
+- `drive_c/windows/system32/winenxaudio.drv`: horizon-wine/source/audio_driver.c
 - `drive_c/windows/system32/wineps.drv`: dlls/wineps.drv
 - `drive_c/windows/system32/winevulkan.dll`: dlls/winevulkan
 - `drive_c/windows/system32/winexinput.sys`: dlls/winexinput.sys
@@ -953,7 +954,7 @@ Changed since the Wine import, or Autorun's own:
 - `drive_c/windows/syswow64/winedevice.exe`: programs/winedevice
 - `drive_c/windows/syswow64/winedmo.dll`: dlls/winedmo
 - `drive_c/windows/syswow64/winehid.sys`: dlls/winehid.sys
-- `drive_c/windows/syswow64/winenxaudio.drv`: wine-nx-probe/source/audio_driver.c
+- `drive_c/windows/syswow64/winenxaudio.drv`: horizon-wine/source/audio_driver.c
 - `drive_c/windows/syswow64/wineps.drv`: dlls/wineps.drv
 - `drive_c/windows/syswow64/winevdm.exe`: programs/winevdm
 - `drive_c/windows/syswow64/winevulkan.dll`: dlls/winevulkan

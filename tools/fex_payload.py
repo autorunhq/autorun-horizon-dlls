@@ -11,7 +11,7 @@ VERSION = '2609'
 REVISION = '395b132f346b1a45def246d10c52245edba1ef02'
 DLLS = {'libarm64ecfex.dll': 'arm64ec', 'libwow64fex.dll': 'arm64'}
 # The runtime side of the FEX ABI stays with the runtime, in Autorun.
-from autorun import probe as PROBE
+from autorun import horizon_wine as HORIZON_WINE
 
 
 def digest(path):
@@ -56,9 +56,9 @@ def validate_image(path, architecture):
 def required_exports(architecture):
     if architecture == 'arm64ec':
         return set(re.findall(r'^@ (?:stdcall|extern) (\w+)',
-                   (PROBE.parent / 'dlls/winebox64ec/winebox64ec.spec').read_text(), re.M))
+                   (HORIZON_WINE.parent / 'dlls/winebox64ec/winebox64ec.spec').read_text(), re.M))
     return set(re.findall(r'GET_PTR\( (BTCpu\w+|__wine_get_unix_opcode) \)',
-                          (PROBE.parent / 'dlls/wow64/syscall.c').read_text()))
+                          (HORIZON_WINE.parent / 'dlls/wow64/syscall.c').read_text()))
 
 
 def validate_payload(directory):
@@ -70,7 +70,7 @@ def validate_payload(directory):
                       ('jit_registry_sha256', 'jit_registry.h'),
                       ('code_storage_sha256', 'code_storage.h'),
                       ('cache_policy_sha256', 'cache_policy.h')):
-        if manifest.get(key) != source_digest(PROBE / 'fex' / file):
+        if manifest.get(key) != source_digest(HORIZON_WINE / 'fex' / file):
             raise ValueError(f'FEX payload does not match {file}')
     modules = manifest.get('modules', {})
     if set(modules) != set(DLLS):
@@ -121,11 +121,11 @@ def build_payload(source, arm64ec, wow64, output):
     softfloat = (source / 'External/SoftFloat-3e/include/SoftFloat-3e/softfloat.h').read_text()
     (licenses / 'FEX-SoftFloat.txt').write_text(softfloat.split('*/', 1)[0] + '*/\n')
     manifest = {'version': VERSION, 'revision': REVISION, 'modules': modules,
-                'patch_sha256': source_digest(PROBE / 'fex/horizon.patch'),
-                'abi_sha256': source_digest(PROBE / 'fex/unixlib.h'),
-                'jit_registry_sha256': source_digest(PROBE / 'fex/jit_registry.h'),
-                'code_storage_sha256': source_digest(PROBE / 'fex/code_storage.h'),
-                'cache_policy_sha256': source_digest(PROBE / 'fex/cache_policy.h'),
+                'patch_sha256': source_digest(HORIZON_WINE / 'fex/horizon.patch'),
+                'abi_sha256': source_digest(HORIZON_WINE / 'fex/unixlib.h'),
+                'jit_registry_sha256': source_digest(HORIZON_WINE / 'fex/jit_registry.h'),
+                'code_storage_sha256': source_digest(HORIZON_WINE / 'fex/code_storage.h'),
+                'cache_policy_sha256': source_digest(HORIZON_WINE / 'fex/cache_policy.h'),
                 'licenses': {path.name: digest(path) for path in sorted(licenses.iterdir()) if path.is_file()}}
     (output / 'fex-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
     validate_payload(output)

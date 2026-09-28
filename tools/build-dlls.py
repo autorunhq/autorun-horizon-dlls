@@ -6,7 +6,7 @@ the ones that changed over switch/ here.
 
 The repository is a submodule of Autorun (horizon-dlls/), and the Wine it
 builds from is the Autorun checkout around it; --autorun names another. The
-build tree is Autorun's wine-nx-probe/build-wine-amd64-pe (aarch64, arm64ec and
+build tree is Autorun's horizon-wine/build-wine-amd64-pe (aarch64, arm64ec and
 i386), whose system32 modules are ARM64X: native ARM64 code and ARM64EC in one
 file, so the one set serves the x86 runtime and the AMD64 one alike.
 
@@ -70,12 +70,12 @@ import sys
 import tempfile
 import zlib
 
-from autorun import root, probe, toolchain
+from autorun import root, horizon_wine, toolchain
 from compat_runtime import COMPAT_PATHS, stage_runtime
 
 repo = Path(__file__).resolve().parents[1]
 tools = Path(__file__).resolve().parent
-pe = Path(os.environ.get('WINE_NX_PE_BUILD_DIR', probe / 'build-wine-amd64-pe')).resolve()
+pe = Path(os.environ.get('WINE_NX_PE_BUILD_DIR', horizon_wine / 'build-wine-amd64-pe')).resolve()
 assert (root / 'dlls/ntdll').is_dir() and (pe / 'Makefile').is_file(), \
     f'{root} is not an Autorun checkout with a configured {pe.name}'
 
@@ -232,7 +232,7 @@ def run(*command, **kwargs):
 
 # What a runtime reports, which is what the files here require of it: the same
 # reading of the same sources the runtime's own build makes.
-spec = importlib.util.spec_from_file_location('runtime_features', probe / 'tools/runtime_features.py')
+spec = importlib.util.spec_from_file_location('runtime_features', horizon_wine / 'tools/runtime_features.py')
 runtime_features = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(runtime_features)
 static_unix_libs, interfaces = runtime_features.static_unix_libs, runtime_features.interfaces
@@ -342,14 +342,16 @@ def stripped(path, into):
 # --- Files built from other sources -------------------------------------------
 
 def pin(identity, autorun_inputs=(), repo_inputs=()):
-    """A digest of a recipe and everything it reads, which names a build of it."""
+    """A digest of a recipe and everything it reads, which names a build of it.
+    Each file is named within its input, so moving an input keeps the pin."""
     digest = hashlib.sha256(identity.encode())
     for base, paths in ((root, autorun_inputs), (repo, repo_inputs)):
         for path in paths:
-            files = sorted(p for p in (base / path).rglob('*') if p.is_file()) if (base / path).is_dir() \
-                else [base / path]
+            top = base / path
+            files = sorted(p for p in top.rglob('*') if p.is_file()) if top.is_dir() else [top]
             for file in files:
-                digest.update(str(file.relative_to(base)).encode() + b'\0' + file.read_bytes())
+                name = file.relative_to(top).as_posix() if top.is_dir() else file.name
+                digest.update(name.encode() + b'\0' + file.read_bytes())
     return digest.hexdigest()[:16]
 
 AUDIO_FLAGS = ['-Os', '-Wall', '-Wextra', '-Werror', '-fno-builtin', '-nostdlib', '-shared',
@@ -366,14 +368,14 @@ def build_audio_drivers(scratch):
         driver = scratch / arch / 'winenxaudio.drv'
         driver.parent.mkdir(parents=True, exist_ok=True)
         run(toolchain / f'{compiler}-w64-mingw32-clang', *AUDIO_FLAGS, f'-Wl,--entry,{entry}',
-            '-o', driver, probe / 'source/audio_driver.c')
+            '-o', driver, horizon_wine / 'source/audio_driver.c')
         assert b'winenxaudio.drv\0' in driver.read_bytes(), 'the audio driver has no module identity'
         built.append(dict(file=driver, name='winenxaudio.drv', path=f'drive_c/windows/{directory}', arch=arch))
     return built
 
 def build_fex(scratch):
     run('sh', tools / 'build-fex.sh')
-    payload = probe / 'toolchains/build-fex-2609-horizon/payload'
+    payload = horizon_wine / 'toolchains/build-fex-2609-horizon/payload'
     manifest = json.loads((payload / 'fex-manifest.json').read_text())
     return [dict(file=payload / name, name=name, path='drive_c/windows/system32',
                  arch='arm64ec' if 'arm64ec' in name else 'aarch64') for name in ('libarm64ecfex.dll', 'libwow64fex.dll')] + \
@@ -381,7 +383,7 @@ def build_fex(scratch):
 
 def build_dxvk64(scratch):
     run(sys.executable, tools / 'build-dxvk.py')
-    payload = probe / 'build-dxvk-amd64/payload'
+    payload = horizon_wine / 'build-dxvk-amd64/payload'
     manifest = json.loads((payload / 'dxvk-manifest.json').read_text())
     return [dict(file=payload / name, name=name, path='drive_c/dxvk64', arch='x86_64')
             for name in list(manifest['files']) + ['dxvk-manifest.json']] + \
@@ -389,7 +391,7 @@ def build_dxvk64(scratch):
 
 def build_vkd3d64(scratch):
     run(sys.executable, tools / 'build-vkd3d.py')
-    payload = probe / 'build-vkd3d-amd64/payload'
+    payload = horizon_wine / 'build-vkd3d-amd64/payload'
     manifest = json.loads((payload / 'vkd3d-manifest.json').read_text())
     return [dict(file=payload / name, name=name, path='drive_c/vkd3d64', arch='x86_64')
             for name in list(manifest['files']) + ['vkd3d-manifest.json']] + \
@@ -399,7 +401,7 @@ def build_dxvk_d3d9(scratch):
     """DXVK's d3d9 for 32-bit programs, from the same pinned DXVK as C:\\dxvk64.
     A program uses it from C:\\dxvk, or copied beside its executable."""
     run(sys.executable, tools / 'build-dxvk.py')
-    source, build = probe / 'vendor/dxvk', probe / 'build-dxvk-i386'
+    source, build = horizon_wine / 'vendor/dxvk', horizon_wine / 'build-dxvk-i386'
     if not (build / 'build.ninja').is_file():
         build.mkdir(parents=True, exist_ok=True)
         cross = build / 'llvm-mingw-i386.txt'
@@ -462,11 +464,11 @@ def say_directx9(path):
 # recipe identity and the files it reads, in Autorun and here.
 EXTRA = [
     dict(key='winenxaudio', build=build_audio_drivers, category='audio', origin='autorun',
-         license=None, sources=['wine-nx-probe/source/audio_driver.c'],
-         identity=' '.join(AUDIO_FLAGS), autorun_inputs=['wine-nx-probe/source/audio_driver.c']),
+         license=None, sources=['horizon-wine/source/audio_driver.c'],
+         identity=' '.join(AUDIO_FLAGS), autorun_inputs=['horizon-wine/source/audio_driver.c']),
     dict(key='fex', build=build_fex, category='core', origin='fex', license='MIT',
-         sources=['wine-nx-probe/fex'], identity='fex',
-         autorun_inputs=['wine-nx-probe/fex'], repo_inputs=['tools/build-fex.sh', 'tools/fex_payload.py']),
+         sources=['horizon-wine/fex'], identity='fex',
+         autorun_inputs=['horizon-wine/fex'], repo_inputs=['tools/build-fex.sh', 'tools/fex_payload.py']),
     dict(key='dxvk64', build=build_dxvk64, category='translation-layers', origin='dxvk', license='Zlib',
          sources=[], identity='dxvk64', repo_inputs=['tools/build-dxvk.py', 'tools/dxvk_payload.py']),
     dict(key='vkd3d64', build=build_vkd3d64, category='translation-layers', origin='vkd3d-proton',
@@ -517,8 +519,8 @@ def main():
 
     commit = git('rev-parse', 'HEAD')
     dirty = git('status', '--porcelain', '--', 'include', 'libs', 'dlls', 'programs', 'tools', 'VERSION',
-                'configure', 'configure.ac', 'wine-nx-probe/source/audio_driver.c',
-                'wine-nx-probe/runtime-interfaces.json', 'wine-nx-probe/fex')
+                'configure', 'configure.ac', 'horizon-wine/source/audio_driver.c',
+                'horizon-wine/runtime-interfaces.json', 'horizon-wine/fex')
     if dirty:
         assert args.allow_dirty, f'uncommitted changes in what the DLLs are built from:\n{dirty}'
         commit += '-dirty'
@@ -693,7 +695,7 @@ def main():
     compatibility = [f for f in earlier.values() if f['source'].get('extra') == 'compat-runtime']
     if (args.all or {f"{f['path']}/{f['name']}" for f in compatibility} != COMPAT_PATHS or
             any(f['source'].get('pin') != compat_pin for f in compatibility)):
-        compatibility, texts = stage_runtime(scratch / 'compat', probe / 'toolchains/compat-runtime',
+        compatibility, texts = stage_runtime(scratch / 'compat', horizon_wine / 'toolchains/compat-runtime',
                                               earlier, args.ref, toolchain)
         for entry in compatibility:
             entry['source'].update(extra='compat-runtime', pin=compat_pin)
@@ -894,7 +896,7 @@ git submodule update --init horizon-dlls
 horizon-dlls/tools/build-dlls.py
 ```
 
-It builds in Autorun's `wine-nx-probe/build-wine-amd64-pe`, configured as
+It builds in Autorun's `horizon-wine/build-wine-amd64-pe`, configured as
 `build-amd64-components.sh` does, and writes over `switch/` only what changed
 since the commit the manifest names: a Wine module whose sources, headers,
 import libraries or build tools changed, as Wine's make knows them, and a file
@@ -902,8 +904,8 @@ built from other sources whose recipe or inputs changed. The rest keep their
 bytes and versions. `--all` rebuilds everything. FEX, DXVK and VKD3D-Proton are
 built by `tools/build-fex.sh`, `tools/build-dxvk.py` and `tools/build-vkd3d.py`
 from their pinned releases; FEX's Horizon patch and the ABI it shares with the
-runtime stay in Autorun's `wine-nx-probe/fex`, and the headers a Wine module
-shares with the runtime are listed in `wine-nx-probe/runtime-interfaces.json`.
+runtime stay in Autorun's `horizon-wine/fex`, and the headers a Wine module
+shares with the runtime are listed in `horizon-wine/runtime-interfaces.json`.
 Commit and push here, then commit the new `horizon-dlls` in Autorun, so each
 Autorun commit names the DLLs that go with it.
 '''

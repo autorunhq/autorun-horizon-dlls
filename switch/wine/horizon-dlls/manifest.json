@@ -3,7 +3,7 @@
  "flavor": "arm64x",
  "source": {
   "repo": "autorunhq/autorun",
-  "commit": "dfd6a01c84ed105c1f0f49afb6c58cc6df807590",
+  "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
   "wine": "11.18",
   "wine_import": "eaa5b16e"
  },
@@ -92,7 +92,7 @@
     "modified": true,
     "paths": [],
     "extra": "dxvk32",
-    "pin": "51efa5148d5f8a74"
+    "pin": "8e928ef99c7a4ef5"
    },
    "license": "Zlib",
    "requires": {
@@ -123,7 +123,7 @@
     "modified": true,
     "paths": [],
     "extra": "dxvk64",
-    "pin": "f22228ee38efc544"
+    "pin": "d822e75476f89b46"
    },
    "license": "Zlib",
    "requires": {
@@ -154,7 +154,7 @@
     "modified": true,
     "paths": [],
     "extra": "dxvk64",
-    "pin": "f22228ee38efc544"
+    "pin": "d822e75476f89b46"
    },
    "license": "Zlib",
    "requires": {
@@ -185,7 +185,7 @@
     "modified": true,
     "paths": [],
     "extra": "dxvk64",
-    "pin": "f22228ee38efc544"
+    "pin": "d822e75476f89b46"
    },
    "license": "Zlib",
    "requires": {
@@ -216,7 +216,7 @@
     "modified": true,
     "paths": [],
     "extra": "dxvk64",
-    "pin": "f22228ee38efc544"
+    "pin": "d822e75476f89b46"
    },
    "license": "Zlib",
    "requires": {
@@ -247,7 +247,7 @@
     "modified": true,
     "paths": [],
     "extra": "dxvk64",
-    "pin": "f22228ee38efc544"
+    "pin": "d822e75476f89b46"
    },
    "license": "Zlib",
    "requires": {
@@ -278,7 +278,7 @@
     "modified": true,
     "paths": [],
     "extra": "dxvk64",
-    "pin": "f22228ee38efc544"
+    "pin": "d822e75476f89b46"
    },
    "license": "Zlib",
    "requires": {
@@ -309,7 +309,7 @@
     "modified": true,
     "paths": [],
     "extra": "vkd3d64",
-    "pin": "7c17e30016769be2"
+    "pin": "110d01f620a3415f"
    },
    "license": "LGPL-2.1-or-later",
    "requires": {
@@ -340,7 +340,7 @@
     "modified": true,
     "paths": [],
     "extra": "vkd3d64",
-    "pin": "7c17e30016769be2"
+    "pin": "110d01f620a3415f"
    },
    "license": "LGPL-2.1-or-later",
    "requires": {
@@ -371,7 +371,7 @@
     "modified": true,
     "paths": [],
     "extra": "vkd3d64",
-    "pin": "7c17e30016769be2"
+    "pin": "110d01f620a3415f"
    },
    "license": "LGPL-2.1-or-later",
    "requires": {
@@ -5353,13 +5353,13 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "directx-input",
-   "version": 2,
-   "size": 1245184,
-   "sha256": "1ef2cacbdc7a6fa4adfb482bbe7d2a2e06f94209befb801ea1438bf61cd76e37",
+   "version": 3,
+   "size": 1310720,
+   "sha256": "47b9ec90e753a33729db05fdb9f5a38e8f169f27dcfc9988ad682fcebe8a54b1",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/dinput.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -5385,8 +5385,8 @@
    ],
    "compressed": {
     "encoding": "zlib",
-    "size": 264180,
-    "sha256": "111de1679461a9a424c2b3bbbb53a88623bd48474afa9bf1c79666dacb2385c6",
+    "size": 273425,
+    "sha256": "aedf55067bbc1ba9fc4e4c75fa582bb95f27ffc518ed818d32fe5a041ea65224",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/dinput.dll.z"
    }
   },
@@ -5395,13 +5395,13 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "directx-input",
-   "version": 2,
-   "size": 1245184,
-   "sha256": "2d4c3ef2f85aaf25d7c2e18702e8c7af1e34c8cb50ee8ae26a3a69292de6f0f0",
+   "version": 3,
+   "size": 1310720,
+   "sha256": "e6cad04c30ef802ab3d80ff7903dddb642d7f3df353b87815decc7c6ef16fae5",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/dinput8.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -5428,8 +5428,8 @@
    ],
    "compressed": {
     "encoding": "zlib",
-    "size": 263821,
-    "sha256": "84920628217aa13e46a3a035c5cc2abb81857cc8a45ce0025f667c6e1d1fc650",
+    "size": 273095,
+    "sha256": "94395f1d000e68c42dd0a6dab8c6610e2ee4421334e58d90b63d8eb6e5913933",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/dinput8.dll.z"
    }
   },
@@ -9660,20 +9660,20 @@
    "path": "drive_c/windows/system32",
    "arch": "arm64ec",
    "category": "core",
-   "version": 1,
+   "version": 2,
    "size": 5222400,
-   "sha256": "30865b06a4897c33e4a906ab848f6b424c2001d4d91b53af9f635363bb454b11",
+   "sha256": "6728b6e377651932e53e29bc189b469f60d1d3577417472bc6688632f61347c0",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/libarm64ecfex.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "21ff18433b0ea580e2dbc516a8468be92c081fb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "fex",
     "modified": true,
     "paths": [
-     "wine-nx-probe/fex"
+     "horizon-wine/fex"
     ],
     "extra": "fex",
-    "pin": "8b0c384a45985998"
+    "pin": "ad60d97183a761c4"
    },
    "license": "MIT",
    "requires": {
@@ -9683,8 +9683,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 1140949,
-    "sha256": "fd8fae50a2f72436cf6be7cc9b4e218efbab320d705ff138d1f6f27ca9d6a18c",
+    "size": 1140948,
+    "sha256": "ce4c1f205bd8f4e4e776734a12a8f2780f905030afd305ea4c2a8190e493d9d3",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/libarm64ecfex.dll.z"
    }
   },
@@ -9693,20 +9693,20 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "core",
-   "version": 1,
+   "version": 2,
    "size": 4677632,
-   "sha256": "24748515fd519363df632dbad3d17a10b813703cd2a93d08f0958a20dab42802",
+   "sha256": "0facb4af48adebb15def4fba956fa483dd91b0c602f1042db98df1433a32723a",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/libwow64fex.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "21ff18433b0ea580e2dbc516a8468be92c081fb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "fex",
     "modified": true,
     "paths": [
-     "wine-nx-probe/fex"
+     "horizon-wine/fex"
     ],
     "extra": "fex",
-    "pin": "8b0c384a45985998"
+    "pin": "ad60d97183a761c4"
    },
    "license": "MIT",
    "requires": {
@@ -9716,8 +9716,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 1018582,
-    "sha256": "ed3a1d6a22ea6ebbd7e72adae51aa8771ec4948dd9d3170ab5d3d32ef3c51fd2",
+    "size": 1018598,
+    "sha256": "37c266d800b61d4cc9843f6984543b5504212801860aaebeea1b1953682c42f4",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/libwow64fex.dll.z"
    }
   },
@@ -14819,13 +14819,13 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "core",
-   "version": 2,
+   "version": 3,
    "size": 2293760,
-   "sha256": "7b7846416c6a8a76a873fb0a6322c0d14e7c25353d85b470f9cc54df696bfb36",
+   "sha256": "bb03865f56565fda351cf9d0edafd7bb5bef2fd10e57d0376bb2e9fe076ad8a4",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/ntdll.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -14845,8 +14845,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 692226,
-    "sha256": "8912a770e53c824cd92a4bc18137cd75b86adddcc2853d5001fef65bba06296f",
+    "size": 692351,
+    "sha256": "255df15f274b5000fcebb14edd0e1c7ef5a54aafdda5c577ef6b5619fc15e9b0",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/ntdll.dll.z"
    }
   },
@@ -22895,13 +22895,13 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "core",
-   "version": 3,
+   "version": 4,
    "size": 458752,
-   "sha256": "dd0903fd6b56e4bd99b2bb4b05c28fa9470d5e1ed4a778938e8ef2bf5d5f2f28",
+   "sha256": "09b6eb0e18d58d857eab13527726752ab0821ea39c59fbc0e6a69fc8dcb05b9f",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/winebox64.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "d7c1ab1b596a17f2d6d3d16e7053d2f967bf58b5",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -22917,7 +22917,7 @@
    "compressed": {
     "encoding": "zlib",
     "size": 5737,
-    "sha256": "c35ab78507e7358c87da0b9b17ac38cf3b83f1f347395e5630ca509d3a18dab6",
+    "sha256": "86b0341cd8830e2edeb98b51b3a67b9609d1cf9bc794b0f70775306044afec7c",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/winebox64.dll.z"
    }
   },
@@ -22926,13 +22926,13 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "core",
-   "version": 2,
+   "version": 3,
    "size": 589824,
-   "sha256": "5dfec370430e144f7f454c48a4c6a7669c581a5853d53af9336b0c9150a61087",
+   "sha256": "1f4ecffced85555b98b5767d9346ae8ec00555697dacc1dcdaf4c4a7414e057e",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/winebox64ec.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "d7c1ab1b596a17f2d6d3d16e7053d2f967bf58b5",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -22948,7 +22948,7 @@
    "compressed": {
     "encoding": "zlib",
     "size": 8378,
-    "sha256": "b774d65b55924b3525dd4d18f45ff72f1f68a6e012bbe211d8ea1ef310acb454",
+    "sha256": "abeefc6ce63df2596956038fb76a74b87e051c93c2ddd202b8c597ab6a81728f",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/winebox64ec.dll.z"
    }
   },
@@ -23434,10 +23434,10 @@
     "origin": "autorun",
     "modified": true,
     "paths": [
-     "wine-nx-probe/source/audio_driver.c"
+     "horizon-wine/source/audio_driver.c"
     ],
     "extra": "winenxaudio",
-    "pin": "edf5fdb8c599869f"
+    "pin": "fb5bcbf22a50233f"
    },
    "license": "LGPL-2.1-or-later AND (NCSA OR MIT)",
    "requires": {
@@ -26650,13 +26650,13 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "directx-input",
-   "version": 2,
+   "version": 3,
    "size": 655360,
-   "sha256": "d7596c52bcc1e6ee8c1808a2847b2145cd521649f48de4e450109ef4e071235b",
+   "sha256": "dc7b4240452ece8fe1f557d5fcf6c489d6c670954ef3f025f13e239a857f7b54",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/xinput1_1.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -26672,8 +26672,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 37007,
-    "sha256": "d030ef5a814cd10bf42017b6d2174a5e21038f40fc400775b7be10f03ec530a3",
+    "size": 36683,
+    "sha256": "b4c44a277ecb13fdd37871be6975945315b58113be022e902530ed84180af054",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/xinput1_1.dll.z"
    }
   },
@@ -26682,13 +26682,13 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "directx-input",
-   "version": 2,
+   "version": 3,
    "size": 655360,
-   "sha256": "dfe20b924ac6321979d306a259e94791349e76b55ae81b78348f736599700884",
+   "sha256": "251c18b033791edcf705a013db74b17bd873ae0dfa1de111d3c7d726db145b54",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/xinput1_2.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -26704,8 +26704,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 37009,
-    "sha256": "25db0be3535d021117ee90722a2dd2d8eaa28816417298a5f6dcc03041e56c93",
+    "size": 36684,
+    "sha256": "1debb0289dd56739831615a19909caedd729ad0ba520fb7fbc0a9976c0301587",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/xinput1_2.dll.z"
    }
   },
@@ -26714,13 +26714,13 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "directx-input",
-   "version": 2,
+   "version": 3,
    "size": 655360,
-   "sha256": "f4998befb40c7553b89b2f2d4434a166e7cf83d219d7734a020fc120d47b467a",
+   "sha256": "3a3640e1d07805d0b0cffd5d4da2e165911023908a337d6eaa6241ffefc9f9ec",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/xinput1_3.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -26735,8 +26735,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 37165,
-    "sha256": "48edc5c7cac04389ec5f2acdd14947ef9eb2f796eba463f687ae654e9fd3235d",
+    "size": 36826,
+    "sha256": "14c473fdaa0f054edfa5cd95106a09e5e395575880eaabc16f0865d74a1869ce",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/xinput1_3.dll.z"
    }
   },
@@ -26745,13 +26745,13 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "directx-input",
-   "version": 2,
+   "version": 3,
    "size": 720896,
-   "sha256": "c5ff092b6f51d68512116ba782b8427fda8cbcfe3a1313c2c0736afee760de12",
+   "sha256": "e806601616536af75ac77ebe46af3eb37941665455dc65b4963c2a8c3981e261",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/xinput1_4.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -26767,8 +26767,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 37810,
-    "sha256": "3dcaec04feb569d782111af5a08257b2cb12e29ae20c38a244599eeffcade980",
+    "size": 37485,
+    "sha256": "b6a5d5557265f2e70c5b34a485cfee0a5623e9f81859f06393285d2d6346e356",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/xinput1_4.dll.z"
    }
   },
@@ -26808,13 +26808,13 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "directx-input",
-   "version": 2,
+   "version": 3,
    "size": 720896,
-   "sha256": "201c1687f70843e980afe67b7c024d041f1c212a1bd6940b202621cfa1db55ad",
+   "sha256": "e4ddab7bb7e25132e63148684d65d0d6b306e1ba289c1fb377a7efdcfe2113c1",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/xinputuap.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -26830,8 +26830,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 37724,
-    "sha256": "764b4cf5ef8b9a810182115b443539df83d10e849a7d6c79844c51fec6b45b21",
+    "size": 37400,
+    "sha256": "f41f1d8532471f7c2341ad095bd1ce9c7f15a737237a3e3944a31c2dad7debcd",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/xinputuap.dll.z"
    }
   },
@@ -32303,13 +32303,13 @@
    "path": "drive_c/windows/syswow64",
    "arch": "i386",
    "category": "directx-input",
-   "version": 2,
-   "size": 434176,
-   "sha256": "19ec1a40c92c66e9efe86e22c7934695f4f3557bbc634617385429f51609fab7",
+   "version": 3,
+   "size": 475136,
+   "sha256": "c4870965275f0735626b058a90545dfd16aff5b0f19edbc33bc93f7412e78af1",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/dinput.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -32319,7 +32319,9 @@
    "license": "LGPL-2.1-or-later AND (NCSA OR MIT)",
    "requires": {
     "flavor": "arm64x",
-    "features": []
+    "features": [
+     "unixlib32:dinput.dll"
+    ]
    },
    "classes": [
     {
@@ -32335,8 +32337,8 @@
    ],
    "compressed": {
     "encoding": "zlib",
-    "size": 148066,
-    "sha256": "d9a3a9bbee19d621c656113c84536cbee6c958717332b3a95c5ec6e5d54b91b0",
+    "size": 157495,
+    "sha256": "40e46861e8d051fa91a36d67d56f9dfae2f63bf25ca666f1d29389deb538bed8",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/dinput.dll.z"
    }
   },
@@ -32345,13 +32347,13 @@
    "path": "drive_c/windows/syswow64",
    "arch": "i386",
    "category": "directx-input",
-   "version": 2,
-   "size": 434176,
-   "sha256": "0479aaa5c873ccfe288d13e310dadef07c14cf5e9059be4e89d76535723171af",
+   "version": 3,
+   "size": 475136,
+   "sha256": "8862b84bd483707269b5719f3f5f8dd4cd7d4f6868c204115f50d322328c71ab",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/dinput8.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -32362,7 +32364,9 @@
    "license": "LGPL-2.1-or-later AND (NCSA OR MIT)",
    "requires": {
     "flavor": "arm64x",
-    "features": []
+    "features": [
+     "unixlib32:dinput8.dll"
+    ]
    },
    "classes": [
     {
@@ -32378,8 +32382,8 @@
    ],
    "compressed": {
     "encoding": "zlib",
-    "size": 147929,
-    "sha256": "029bc94d252a0eaf6907461e33e14003508e30f92633aa2503d653836fcbe521",
+    "size": 157339,
+    "sha256": "64d0a62d7d5cdaeb5019b9ba97d455cc3125bce958892f1a85d5e282d59f5d8e",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/dinput8.dll.z"
    }
   },
@@ -33141,7 +33145,9 @@
    "license": "LGPL-2.1-or-later AND (NCSA OR MIT)",
    "requires": {
     "flavor": "arm64x",
-    "features": []
+    "features": [
+     "unixlib32:dnsapi.dll"
+    ]
    },
    "classes": [],
    "compressed": {
@@ -42929,13 +42935,13 @@
    "path": "drive_c/windows/syswow64",
    "arch": "i386",
    "category": "core",
-   "version": 2,
+   "version": 3,
    "size": 933888,
-   "sha256": "ecc1b6bd8eb905dd7c793f47d3732762e6913bc3d6c0ac6303700d7287e020bb",
+   "sha256": "b4726089f13304aa4f1d1b407367fd9c74286c0feac40b823a3b35a0967c3fed",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/ntdll.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -42953,8 +42959,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 361957,
-    "sha256": "8e909cb8db9b885cdd1431e6270d94898b9c0d027e3f8bd2125e07db9b41f82a",
+    "size": 362030,
+    "sha256": "b46c067c46d2c34ca8c5a7d26cfeb1caba7527d988368382301a4b0bdba22b5b",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/ntdll.dll.z"
    }
   },
@@ -52410,10 +52416,10 @@
     "origin": "autorun",
     "modified": true,
     "paths": [
-     "wine-nx-probe/source/audio_driver.c"
+     "horizon-wine/source/audio_driver.c"
     ],
     "extra": "winenxaudio",
-    "pin": "edf5fdb8c599869f"
+    "pin": "fb5bcbf22a50233f"
    },
    "license": "LGPL-2.1-or-later AND (NCSA OR MIT)",
    "requires": {
@@ -55818,13 +55824,13 @@
    "path": "drive_c/windows/syswow64",
    "arch": "i386",
    "category": "directx-input",
-   "version": 2,
+   "version": 3,
    "size": 73728,
-   "sha256": "aed72430dab23ac62fb0a8fae90ab28f43e487c91aeaf8ce8221e7e23e3023a9",
+   "sha256": "810ab91012c07b446375594b586fbe530e973c5bdaa54507e849de4bb0256b3e",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/xinput1_1.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -55837,14 +55843,14 @@
     "flavor": "arm64x",
     "features": [
      "unixlib32:xinput1_1.dll",
-     "iface:xinput1_1.dll:2ef0fc0f6b16"
+     "iface:xinput1_1.dll:a02ed9c6c7b5"
     ]
    },
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 22620,
-    "sha256": "f692d652586494f3546d859834290a9ab960050d8ca5033a5345320e671931da",
+    "size": 22577,
+    "sha256": "523b21dec8a4c0c9e6110dca6aedb130ff7f2d7151c12d46624b3576acd4b33e",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/xinput1_1.dll.z"
    }
   },
@@ -55853,13 +55859,13 @@
    "path": "drive_c/windows/syswow64",
    "arch": "i386",
    "category": "directx-input",
-   "version": 2,
+   "version": 3,
    "size": 73728,
-   "sha256": "704a20cc58e229c98b72bd7e5f9b9c6b8e3f541263119608ff0f8011a9edd6f4",
+   "sha256": "afca8e81e9da2d5478e97d2715ad23dabff7b26b02901ee1c2dfbc86d6adbb79",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/xinput1_2.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -55872,14 +55878,14 @@
     "flavor": "arm64x",
     "features": [
      "unixlib32:xinput1_2.dll",
-     "iface:xinput1_2.dll:2ef0fc0f6b16"
+     "iface:xinput1_2.dll:a02ed9c6c7b5"
     ]
    },
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 22622,
-    "sha256": "ddf787cc0410d421425b3313d4923d891fa9477780d3b3a38492c1c057892d7f",
+    "size": 22579,
+    "sha256": "359b249c90220d99ca3e957ecdd947b4125855bd343c857f034356f33a40f340",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/xinput1_2.dll.z"
    }
   },
@@ -55888,13 +55894,13 @@
    "path": "drive_c/windows/syswow64",
    "arch": "i386",
    "category": "directx-input",
-   "version": 2,
+   "version": 3,
    "size": 73728,
-   "sha256": "cee905fcee1d203dc3683946ff4b98807c9af85b607f3e42638673a8f7003e82",
+   "sha256": "c0bf31400f392c4f7cef532f6989b815456b22fd994111c852e7fb7a9a86351b",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/xinput1_3.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -55906,14 +55912,14 @@
     "flavor": "arm64x",
     "features": [
      "unixlib32:xinput1_3.dll",
-     "iface:xinput1_3.dll:2ef0fc0f6b16"
+     "iface:xinput1_3.dll:a02ed9c6c7b5"
     ]
    },
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 22733,
-    "sha256": "e39d0982f56b75d70ccb600037d50212a958be7fb0f8dfbd30a5525a8e35665c",
+    "size": 22701,
+    "sha256": "d6089a75ba0fe18c9bac7cf604a458c0b85fc79df5b9ba58e99f24ff86182361",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/xinput1_3.dll.z"
    }
   },
@@ -55922,13 +55928,13 @@
    "path": "drive_c/windows/syswow64",
    "arch": "i386",
    "category": "directx-input",
-   "version": 2,
+   "version": 3,
    "size": 77824,
-   "sha256": "22ea9d2ad978da6b65dfca72c13d0f0d74da67b2bcfde8427f5cf7f25dbaee7a",
+   "sha256": "9ef7961b86ecd781bb2b77865d6c8385ad7f3661bd4013b75c7e8368169d1e6a",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/xinput1_4.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -55941,14 +55947,14 @@
     "flavor": "arm64x",
     "features": [
      "unixlib32:xinput1_4.dll",
-     "iface:xinput1_4.dll:2ef0fc0f6b16"
+     "iface:xinput1_4.dll:a02ed9c6c7b5"
     ]
    },
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 23010,
-    "sha256": "8cf006e4b0dde97aea4d203e2dd1914f3145333f2b6af231d2d5a46bd39e7bdd",
+    "size": 22963,
+    "sha256": "711eb4595b98b4ef0ca35a5c814598346fafaf5c90d3d811b43bd1e4c83b41b1",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/xinput1_4.dll.z"
    }
   },
@@ -55988,13 +55994,13 @@
    "path": "drive_c/windows/syswow64",
    "arch": "i386",
    "category": "directx-input",
-   "version": 2,
+   "version": 3,
    "size": 77824,
-   "sha256": "34af5a07e8f86102848ffaa60c2ec8c85849383836e90111b166df4f87240afc",
+   "sha256": "6be58d015c267ab80903e63bb30203f72b6a3a583bc9e531acfaa086eb680721",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/xinputuap.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -56010,8 +56016,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 22926,
-    "sha256": "897c5f5574dfa3dbb91f3cb743fe1f076bc9f91ac3bae25e59c10bc35cb0ea43",
+    "size": 22869,
+    "sha256": "c89e1e2dde547fcd65d6a3575155554fbc9d13cacdb9423a5c0d96219e99fb52",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/xinputuap.dll.z"
    }
   },
@@ -56162,7 +56168,7 @@
      ]
     },
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "MIT",
    "requires": {
@@ -56194,7 +56200,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56226,7 +56232,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56258,7 +56264,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56290,7 +56296,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56322,7 +56328,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56354,7 +56360,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56386,7 +56392,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56418,7 +56424,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56450,7 +56456,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56482,7 +56488,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56514,7 +56520,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56546,7 +56552,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56578,7 +56584,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56610,7 +56616,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56642,7 +56648,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56674,7 +56680,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56706,7 +56712,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56738,7 +56744,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56770,7 +56776,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "ef96d5d95e69344a"
+    "pin": "d287bf3636975e9a"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {

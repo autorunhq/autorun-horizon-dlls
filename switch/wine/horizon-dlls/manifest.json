@@ -24242,23 +24242,29 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "directx-media",
-   "version": 2,
-   "size": 983040,
-   "sha256": "d98ef98417988ac57010a95ee467598fcd658282b7b9b2e4559ac58ca5023008",
+   "version": 3,
+   "size": 1048576,
+   "sha256": "5432ac5fbdaa66664c6c6abceba831a21cd42bcceeae7de41104ccccc7414aaa",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/wmadmod.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "bcf3a7e20cbf9be6b0a08da2b440e09d12e0a430",
     "origin": "wine",
     "modified": true,
     "paths": [
-     "dlls/wmadmod"
+     "dlls/wmadmod",
+     "dlls/winegstreamer/wma_decoder.c",
+     "dlls/winegstreamer/gst_private.h",
+     "dlls/winegstreamer/unixlib.h"
     ]
    },
    "license": "LGPL-2.1-or-later AND (NCSA OR MIT)",
    "requires": {
     "flavor": "arm64x",
-    "features": []
+    "features": [
+     "unixlib:wmadmod.dll",
+     "iface:wmadmod.dll:ced86b7c8a65"
+    ]
    },
    "classes": [
     {
@@ -24269,8 +24275,8 @@
    ],
    "compressed": {
     "encoding": "zlib",
-    "size": 147934,
-    "sha256": "759d12786d7a7e0feb4b00b03a973d4b2a538de1d381452410b5581f4a36c6d1",
+    "size": 164253,
+    "sha256": "7d8cde4463f72acf2a8c4508a05813624c7ea84b5d4fc396ca807871cca763c6",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/wmadmod.dll.z"
    }
   },
@@ -53475,23 +53481,29 @@
    "path": "drive_c/windows/syswow64",
    "arch": "i386",
    "category": "directx-media",
-   "version": 2,
-   "size": 290816,
-   "sha256": "dcd5a8f47e22ff1590cd4f11c557de5d0e9965fa459c3b31e395060d84a5a78c",
+   "version": 3,
+   "size": 315392,
+   "sha256": "81faf0f9a7b744116badfb605030e5e92a3b87660dc2a7a59f73a929d76a5467",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/wmadmod.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "bcf3a7e20cbf9be6b0a08da2b440e09d12e0a430",
     "origin": "wine",
     "modified": true,
     "paths": [
-     "dlls/wmadmod"
+     "dlls/wmadmod",
+     "dlls/winegstreamer/wma_decoder.c",
+     "dlls/winegstreamer/gst_private.h",
+     "dlls/winegstreamer/unixlib.h"
     ]
    },
    "license": "LGPL-2.1-or-later AND (NCSA OR MIT)",
    "requires": {
     "flavor": "arm64x",
-    "features": []
+    "features": [
+     "unixlib32:wmadmod.dll",
+     "iface:wmadmod.dll:ced86b7c8a65"
+    ]
    },
    "classes": [
     {
@@ -53502,8 +53514,8 @@
    ],
    "compressed": {
     "encoding": "zlib",
-    "size": 95887,
-    "sha256": "a464d2b87f555b9b0bbaa4a634778e8e28ce6ed0beff999cd36cf1cd7216f79b",
+    "size": 104200,
+    "sha256": "cb5fa0be98b97f213924f29fea233d6a279d29ad1ba6734c52e63b190cb68b93",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/wmadmod.dll.z"
    }
   },

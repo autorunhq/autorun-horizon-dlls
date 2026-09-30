@@ -16466,13 +16466,13 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "directx-media",
-   "version": 2,
+   "version": 3,
    "size": 2097152,
-   "sha256": "c0d5d3fc64bc115e74f9725ea217558dfab987a397626e6ee4c0f3b0d2b67b35",
+   "sha256": "b6790230f1aa8f1e49b5763765ffc775219bfdebe2c8632ba4054069232c2a2a",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/quartz.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "5255566bef9f7641012fee092bc724207feb1fd6",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -16603,8 +16603,8 @@
    ],
    "compressed": {
     "encoding": "zlib",
-    "size": 491342,
-    "sha256": "9d115d923afe36252fc0a345a8030c9090996979b0c36ad72220da6cbefdb822",
+    "size": 491567,
+    "sha256": "c7a1bd0da5c2f87b6ddb27e0fcf15de379e009059c8a33d41ebb40a1be0aabe4",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/quartz.dll.z"
    }
   },
@@ -44899,13 +44899,13 @@
    "path": "drive_c/windows/syswow64",
    "arch": "i386",
    "category": "directx-media",
-   "version": 2,
+   "version": 3,
    "size": 856064,
-   "sha256": "aeef65940bd367875452d5afe44b1c7b49b9320ba37f472148dcf7321a095ac9",
+   "sha256": "acfb04d85e8d06293fa9343b7a19c5e3f28227e9f431b34a02b4395edaaf415f",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/quartz.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "5255566bef9f7641012fee092bc724207feb1fd6",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -45036,8 +45036,8 @@
    ],
    "compressed": {
     "encoding": "zlib",
-    "size": 282101,
-    "sha256": "25065a96410feeda854d6c8a4e347366616ef3aa9efb07a00a439d58f6ab5fb2",
+    "size": 282465,
+    "sha256": "a0b7f3f9fd561bb8e3664b424a083fd2ffd92e12b0b3ab42d3cd0ed4a3bde87a",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/quartz.dll.z"
    }
   },

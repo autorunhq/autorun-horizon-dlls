@@ -9693,20 +9693,20 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "core",
-   "version": 2,
+   "version": 3,
    "size": 4677632,
-   "sha256": "0facb4af48adebb15def4fba956fa483dd91b0c602f1042db98df1433a32723a",
+   "sha256": "c993aac7702f37b132af00e36912217f31d272a8cd7f4b11451dfd43e758208a",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/libwow64fex.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "3efb9316f09d07462116c39cf93b99f600d3bcb2",
+    "commit": "c6334849ab58954af40818c597dd0c63c8a6f0ef",
     "origin": "fex",
     "modified": true,
     "paths": [
      "horizon-wine/fex"
     ],
     "extra": "fex",
-    "pin": "ad60d97183a761c4"
+    "pin": "a0f6bb89deeaa391"
    },
    "license": "MIT",
    "requires": {
@@ -9716,8 +9716,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 1018598,
-    "sha256": "37c266d800b61d4cc9843f6984543b5504212801860aaebeea1b1953682c42f4",
+    "size": 1017884,
+    "sha256": "7bed8d4655604d865a55e8459272cd3a0b78d6f45c12e94aaa20e1e30a4c1fd4",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/libwow64fex.dll.z"
    }
   },

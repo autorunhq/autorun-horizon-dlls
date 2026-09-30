@@ -24594,13 +24594,13 @@
    "path": "drive_c/windows/system32",
    "arch": "aarch64",
    "category": "directx-media",
-   "version": 2,
+   "version": 3,
    "size": 917504,
-   "sha256": "443d0b1799639190e71f2eebb59adfd9c03db451a2e3b30ea154aa10bdb0460a",
+   "sha256": "0be766d818f813710d40af7855fd3250a780bb9a16908008bda086848a4437da",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/system32/wmvcore.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "f9a1d4a87bb5700e08d187ecc1f2d001b1a8b96d",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -24615,8 +24615,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 76531,
-    "sha256": "88f4062ff4dbd21f0f478d6b26b88062e65c12b8fa848d4644a4799e19c0fa93",
+    "size": 76674,
+    "sha256": "ac5419be1e74566a92de58f207af40e0f22d14eb87f321b1acea247773bb2e61",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/system32/wmvcore.dll.z"
    }
   },
@@ -53833,13 +53833,13 @@
    "path": "drive_c/windows/syswow64",
    "arch": "i386",
    "category": "directx-media",
-   "version": 2,
+   "version": 3,
    "size": 163840,
-   "sha256": "ad9c4fb2fcf3db183f9e10d3939d28e80aec5af7809bf72b4915e4dbfbfb5b65",
+   "sha256": "221885cfe22dc815e2adc8be215f6f964acf2aeb97adc5ac2c94f53b5db87f1b",
    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/windows/syswow64/wmvcore.dll",
    "source": {
     "repo": "autorunhq/autorun",
-    "commit": "14ebe6b92ea5631b3b9d8b687a20503655d40eb1",
+    "commit": "f9a1d4a87bb5700e08d187ecc1f2d001b1a8b96d",
     "origin": "wine",
     "modified": true,
     "paths": [
@@ -53854,8 +53854,8 @@
    "classes": [],
    "compressed": {
     "encoding": "zlib",
-    "size": 50023,
-    "sha256": "9adad44b470c8d77dcf49c1ed6b240fe0d3a93487f3aaab2e99afc4dc1f4e77c",
+    "size": 50156,
+    "sha256": "168e17cab35f4f75289c9c0ef8d1013da5a7403454b9b8c5724d8eebefeeaa7b",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/windows/syswow64/wmvcore.dll.z"
    }
   },

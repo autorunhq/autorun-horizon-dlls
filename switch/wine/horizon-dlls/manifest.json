@@ -56180,7 +56180,7 @@
      ]
     },
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "MIT",
    "requires": {
@@ -56212,7 +56212,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56244,7 +56244,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56276,7 +56276,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56308,7 +56308,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56340,7 +56340,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56372,7 +56372,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56404,7 +56404,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56436,7 +56436,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56468,7 +56468,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56500,7 +56500,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56532,7 +56532,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56564,7 +56564,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56596,7 +56596,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56628,7 +56628,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56660,7 +56660,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56692,7 +56692,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56724,7 +56724,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56756,7 +56756,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56788,7 +56788,7 @@
     "archive": "https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi",
     "sha256": "e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676",
     "extra": "compat-runtime",
-    "pin": "d287bf3636975e9a"
+    "pin": "c4fa54c98081e5e0"
    },
    "license": "LicenseRef-NVIDIA-PhysX",
    "requires": {
@@ -56801,6 +56801,70 @@
     "size": 183928,
     "sha256": "89fbf669c532668e8f38edda106d322040219ccd790d619ffb542691343ec374",
     "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.8.3/physxcooking.dll.z"
+   }
+  },
+  {
+   "name": "physxcore.dll",
+   "path": "drive_c/physx/Engine/v2.7.2",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 2725768,
+   "sha256": "25a1ec979f216787230d651bc7fdd7ec515992250938e89e00e03f6ee911a5e2",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.7.2/physxcore.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_12_1031/physx-9-12-1031-legacy-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.12.1031",
+    "archive": "https://us.download.nvidia.com/Windows/9.12.1031/PhysX-9.12.1031-SystemSoftware-Legacy.msi",
+    "sha256": "2554b77a21f265dc6ddb727513ba4543dd9777b17b3f2fbe83a6ff11244fa00e",
+    "extra": "compat-runtime",
+    "pin": "c4fa54c98081e5e0"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 1181539,
+    "sha256": "e68d293a9107171affa6b6365009ee727d72c321fb8e36c2c20aff4aad4c93e7",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.7.2/physxcore.dll.z"
+   }
+  },
+  {
+   "name": "physxcooking.dll",
+   "path": "drive_c/physx/Engine/v2.7.2",
+   "arch": "i386",
+   "category": "gaming",
+   "version": 1,
+   "size": 386952,
+   "sha256": "1f5cf39e4d81c561d629e7ba1528c430e421e9bac1399e041b22586d0ac4fc92",
+   "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/switch/wine/drive_c/physx/Engine/v2.7.2/physxcooking.dll",
+   "source": {
+    "repo": "https://www.nvidia.com/en-us/drivers/physx/9_12_1031/physx-9-12-1031-legacy-driver/",
+    "origin": "nvidia",
+    "modified": false,
+    "version": "9.12.1031",
+    "archive": "https://us.download.nvidia.com/Windows/9.12.1031/PhysX-9.12.1031-SystemSoftware-Legacy.msi",
+    "sha256": "2554b77a21f265dc6ddb727513ba4543dd9777b17b3f2fbe83a6ff11244fa00e",
+    "extra": "compat-runtime",
+    "pin": "c4fa54c98081e5e0"
+   },
+   "license": "LicenseRef-NVIDIA-PhysX",
+   "requires": {
+    "flavor": "arm64x",
+    "features": []
+   },
+   "classes": [],
+   "compressed": {
+    "encoding": "zlib",
+    "size": 196400,
+    "sha256": "48b5d34f2ae9ffeeec13566555360cc52100eabbe19daa010b72d5737c1415fd",
+    "url": "https://raw.githubusercontent.com/autorunhq/autorun-horizon-dlls/main/compressed/switch/wine/drive_c/physx/Engine/v2.7.2/physxcooking.dll.z"
    }
   }
  ]

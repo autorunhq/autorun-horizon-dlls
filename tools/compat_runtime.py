@@ -12,6 +12,8 @@ from xlive_runtime import REPOSITORY as XLIVE_REPOSITORY, REVISION as XLIVE_REVI
 
 PHYSX_URL = 'https://us.download.nvidia.com/Windows/9.13.0604/PhysX-9.13.0604-SystemSoftware.msi'
 PHYSX_SHA256 = 'e5fa75fd3324463197246966acf7cf09f4f4c31c8710ba820174ab38aa755676'
+PHYSX_LEGACY_URL = 'https://us.download.nvidia.com/Windows/9.12.1031/PhysX-9.12.1031-SystemSoftware-Legacy.msi'
+PHYSX_LEGACY_SHA256 = '2554b77a21f265dc6ddb727513ba4543dd9777b17b3f2fbe83a6ff11244fa00e'
 MANIFEST = 'horizon-dlls/manifest.json'
 PHYSX_FILES = {
     'drive_c/windows/syswow64/physxloader.dll': 'FILE_COMMON_PhysXLoader_dll',
@@ -22,7 +24,11 @@ for sdk in ('2.7.1', '2.7.3', '2.7.4', '2.7.5', '2.7.6', '2.8.0', '2.8.1', '2.8.
     for module in ('PhysXCore', 'PhysXCooking'):
         PHYSX_FILES[f'drive_c/physx/Engine/v{sdk}/{module.lower()}.dll'] = (
             f'FILE_CMP_GPU_DLLS_{sdk.replace(".", "")}_{module}_dll')
-COMPAT_PATHS = {'drive_c/windows/syswow64/xlive.dll', *PHYSX_FILES}
+PHYSX_LEGACY_FILES = {
+    f'drive_c/physx/Engine/v2.7.2/{module.lower()}.dll': f'FILE_CMP_GPU_DLLS_272_{module}_dll'
+    for module in ('PhysXCore', 'PhysXCooking')
+}
+COMPAT_PATHS = {'drive_c/windows/syswow64/xlive.dll', *PHYSX_FILES, *PHYSX_LEGACY_FILES}
 
 
 def digest(data):
@@ -48,18 +54,23 @@ def require_i386(data):
 
 
 def physx_payload(cache):
-    physx = dict(repo='https://www.nvidia.com/en-us/drivers/physx/9_13_0604/physx-9-13-0604-driver/',
-                 origin='nvidia', modified=False, version='9.13.0604',
-                 archive=PHYSX_URL, sha256=PHYSX_SHA256)
+    packages = (
+        (PHYSX_URL, PHYSX_SHA256, '9.13.0604', 'physx-9-13-0604-driver', PHYSX_FILES),
+        (PHYSX_LEGACY_URL, PHYSX_LEGACY_SHA256, '9.12.1031',
+         'physx-9-12-1031-legacy-driver', PHYSX_LEGACY_FILES),
+    )
     files = []
-    installer = fetch(cache, PHYSX_URL, PHYSX_SHA256)
     sevenzip = shutil.which('7zz') or shutil.which('7z')
     if not sevenzip:
         raise RuntimeError('7-Zip is required to extract PhysX')
-    for relative, member in PHYSX_FILES.items():
-        dll = subprocess.check_output([sevenzip, 'e', '-so', str(installer), member])
-        require_i386(dll)
-        files.append((relative, dll, physx, 'LicenseRef-NVIDIA-PhysX'))
+    for url, sha256, version, page, payload in packages:
+        physx = dict(repo=f'https://www.nvidia.com/en-us/drivers/physx/{version.replace(".", "_")}/{page}/',
+                     origin='nvidia', modified=False, version=version, archive=url, sha256=sha256)
+        installer = fetch(cache, url, sha256)
+        for relative, member in payload.items():
+            dll = subprocess.check_output([sevenzip, 'e', '-so', str(installer), member])
+            require_i386(dll)
+            files.append((relative, dll, physx, 'LicenseRef-NVIDIA-PhysX'))
     return files
 
 

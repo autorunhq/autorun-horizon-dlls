@@ -2937,6 +2937,81 @@ WINE REGISTRY Version 2
 @="windowscodecs.dll"
 "ThreadingModel"="Both"
 
+;; winegstreamer: wg_avi_splitter
+[Software\\Classes\\CLSID\\{272bfbfb-50d0-4078-b600-1e959c301337}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
+;; winegstreamer: wg_mpeg_audio_decoder
+[Software\\Classes\\CLSID\\{c9f285f8-4380-4121-971f-49a95316c27b}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
+;; winegstreamer: wg_mpeg_video_decoder
+[Software\\Classes\\CLSID\\{5ed2e5f6-bf3e-4180-83a4-4847cc5b4ea3}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
+;; winegstreamer: wg_mp3_decoder
+[Software\\Classes\\CLSID\\{84cd8e3e-b221-434a-8882-9d6c8df490e1}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
+;; winegstreamer: wg_mpeg1_splitter
+[Software\\Classes\\CLSID\\{a8edbf98-2442-42c5-85a1-ab05a580df53}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
+;; winegstreamer: wg_wave_parser
+[Software\\Classes\\CLSID\\{3f839ec7-5ea6-49e1-80c2-1ea300f8b0e0}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
+;; winegstreamer: decodebin_parser
+[Software\\Classes\\CLSID\\{f9d8d64e-a144-47dc-8ee0-f53498372c29}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
+;; winegstreamer: GStreamerByteStreamHandler
+[Software\\Classes\\CLSID\\{317df618-5e5a-468a-9f15-d827a9a08162}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
+;; winegstreamer: wg_wma_decoder
+[Software\\Classes\\CLSID\\{5b4d4e54-0620-4cf9-94ae-7823965c28b6}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
+;; winegstreamer: wg_aac_decoder
+[Software\\Classes\\CLSID\\{e7889a8a-2083-4844-8370-5ee349b14503}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
+;; winegstreamer: wg_wmv_decoder
+[Software\\Classes\\CLSID\\{62ee5ddb-4f52-48e2-8928-787b0253a0bc}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
+;; winegstreamer: wg_h264_decoder
+[Software\\Classes\\CLSID\\{1f1e273d-12c0-4b3a-8e9b-1933c2498aea}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
+;; winegstreamer: wg_h264_encoder
+[Software\\Classes\\CLSID\\{6c34de69-4670-46cd-8cb4-1f2fa1dffb65}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
+;; winegstreamer: wg_mp3_sink_factory
+[Software\\Classes\\CLSID\\{1f302877-aaab-40a3-b9e0-9f48daf35bc8}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
+;; winegstreamer: wg_mpeg4_sink_factory
+[Software\\Classes\\CLSID\\{5d5407d9-c6ca-4770-a7cc-27c0cb8a7627}\\InprocServer32]
+@="winegstreamer.dll"
+"ThreadingModel"="Both"
+
 ;; winhttp: WinHttpRequest Component version 5.1
 [Software\\Classes\\CLSID\\{2087c2f4-2cef-4953-a8ab-66779b670495}\\InprocServer32]
 @="winhttp.dll"
@@ -3207,6 +3282,14 @@ WINE REGISTRY Version 2
 @="xaudio2_7.dll"
 "ThreadingModel"="Both"
 
+[Software\\Classes\\MediaFoundation\\Transforms\\98230571-0087-4204-b020-3282538e57d3]
+@="Color Converter MFT"
+"MFTFlags"=dword:00000001
+"InputTypes"=hex:76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,55,59,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,55,59,56,59,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,41,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,16,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,17,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,34,32,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,59,55,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,14,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,18,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,29,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,56,32,31,36,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,56,34,31,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,31,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,31,50,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,31,54,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,32,54,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,55,39,00,00,10,00,80,00,00,aa,00,38,9b,71
+"OutputTypes"=hex:76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,55,59,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,55,59,56,59,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,41,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,16,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,17,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,34,32,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,59,55,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,14,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,18,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,29,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,56,32,31,36,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,56,34,31,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,31,00,00,10,00,80,00,00,aa,00,38,9b,71
+
+[Software\\Classes\\MediaFoundation\\Transforms\\Categories\\12e17c21-532c-4a6e-8a1c-40825a736397\\98230571-0087-4204-b020-3282538e57d3]
+
 [Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base DSS Cryptographic Provider]
 "Image Path"="C:\\windows\\system32\\dssenh.dll"
 "Type"=dword:00000003
@@ -3234,6 +3317,270 @@ WINE REGISTRY Version 2
 [Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 018]
 "Name"="Microsoft DH SChannel Cryptographic Provider"
 "TypeName"="Diffie-Hellman SChannel"
+
+[Software\\Microsoft\\Windows Media Foundation\\SchemeHandlers\\file:]
+"{477ec299-1421-4bdd-971f-7ccb933f21ad}"="File Scheme Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\SchemeHandlers\\http:]
+"{9ec4b4f9-3029-45ad-947b-344de2a249e2}"="Urlmon Scheme Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\SchemeHandlers\\https:]
+"{9ec4b4f9-3029-45ad-947b-344de2a249e2}"="Urlmon Scheme Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.3g2]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.3gp]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.3gp2]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.3gpp]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.m4a]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.m4v]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.mov]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.mp4]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.mp4v]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.uvu]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\audio/3gpp]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\audio/3gpp2]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\audio/mp4]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\audio/MP4A-LATM]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\audio/x-m4a]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\video/3gpp]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\video/3gpp2]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\video/mp4]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\video/vnd.dece.mp4]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\video/x-m4v]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Classes\\MediaFoundation\\Transforms\\32d186a7-218f-4c75-8876-dd77273a8999]
+@="Microsoft AAC Audio Decoder MFT"
+"MFTFlags"=dword:00000001
+"InputTypes"=hex:61,75,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,10,16,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,61,75,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,ff,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,61,75,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,00,16,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71
+"OutputTypes"=hex:61,75,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,03,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,61,75,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,01,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71
+
+[Software\\Classes\\MediaFoundation\\Transforms\\Categories\\9ea73fb4-ef7a-4559-8d5d-719d8f0426c7\\32d186a7-218f-4c75-8876-dd77273a8999]
+
+[Software\\Classes\\MediaFoundation\\Transforms\\62ce7e72-4c71-4d20-b15d-452831a87d9d]
+@="Microsoft H264 Video Decoder MFT"
+"MFTFlags"=dword:00000001
+"InputTypes"=hex:76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,48,32,36,34,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,f0,f4,40,3f,22,56,f8,4f,b6,d8,a1,7a,58,4b,ee,5e
+"OutputTypes"=hex:76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,34,32,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,55,59,32,00,00,10,00,80,00,00,aa,00,38,9b,71
+
+[Software\\Classes\\MediaFoundation\\Transforms\\Categories\\d6c02d4b-6833-45b4-971a-05a4b04bab91\\62ce7e72-4c71-4d20-b15d-452831a87d9d]
+
+[Software\\Classes\\MediaFoundation\\Transforms\\88753b26-5b24-49bd-b2e7-0c445c78c982]
+@="Microsoft Video Processor MFT"
+"MFTFlags"=dword:00000001
+"InputTypes"=hex:76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,55,59,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,15,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,16,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,31,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,41,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,55,59,56,59,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,50,32,30,38,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,14,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,18,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,17,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,29,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,34,32,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,32,31,36,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,76,34,31,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,31,50,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,31,54,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,32,54,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,59,55,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,34,32,30,4f,00,00,10,00,80,00,00,aa,00,38,9b,71
+"OutputTypes"=hex:76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,55,59,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,15,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,16,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,31,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,41,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,55,59,56,59,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,50,32,30,38,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,14,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,18,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,17,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,29,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,34,32,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,32,31,36,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,76,34,31,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,31,50,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,31,54,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,32,54,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,59,55,00,00,10,00,80,00,00,aa,00,38,9b,71
+
+[Software\\Classes\\MediaFoundation\\Transforms\\Categories\\302ea3fc-aa5f-47f9-9f7a-c2188bb16302\\88753b26-5b24-49bd-b2e7-0c445c78c982]
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base Cryptographic Provider v1.0]
+"Image Path"="C:\\windows\\system32\\rsaenh.dll"
+"Type"=dword:00000001
+"Signature"=hex:de,ad,be,ef
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced Cryptographic Provider v1.0]
+"Image Path"="C:\\windows\\system32\\rsaenh.dll"
+"Type"=dword:00000001
+"Signature"=hex:de,ad,be,ef
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced RSA and AES Cryptographic Provider]
+"Image Path"="C:\\windows\\system32\\rsaenh.dll"
+"Type"=dword:00000018
+"Signature"=hex:de,ad,be,ef
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced RSA and AES Cryptographic Provider (Prototype)]
+"Image Path"="C:\\windows\\system32\\rsaenh.dll"
+"Type"=dword:00000018
+"Signature"=hex:de,ad,be,ef
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft RSA SChannel Cryptographic Provider]
+"Image Path"="C:\\windows\\system32\\rsaenh.dll"
+"Type"=dword:0000000c
+"Signature"=hex:de,ad,be,ef
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Strong Cryptographic Provider]
+"Image Path"="C:\\windows\\system32\\rsaenh.dll"
+"Type"=dword:00000001
+"Signature"=hex:de,ad,be,ef
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 001]
+"Name"="Microsoft Enhanced Cryptographic Provider v1.0"
+"TypeName"="RSA Full (Signature and Key Exchange)"
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 012]
+"Name"="Microsoft RSA SChannel Cryptographic Provider"
+"TypeName"="RSA SChannel"
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 024]
+"Name"="Microsoft Enhanced RSA and AES Cryptographic Provider"
+"TypeName"="RSA Full and AES"
+
+[Software\\Classes\\MediaFoundation\\Transforms\\98230571-0087-4204-b020-3282538e57d3]
+@="Color Converter MFT"
+"MFTFlags"=dword:00000001
+"InputTypes"=hex:76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,55,59,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,55,59,56,59,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,41,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,16,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,17,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,34,32,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,59,55,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,14,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,18,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,29,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,56,32,31,36,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,56,34,31,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,31,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,31,50,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,31,54,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,32,54,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,55,39,00,00,10,00,80,00,00,aa,00,38,9b,71
+"OutputTypes"=hex:76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,55,59,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,55,59,56,59,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,41,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,16,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,17,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,34,32,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,59,55,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,14,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,18,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,29,00,00,00,4f,52,ce,11,9f,53,00,20,af,0b,a7,70,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,56,32,31,36,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,56,34,31,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,31,00,00,10,00,80,00,00,aa,00,38,9b,71
+
+[Software\\Classes\\MediaFoundation\\Transforms\\Categories\\12e17c21-532c-4a6e-8a1c-40825a736397\\98230571-0087-4204-b020-3282538e57d3]
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base DSS Cryptographic Provider]
+"Image Path"="C:\\windows\\system32\\dssenh.dll"
+"Type"=dword:00000003
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base DSS and Diffie-Hellman Cryptographic Provider]
+"Image Path"="C:\\windows\\system32\\dssenh.dll"
+"Type"=dword:0000000d
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced DSS and Diffie-Hellman Cryptographic Provider]
+"Image Path"="C:\\windows\\system32\\dssenh.dll"
+"Type"=dword:0000000d
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft DH SChannel Cryptographic Provider]
+"Image Path"="C:\\windows\\system32\\dssenh.dll"
+"Type"=dword:00000012
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 003]
+"Name"="Microsoft Base DSS Cryptographic Provider"
+"TypeName"="DSS Signature"
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 013]
+"Name"="Microsoft Enhanced DSS and Diffie-Hellman Cryptographic Provider"
+"TypeName"="DSS Signature with Diffie-Hellman Key Exchange"
+
+[Software\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 018]
+"Name"="Microsoft DH SChannel Cryptographic Provider"
+"TypeName"="Diffie-Hellman SChannel"
+
+[Software\\Microsoft\\Windows Media Foundation\\SchemeHandlers\\file:]
+"{477ec299-1421-4bdd-971f-7ccb933f21ad}"="File Scheme Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\SchemeHandlers\\http:]
+"{9ec4b4f9-3029-45ad-947b-344de2a249e2}"="Urlmon Scheme Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\SchemeHandlers\\https:]
+"{9ec4b4f9-3029-45ad-947b-344de2a249e2}"="Urlmon Scheme Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.3g2]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.3gp]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.3gp2]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.3gpp]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.m4a]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.m4v]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.mov]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.mp4]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.mp4v]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\.uvu]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\audio/3gpp]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\audio/3gpp2]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\audio/mp4]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\audio/MP4A-LATM]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\audio/x-m4a]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\video/3gpp]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\video/3gpp2]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\video/mp4]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\video/vnd.dece.mp4]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Microsoft\\Windows Media Foundation\\ByteStreamHandlers\\video/x-m4v]
+"{271c3902-6095-4c45-a22f-20091816ee9e}"="MPEG4 Byte Stream Handler"
+
+[Software\\Classes\\MediaFoundation\\Transforms\\32d186a7-218f-4c75-8876-dd77273a8999]
+@="Microsoft AAC Audio Decoder MFT"
+"MFTFlags"=dword:00000001
+"InputTypes"=hex:61,75,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,10,16,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,61,75,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,ff,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,61,75,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,00,16,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71
+"OutputTypes"=hex:61,75,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,03,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,61,75,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,01,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71
+
+[Software\\Classes\\MediaFoundation\\Transforms\\Categories\\9ea73fb4-ef7a-4559-8d5d-719d8f0426c7\\32d186a7-218f-4c75-8876-dd77273a8999]
+
+[Software\\Classes\\MediaFoundation\\Transforms\\62ce7e72-4c71-4d20-b15d-452831a87d9d]
+@="Microsoft H264 Video Decoder MFT"
+"MFTFlags"=dword:00000001
+"InputTypes"=hex:76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,48,32,36,34,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,f0,f4,40,3f,22,56,f8,4f,b6,d8,a1,7a,58,4b,ee,5e
+"OutputTypes"=hex:76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,34,32,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,55,59,32,00,00,10,00,80,00,00,aa,00,38,9b,71
+
+[Software\\Classes\\MediaFoundation\\Transforms\\Categories\\d6c02d4b-6833-45b4-971a-05a4b04bab91\\62ce7e72-4c71-4d20-b15d-452831a87d9d]
+
+[Software\\Classes\\MediaFoundation\\Transforms\\88753b26-5b24-49bd-b2e7-0c445c78c982]
+@="Microsoft Video Processor MFT"
+"MFTFlags"=dword:00000001
+"InputTypes"=hex:76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,55,59,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,15,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,16,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,31,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,41,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,55,59,56,59,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,50,32,30,38,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,14,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,18,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,17,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,29,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,34,32,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,32,31,36,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,76,34,31,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,31,50,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,31,54,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,32,54,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,59,55,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,34,32,30,4f,00,00,10,00,80,00,00,aa,00,38,9b,71
+"OutputTypes"=hex:76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,55,59,32,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,15,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,16,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,4e,56,31,31,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,41,59,55,56,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,55,59,56,59,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,50,32,30,38,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,14,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,18,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,17,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,29,00,00,00,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,49,34,32,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,32,31,36,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,76,34,31,30,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,31,50,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,31,54,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,34,32,54,00,00,10,00,80,00,00,aa,00,38,9b,71,76,69,64,73,00,00,10,00,80,00,00,aa,00,38,9b,71,59,56,59,55,00,00,10,00,80,00,00,aa,00,38,9b,71
+
+[Software\\Classes\\MediaFoundation\\Transforms\\Categories\\302ea3fc-aa5f-47f9-9f7a-c2188bb16302\\88753b26-5b24-49bd-b2e7-0c445c78c982]
 
 [Software\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base Cryptographic Provider v1.0]
 "Image Path"="C:\\windows\\system32\\rsaenh.dll"

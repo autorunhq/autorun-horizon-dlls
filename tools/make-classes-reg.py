@@ -27,6 +27,7 @@ import shutil
 import subprocess
 
 from autorun import root
+from media_registry import media_registry
 
 COCLASS = re.compile(
     r'\[(?P<attrs>[^\]]*?)\]\s*coclass\s+(?P<name>\w+)', re.S)
@@ -150,6 +151,10 @@ def write(stage, dlls):
             lines.append('')
     lines += crypto_registry(path for arch in ('system32', 'syswow64') for dll in sorted(dlls)
                              if (path := stage / f'drive_c/windows/{arch}/{dll}.dll').is_file())
+    for dll in sorted(dlls):
+        path = syswow64 / f'{dll}.dll'
+        if path.is_file():
+            lines.append(media_registry(path, root))
     out = stage / 'config/classes.reg'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text('\n'.join(lines))

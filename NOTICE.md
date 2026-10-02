@@ -1,6 +1,6 @@
 # autorun-horizon-dlls
 
-Built from Wine 11.18 as carried by https://github.com/autorunhq/autorun at commit `b698a1ec6613acca9b87736e37751384eabbb6a8`. The source of every file is there, under the paths its manifest entry lists.
+Built from Wine 11.18 as carried by https://github.com/autorunhq/autorun at commit `97422507a2bc8100c6ba32a13828109a340e9131`. The source of every file is there, under the paths its manifest entry lists.
 
 | Component | License | Text |
 |---|---|---|
@@ -1035,3 +1035,5 @@ Changed since the Wine import, or Autorun's own:
 - `drive_c/windows/syswow64/xinputuap.dll`: dlls/xinputuap, dlls/xinput1_3
 - `drive_c/windows/syswow64/xmllite.dll`: dlls/xmllite
 - `drive_c/windows/syswow64/xpsprint.dll`: dlls/xpsprint
+- `drive_c/windows/system32/winegstreamer.dll`: dlls/winegstreamer
+- `drive_c/windows/syswow64/winegstreamer.dll`: dlls/winegstreamer

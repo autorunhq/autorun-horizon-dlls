@@ -690,6 +690,10 @@ def main():
             source=source, license=license,
             requires=dict(flavor=FLAVOR, features=entry['features']),
             classes=kept_classes))
+        registry = classes.media_registry(card / path / name, root)
+        registry += '\n'.join(classes.crypto_registry([card / path / name]))
+        if registry:
+            files[-1]['registry'] = registry
     compat_pin = pin('compat-runtime', repo_inputs=['tools/compat_runtime.py', 'tools/xlive_runtime.py',
                                                    'runtime/xlive/dllmain.cpp'])
     compatibility = [f for f in earlier.values() if f['source'].get('extra') == 'compat-runtime']
@@ -741,7 +745,7 @@ def main():
                     licenses=licenses_in, files=files)
     (card / MANIFEST).parent.mkdir(parents=True, exist_ok=True)
     (card / MANIFEST).write_text(json.dumps(manifest, indent=1) + '\n')
-    (card / CLASSES).write_text(classes_reg(files, card))
+    (card / CLASSES).write_text(classes_reg(files))
 
     (repo / 'LICENSES').mkdir(exist_ok=True)
     wanted = {LICENSES[key][2] + '.txt': root / LICENSES[key][1] for key in wine_licenses}
@@ -771,7 +775,7 @@ def main():
         print(f'  imports nothing here provides ({len(unresolved)}): {", ".join(unresolved[:12])}')
     print(f'  publish: commit and push {repo}, then commit the new horizon-dlls in {root}')
 
-def classes_reg(files, card):
+def classes_reg(files):
     """The classes and crypto providers the runtime loads before a
     program asks for one; the first file to claim a class keeps it, 32-bit
     first, as make-classes-reg.py wrote them."""
@@ -788,8 +792,9 @@ def classes_reg(files, card):
             lines += [f";; {dll.removesuffix('.dll')}: {c['name']}",
                       f"[Software\\\\Classes\\\\CLSID\\\\{{{c['clsid']}}}\\\\InprocServer32]",
                       f'@="{dll}"', f'"ThreadingModel"="{c["threading"]}"', '']
-    lines += classes.crypto_registry(card / f['path'] / f['name']
-                                     for f in sorted(files, key=lambda f: (f['arch'] != 'aarch64', f['name'].lower())))
+    for f in files:
+        if f.get('registry'):
+            lines.append(f['registry'])
     return '\n'.join(lines)
 
 def write_notice(manifest, licenses, extra_licenses):
